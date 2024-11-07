@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  background-color: #FEF3E2;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  overflow-x: hidden;
+  cursor:default;
+}
+
+/* MISC */
+
+h1, h2, h3{
+  font-weight: bold;
+}
+
+h1{
+  font-size: 4rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1rem;
+}
+
+nav{
+  background-color: #FA812F;
+  opacity: 0;
+}
+
+footer{
+  background-color: #FA4032;
+}
+
+/* CONTENTS */
+#ImageKajur{
+  width: 20rem;
+}
+
+.Sambutan{
+  width: 76%;
+}
+.Pengantar{
+  width: 76%;
+}
+
+.PrimaryBtn{
+  background-color: #FA812F;
+}
+
+.CardImage img{
+  transition: all 0.5s ease-in-out;
+}
+
+.Card1:hover .CardImage img{
+scale: 1.1;
+}
+
+#CardImage, 
+#ContentRight, 
+#TitleHome, 
+#HomeCard1,
+#HomeCard2,
+#HomeCard3,
+#HomeCard4,
+#CardSambutanImage,
+#ContentSambutan,
+#ContentPengantar,
+#CardPengantarImage
+{
+  opacity: 0;
+}
