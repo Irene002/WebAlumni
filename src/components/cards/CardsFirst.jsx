@@ -11,7 +11,7 @@ const CardsFirst = ({Name, NIM, ImageCover, iconBtn1, iconBtn2, iconBtn3, ViewPr
 
 
   return (
-    <div className='Card1 p-4 py-8 bg-white rounded-xl shadow-md shadow-red-950 w-96' id={CardId}>
+    <div className='Card1 p-4 py-8 bg-white rounded-xl shadow-md shadow-red-950 w-[30rem] max-w-96' id={CardId}>
                 <div className='CardImage flex justify-center mb-4'>
                     <div className='rounded-full w-52 h-52 overflow-clip flex shadow-md shadow-orange-100'>
                     <img className='w-full h-auto object-cover' src={ImageCover}/>

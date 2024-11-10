@@ -1,17 +1,17 @@
 import React from 'react'
 
 // COMPONTENTS
-import NavBar from './components/NavBar'
+import NavBar from './components/Navbar/NavBar';
 import Footer from './components/Footer';
 import Routing from './routes';
 
-import {Routes, Route} from 'react-router-dom';
-
 const App = () => {
+  const navLink =[
+    {link: 'test', path: 'test'}
+  ]
   return (
     <>
     <NavBar/>
-
 
     <Routing/>
 

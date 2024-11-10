@@ -1,17 +1,26 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 
+
+// IMAGES
 import image1 from '../assets/image1.jpeg';
 import image2 from '../assets/test.png'
 
+// LOGO
+import logo1 from '../assets/logo-ti.png'
+import logo2 from '../assets/Hima.gif'
+import logo3 from '../assets/polnustar.png'
+
 import billy from '../assets/billy.jpg'
 import evandrix from '../assets/evandrix.jpg'
+import supriadi from '../assets/supriadi.jpg'
 
 import {FaInstagram, FaArrowRight, FaFacebook} from 'react-icons/fa6'
 
 // COMPONTENTS
 import AnimationTitle from '../components/Animations/AnimationTitle'
 import AnimationInView from '../components/Animations/AnimationInView';
+import ButtonLink from '../components/Buttons/ButtonLink';
+import ButtonScrollToTop from '../components/Buttons/ButtonScrollToTop';
 
 import CardsFirst from '../components/cards/CardsFirst';
 
@@ -29,18 +38,19 @@ const Home = () => {
     AnimationInView('CardPengantarImage', 1)
     AnimationInView('ContentPengantar', 1.5)
   return (
-    <section className=''>
+    <section>
         <div className='flex w-full h-96 relative'>
             <div className='absolute z-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' id='TitleHome'>
             <h2>Edisi 2025</h2>
             <h1>WEBSITE ALUMNI</h1>
             <h2>Politeknik Negeri Nusa Utara</h2>
+            <p>Angkatan 2022 nih bos... angkatan lain mana bisa?</p>
             </div>
             <img className='w-full h-auto object-cover brightness-50' src={image1} />
         </div>
 
-        <div className='px-32 py-24'>
-            <div className='flex flex-row justify-between gap-8'>
+        <div className='px-32 py-24 SectionContents'>
+            <div className='flex flex-row justify-between gap-8 SambutanContents'>
                 <div className='text-center w-80 flex items-center flex-col gap-8' id='CardSambutanImage'>
                     <img id='ImageKajur' className='h-96 object-cover rounded-2xl shadow-lg shadow-orange-950' src={image1} />
                     <div>
@@ -57,7 +67,7 @@ const Home = () => {
                     <p className='select-text cursor-auto'>Salam hangat dan sukses selalu!</p>
                 </div>
             </div>
-            <div className='flex flex-row justify-between gap-8 pt-32'>
+            <div className='flex flex-row justify-between gap-8 pt-32 PengantarContents'>
                 <div className='Pengantar leading-loose text-end' id='ContentPengantar'>
                     <h2>KATA PENGANTAR</h2>
                     <hr className='border-black mb-4' />
@@ -76,8 +86,8 @@ const Home = () => {
 
         {/* LIST MAHASISWA */}
         <div className='mt-32'>
-            <h2 className='grid justify-center py-16'>MAHASISWA ALUMNI</h2>
-        <div className='flex flex-row gap-8 justify-center'>
+            <h2 className='flex justify-center py-16 text-center'>MAHASISWA ALUMNI</h2>
+        <div className='flex flex-row gap-8 justify-center CardsWrapper'>
             {/* Cards */}
             <CardsFirst
             CardId={'HomeCard1'}
@@ -93,7 +103,7 @@ const Home = () => {
             iconBtn3=
             {<FaArrowRight
             size={25}/>}
-            ViewProfile={'billy-tempolenehe'}
+            ViewProfile={'/mahasiswa/billy-tempolenehe'}
             />
             <CardsFirst
             CardId={'HomeCard2'}
@@ -109,12 +119,12 @@ const Home = () => {
             iconBtn3=
             {<FaArrowRight
             size={25}/>}
-            ViewProfile={'/evandrix-mamintade'}
+            ViewProfile={'/mahasiswa/evandrix-mamintade'}
             />
             <CardsFirst
             CardId={'HomeCard3'}
-            ImageCover={image2}
-            Name={'Sean Ishak Adare'}
+            ImageCover={supriadi}
+            Name={'Supriadinata Masihor'}
             NIM={'NIM : 2205066'}
             iconBtn1=
             {<FaInstagram
@@ -125,6 +135,7 @@ const Home = () => {
             iconBtn3=
             {<FaArrowRight
             size={25}/>}
+            ViewProfile={'/mahasiswa/supriadinata-masihor'}
             />
             <CardsFirst
             CardId={'HomeCard4'}
@@ -141,15 +152,40 @@ const Home = () => {
             {<FaArrowRight
             size={25}
             />}
-            ViewProfile={'/sean-adare'}
+            ViewProfile={'/mahasiswa/sean-adare'}
             />
 
         </div>
         <div className='flex justify-center mt-12'>
-        <button className='underline text-orange-500 hover:text-orange-400 transition-all duration-300'>Lihat Selengkapnya</button>
+        <ButtonLink
+        path={'/mahasiswa'}
+        linkLabel={'Lihat Selengkapnya'}
+        />
         </div>
         </div>
 
+        <div className='mt-44 flex flex-col items-center'>
+            <hr className='border-zinc-500 mb-8 LineTop' />
+            <div className='flex flex-row gap-24 justify-center ContentSpons'>
+                <div className='flex flex-col items-center gap-4'>
+                <img className='w-32 h-32' src={logo1} alt="Teknologi Informatika" />
+                <h3 className='text-center'>Teknologi Informatika</h3>
+                </div>
+                <div className='flex flex-col items-center gap-4 w-64'>
+                <img className='w-fit h-32' src={logo2} alt="Teknologi Informatika" />
+                <h3 className='text-center'>HIMPUNAN MAHASISWA PROGRAM STUDI SISTEM INFORMASI</h3>
+                </div>
+                <div className='flex flex-col items-center gap-4 w-36'>
+                <img className='w-32 h-32' src={logo3} alt="Teknologi Informatika" />
+                <h3 className='text-center'>Politeknik Negeri Nusa Utara</h3>
+                </div>
+            </div>
+            <hr className='border-zinc-500 mt-8 LineBottom'/>
+        </div>
+        </div>
+
+        <div className='flex justify-center'>
+            <ButtonScrollToTop/>
         </div>
     </section>
   )

@@ -2,13 +2,17 @@ import React from 'react'
 
 import {Link} from 'react-router-dom'
 
+import { navLink } from './Links'
+
 const Footer = () => {
   return (
     <footer className='flex flex-row justify-between text-white px-24 py-8'>
         2024 - 2025 &copy; Sistem Informasi Politeknik Negeri Nusa Utara
         <ul className='flex flex-row gap-8'>
-        <Link className='hover:scale-110 transition-all duration-300' to={'/mahasiswa'}>Mahasiswa</Link>
-        <Link className='hover:scale-110 transition-all duration-300' to={'/dosen-pembimbing'}>Dosen Pembimbing</Link>
+        {navLink.map((value) => (
+            <Link className='hover:scale-110 transition-all duration-300'
+            to={value.path}>{value.link}</Link>
+          ))}
         </ul>
     </footer>
   )

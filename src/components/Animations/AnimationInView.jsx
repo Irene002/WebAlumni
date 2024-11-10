@@ -16,7 +16,7 @@ const AnimationInView = (id, delay = 0) => {
                     }
                 });
             },
-            { threshold: 1 }
+            { threshold: 0.5 }
         );
 
         observer.observe(element);

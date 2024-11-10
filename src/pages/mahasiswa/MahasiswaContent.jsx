@@ -13,7 +13,7 @@ const MahasiswaContent = ({NamaMahasiswa,GambarMahasiswa,NIM,JudulProyek,Abstrak
     <section className='px-24 pt-12 pb-32'>
       <button onClick={() => navigate (-1)} className='mb-12 flex flex-row gap-4 items-center hover:text-orange-500 transition-all duration-300 hover:scale-110'><FaArrowLeft/> Kembali</button>
       <div className='flex justify-between gap-8'>
-      <div className=' overflow-clip rounded-2xl shadow-lg shadow-orange-950 flex h-96 w-1/5' id="CardImage">
+      <div className='overflow-clip rounded-2xl shadow-md shadow-orange-950 flex h-96 w-1/5' id="CardImage">
         <img className='w-full h-auto object-cover' src={GambarMahasiswa} />
       </div>
       <div className='w-3/4' id='ContentRight'>

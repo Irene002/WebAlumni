@@ -19,6 +19,16 @@ html,body{
 
 /* MISC */
 
+td,th{
+  border: solid 1px black;
+  padding: 1rem;
+}
+
+table{
+  border: solid black 1px;
+  border-collapse: collapse;
+}
+
 h1, h2, h3{
   font-weight: bold;
 }
@@ -42,6 +52,25 @@ nav{
 
 footer{
   background-color: #FA4032;
+}
+
+/* NAVBAR */
+#NavLogo{
+  perspective: 1000px;
+}
+
+#NavLogo img{
+  transform-style: preserve-3d;
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(360deg);
+  }
 }
 
 /* CONTENTS */
@@ -71,14 +100,172 @@ scale: 1.1;
 #CardImage, 
 #ContentRight, 
 #TitleHome, 
-#HomeCard1,
-#HomeCard2,
-#HomeCard3,
-#HomeCard4,
 #CardSambutanImage,
 #ContentSambutan,
 #ContentPengantar,
 #CardPengantarImage
 {
   opacity: 0;
+}
+
+#HomeCard1,
+#HomeCard2,
+#HomeCard3,
+#HomeCard4,
+#HomeCard5,
+#HomeCard6,
+#HomeCard7,
+#HomeCard8,
+#HomeCard9,
+#HomeCard10,
+#HomeCard11,
+#HomeCard12
+{
+  opacity: 0;
+}
+
+/* BUTTONS */
+.ScrollBtn{
+  background-color: #FA4032;
+}
+
+/* BREAKPOINTS */
+@media (max-width:2560px){
+  #ContentSambutan{
+    width: 83%;
+  }
+
+  #ContentPengantar{
+    width: 83%;
+  }
+
+  .LineTop{
+    width: 70%;
+  }
+  .LineBottom{
+    width: 70%;
+  }
+}
+
+@media(max-width:1440px){
+  #ContentSambutan{
+    width: 70%;
+    max-width: 100%;
+  }
+
+  #ContentPengantar{
+    width: 70%;
+    max-width:100%;
+  }
+
+  .SectionContents{
+    padding: 6rem 3rem;
+  }
+
+  .LineTop{
+    width: 100%;
+  }
+  .LineBottom{
+    width: 100%;
+  }
+}
+
+@media(max-width:1366px){
+  #Navbar{
+    padding: 2rem 2rem;
+  }
+}
+
+@media(max-width:1222px){
+  .CardsWrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width:1024px){
+  #TitleHome{
+    width: 60%;
+  }
+
+  .CardsWrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animate-slide-down{
+    animation: inherit;
+    opacity: 1;
+  }
+
+  .animate-slide-up{
+    animation: inherit;
+    opacity: 1;
+  }
+
+  #CardSambutanImage, #ContentSambutan, #ContentPengantar, #CardPengantarImage{
+    opacity: 1;
+  }
+
+  #HomeCard1,
+#HomeCard2,
+#HomeCard3,
+#HomeCard4,
+#HomeCard5,
+#HomeCard6,
+#HomeCard7,
+#HomeCard8,
+#HomeCard9,
+#HomeCard10,
+#HomeCard11,
+#HomeCard12
+{
+  opacity: 1;
+}
+}
+
+@media (max-width:768px){
+  .SambutanContents{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ContentSambutan{
+    width: 100%;
+  }
+
+  .PengantarContents{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ContentPengantar{
+    width: 100%;
+  }
+}
+
+@media (max-width:680px){
+  .ContentSpons{
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+@media (max-width:425px){
+  #TitleHome h1{
+    font-size: 3rem;
+  }
+
+  #TitleHome{
+    text-align: center;
+    width: 80%;
+  }
+}
+
+@media (max-width:320px){
+  .SectionContents{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
