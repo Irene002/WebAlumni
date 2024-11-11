@@ -13,6 +13,7 @@ import logo3 from '../assets/polnustar.png'
 import billy from '../assets/billy.jpg'
 import evandrix from '../assets/evandrix.jpg'
 import supriadi from '../assets/supriadi.jpg'
+import leo from '../assets/leo.jpg'
 
 import {FaInstagram, FaArrowRight, FaFacebook} from 'react-icons/fa6'
 
@@ -39,7 +40,7 @@ const Home = () => {
     AnimationInView('ContentPengantar', 1.5)
   return (
     <section>
-        <div className='flex w-full h-96 relative'>
+        <div className='flex w-full h-[700px] relative'>
             <div className='absolute z-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' id='TitleHome'>
             <h2>Edisi 2025</h2>
             <h1>WEBSITE ALUMNI</h1>
@@ -139,9 +140,9 @@ const Home = () => {
             />
             <CardsFirst
             CardId={'HomeCard4'}
-            ImageCover={image2}
-            Name={'Sean Ishak Adare'}
-            NIM={'NIM : 2205066'}
+            ImageCover={leo}
+            Name={'Leo Richardo Alelo'}
+            NIM={'NIM : 2205064'}
             iconBtn1=
             {<FaInstagram
             size={25}/>}
@@ -164,7 +165,7 @@ const Home = () => {
         </div>
         </div>
 
-        <div className='mt-44 flex flex-col items-center'>
+        <div className='mt-56 mb-32 flex flex-col items-center'>
             <hr className='border-zinc-500 mb-8 LineTop' />
             <div className='flex flex-row gap-24 justify-center ContentSpons'>
                 <div className='flex flex-col items-center gap-4'>

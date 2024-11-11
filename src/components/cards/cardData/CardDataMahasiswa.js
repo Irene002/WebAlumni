@@ -2,6 +2,7 @@ import image2 from '../../../assets/test.png';
 import billy from '../../../assets/billy.jpg';
 import evandrix from '../../../assets/evandrix.jpg';
 import supriadi from '../../../assets/supriadi.jpg'
+import leo from '../../../assets/leo.jpg'
 
 const cardData = [
 
@@ -39,9 +40,9 @@ const cardData = [
 
   {
     CardId: 'HomeCard5',
-    ImageCover: image2,
-    Name: 'Sean Ishak Adare',
-    NIM: 'NIM : 2205066',
+    ImageCover: leo,
+    Name: 'Leo Richardo Alelo',
+    NIM: 'NIM : 2205064',
     ViewProfile: '/sean-adare'
   },
   {

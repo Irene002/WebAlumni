@@ -14,7 +14,7 @@ const Mahasiswa = () => {
 
   return (
     <section className='mt-24 px-24 mb-32'>
-      <h2 className='grid justify-center py-8'>MAHASISWA ALUMNI</h2>
+      <h2 className='grid justify-center py-2 text-center'>MAHASISWA ALUMNI</h2>
 
       {[...Array(rowsToShow)].map((_, rowIndex) => (
         <div key={rowIndex} className='py-8'>
