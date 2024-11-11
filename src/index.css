@@ -24,17 +24,11 @@ html,body{
   display: none;
 }
 
-#menu, .menuBtn{
-  display: none;
-}
-
 .menuBtn{
+  display: none;
   cursor: pointer;
 }
 
-#SideBar{
-  display: none;
-}
 
 td,th{
   border: solid 1px black;
@@ -87,6 +81,16 @@ footer{
   }
   to{
     transform: rotateY(360deg);
+  }
+}
+
+@keyframes menuAnimate{
+  from{
+    opacity: 0;
+    transform: translateY(-50px);
+  } to{
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -165,6 +169,10 @@ scale: 1.1;
   }
   .LineBottom{
     width: 70%;
+  }
+
+  .menuHome{
+    display: none;
   }
 }
 
@@ -300,6 +308,16 @@ Footer{
 
   .menuBtn{
     display: block;
+  }
+
+  .menuHome{
+    display: none;
+    transition: all 0.5s ease-in-out;
+    animation: menuAnimate 0.3s ease-out;
+  }
+  
+  .visible{
+    display: flex;
   }
 
 }

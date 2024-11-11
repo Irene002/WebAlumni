@@ -8,6 +8,11 @@ import { navLink } from '../Links';
 
 const NavBar = () => {
   AnimationSlideDown('Navbar', 0.5)
+
+  const toggleVisibility = () => {
+    document.querySelector('.menuHome').classList.toggle('visible');
+};
+
   return (
     <>
     <nav className='py-8 px-24 flex flex-row items-center justify-between' id='Navbar'>
@@ -21,11 +26,10 @@ const NavBar = () => {
             to={value.path}>{value.link}</Link>
           ))}
         </ul>
-        <input type='checkbox' id='menu'></input>
-        <label htmlFor="menu" className='text-white text-2xl menuBtn'><FaBars/></label>
+        <button onClick={toggleVisibility} className='text-white text-2xl menuBtn'><FaBars/></button>
     </nav>
 
-    <div className='bg-[#FA812F] absolute w-full top-30 h-[10rem] p-12 py-8 z-30' id='SideBar'>
+    <div className='bg-[#FA812F] absolute w-full top-30 h-[10rem] p-12 py-8 z-30 menuHome'>
       <ul className='text-white flex flex-col gap-4'>
       {navLink.map((value) => (
             <Link className='hover:scale-110 transition-all duration-300'

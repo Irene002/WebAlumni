@@ -157,7 +157,7 @@ const Home = () => {
             />
 
         </div>
-        <div className='flex justify-center mt-12'>
+        <div className='flex justify-center mt-[7rem]'>
         <ButtonLink
         path={'/mahasiswa'}
         linkLabel={'Lihat Selengkapnya'}
