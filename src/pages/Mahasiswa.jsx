@@ -18,7 +18,7 @@ const Mahasiswa = () => {
 
   return (
     <section className='mt-24 px-24 mb-32'>
-      <h2 className='grid justify-center py-2 text-center'>MAHASISWA ALUMNI</h2>
+      <h2 className='grid justify-center py-2 text-center'>MAHASISWA ANGKATAN 2022</h2>
 
         <div className='py-8 flex-wrap flex gap-8 justify-center'>
           {/* Card */}

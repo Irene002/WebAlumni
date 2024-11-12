@@ -218,6 +218,10 @@ scale: 1.1;
   #Navbar{
     padding: 2rem 2rem;
   }
+
+  #CardImage{
+    width: 30%;
+  }
 }
 
 @media(max-width:1222px){
@@ -225,9 +229,27 @@ scale: 1.1;
     flex-direction: column;
     align-items: center;
   }
+
+  #CarddImage{
+    width: 60% !important;
+  }
 }
 
 @media (max-width:1024px){
+  .MahasiswaContentWrapper{
+    flex-direction: column !important;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  #CardImage{
+    width: 50%;
+  }
+
+  .MahasiswaContentWrapper div{
+    opacity: 1 !important;
+  }
+
   #TitleHome{
     width: 60%;
   }
@@ -300,6 +322,14 @@ Footer{
   .SambutanContents{
     flex-direction: column;
     align-items: center;
+  }
+
+  .MahasiswaContentWrapper{
+    align-items: center;
+  }
+
+  #CardImage{
+    width: 50%;
   }
 
   #ContentSambutan{

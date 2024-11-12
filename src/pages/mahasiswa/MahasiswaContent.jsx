@@ -21,16 +21,16 @@ const MahasiswaContent = ({NamaMahasiswa,GambarMahasiswa,NIM,JudulProyek,Abstrak
   return (
     <section className='px-24 pt-12 pb-32'>
       <button onClick={() => navigate (-1)} className='mb-12 flex flex-row gap-4 items-center hover:text-orange-500 transition-all duration-300 hover:scale-110'><FaArrowLeft/> Kembali</button>
-      <div className='flex justify-between gap-8'>
+      <div className='flex flex-row justify-center gap-8 MahasiswaContentWrapper'>
 { mahasiswa ? (
   <>
-      <div className='overflow-clip rounded-2xl shadow-md shadow-orange-950 flex h-96 w-1/5' id="CardImage">
+      <div className='overflow-clip rounded-2xl shadow-md shadow-orange-950 flex h-96 w-[25%]' id="CardImage">
         <img className='w-full h-auto object-cover' src={mahasiswa.ProfileImage} />      
       </div>
-      <div className='w-3/4' id='ContentRight'>
+      <div className='w-[100%]' id='ContentRight'>
         <h2>{mahasiswa.nama}</h2>
         <h3>{mahasiswa.Nim}</h3>
-        <hr className='border-black my-4' />
+        <hr className='border-black my-4 opacity-50' />
         <h2>Judul Proyek Akhir</h2>
         <h3>{mahasiswa.judulProyek}</h3>
         <div className='my-5'>

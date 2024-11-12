@@ -1,9 +1,7 @@
 import React from 'react'
 
-
 // IMAGES
 import image1 from '../assets/image1.jpeg';
-import image2 from '../assets/test.png'
 
 // LOGO
 import logo1 from '../assets/logo-ti.png'
@@ -34,6 +32,7 @@ const Home = () => {
 
     AnimationInView('CardPengantarImage', 1)
     AnimationInView('ContentPengantar', 1.5)
+
   return (
     <section>
         <div className='flex w-full h-[700px] relative'>
