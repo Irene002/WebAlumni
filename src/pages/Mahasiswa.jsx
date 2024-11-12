@@ -1,38 +1,51 @@
 import React, { useState } from 'react';
-import CardRow from '../components/cards/CardRow';
-import cardData from '../components/cards/cardData/CardDataMahasiswa';
+import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
+import CardProfilMahasiswa from '../components/cards/CardProfilMahasiswa';
+
+import {FaInstagram, FaArrowRight, FaFacebook} from 'react-icons/fa6'
 
 const Mahasiswa = () => {
-  const [rowsToShow, setRowsToShow] = useState(1);
-  const cardsPerRow = 4;
 
-  const handleLoadMore = () => {
-    setRowsToShow(rowsToShow + 2); 
+  const [MahasiswaCardRows, setMahasiswaCardRows] = useState(1);
+  const MahasiswaCardsPerRow = 4;
+
+  const showMoreCards = () => {
+    setMahasiswaCardRows(prevRowsVisible => prevRowsVisible + 2);
+
   };
 
-  const totalRows = Math.ceil(cardData.length / cardsPerRow);
+  const visibleCards = cardDataMahasiswa.slice(0, MahasiswaCardRows * MahasiswaCardsPerRow)
 
   return (
     <section className='mt-24 px-24 mb-32'>
       <h2 className='grid justify-center py-2 text-center'>MAHASISWA ALUMNI</h2>
 
-      {[...Array(rowsToShow)].map((_, rowIndex) => (
-        <div key={rowIndex} className='py-8'>
-          <CardRow 
-            cards={cardData.slice(rowIndex * cardsPerRow, (rowIndex + 1) * cardsPerRow)}
-          />
-        </div>
-      ))}
+        <div className='py-8 flex-wrap flex gap-8 justify-center'>
+          {/* Card */}
 
-      {rowsToShow < totalRows && (
+          {visibleCards.map((card, index) =>(
+            <CardProfilMahasiswa
+            key={index}
+            cardMahasiswa={card}
+            BtnLeft={<FaInstagram size={25}/>}
+            BtnMid={<FaFacebook size={25}/>}
+            BtnRight={<FaArrowRight size={25}/>}
+            />
+          ))}
+
+
+
+        </div>
+
         <div className='flex justify-center mt-12'>
+          {visibleCards.length < cardDataMahasiswa.length && (
           <button
             className='underline text-orange-500 hover:text-orange-400 transition-all duration-300'
-            onClick={handleLoadMore}
+            onClick={showMoreCards}
           > Lihat Lainnya
           </button>
+          )}
         </div>
-      )}
     </section>
   );
 };

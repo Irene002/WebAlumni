@@ -6,10 +6,9 @@ import Mahasiswa from '../pages/Mahasiswa';
 import Tabel from '../Tabel/Tabel'
 import TablePage from '../Tabel/TablePage';
 
-import SeanAdare from '../pages/mahasiswa/ListMahasiswa/sean_adare';
-import BillyTempolenehe from '../pages/mahasiswa/ListMahasiswa/billy_tempolenehe';
-import EvandrixMamintade from '../pages/mahasiswa/ListMahasiswa/evandrix_mamintade';
-import SupriadinataMasihor from '../pages/mahasiswa/ListMahasiswa/supriadinata_masihor';
+import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
+
+import MahasiswaContent from '../pages/mahasiswa/MahasiswaContent';
 
 const Routing = () => {
   return (
@@ -20,11 +19,17 @@ const Routing = () => {
         >
         </Route>
         <Route path='/mahasiswa' element={<Mahasiswa/>}></Route>
-        
-        <Route path='/mahasiswa/sean-adare' element={<SeanAdare/>}></Route>
-        <Route path='/mahasiswa/billy-tempolenehe' element={<BillyTempolenehe/>}></Route>
-        <Route path='/mahasiswa/evandrix-mamintade' element={<EvandrixMamintade/>}></Route>
-        <Route path='/mahasiswa/supriadinata-masihor' element={<SupriadinataMasihor/>}></Route>
+
+        {/* MAHASISWA ROUTES */}
+       {cardDataMahasiswa.map ((card, index) =>(
+        <Route
+        key={index}
+        path={card.url}
+        element={<MahasiswaContent/>}
+        >
+
+        </Route>
+       ))}
 
         <Route path='/tabel' element={<Tabel/>}></Route>
         <Route path='/table-page' element={<TablePage/>}></Route>

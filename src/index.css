@@ -19,6 +19,10 @@ html,body{
 
 /* MISC */
 
+.CardContainer:hover .ProfileImage img{
+  scale: 1.1 !important;
+}
+
 
 .LineHorizontal{
   display: none;
@@ -95,7 +99,7 @@ footer{
 }
 
 /* CONTENTS */
-#ImageKajur{
+#ImageHomeCard{
   width: 20rem;
 }
 
@@ -118,6 +122,36 @@ footer{
 scale: 1.1;
 }
 
+#CardSambutanImage:hover img, #CardPengantarImage:hover img{
+  scale: 1.1;
+  filter: brightness(0.8);
+}
+
+
+#CardSambutanImage:hover .CardImageLabel, #CardPengantarImage:hover .CardImageLabel{
+  opacity: 1;
+  display: flex;
+  left: 70%;
+}
+
+#CardSambutanImage:hover .CardImageLabel .IconBtn, #CardPengantarImage:hover .CardImageLabel .IconBtn{
+  animation: scaleBtn 0.5s ease-in-out forwards 0.2s;
+}
+
+.IconBtn{
+  scale: 0;
+}
+
+@keyframes scaleBtn {
+  from{
+    scale: 0;
+  }
+  to{
+    scale: 1.0;
+  }
+  
+}
+
 #CardImage, 
 #ContentRight, 
 #TitleHome, 
@@ -129,25 +163,6 @@ scale: 1.1;
   opacity: 0;
 }
 
-#HomeCard1,
-#HomeCard2,
-#HomeCard3,
-#HomeCard4,
-#HomeCard5,
-#HomeCard6,
-#HomeCard7,
-#HomeCard8,
-#HomeCard9,
-#HomeCard10,
-#HomeCard11,
-#HomeCard12,
-#HomeCard13,
-#HomeCard14,
-#HomeCard15,
-#HomeCard16
-{
-  opacity: 0;
-}
 
 /* BUTTONS */
 .ScrollBtn{

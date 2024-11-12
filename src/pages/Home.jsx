@@ -10,10 +10,9 @@ import logo1 from '../assets/logo-ti.png'
 import logo2 from '../assets/Hima.gif'
 import logo3 from '../assets/polnustar.png'
 
-import billy from '../assets/billy.jpg'
-import evandrix from '../assets/evandrix.jpg'
-import supriadi from '../assets/supriadi.jpg'
-import leo from '../assets/leo.jpg'
+// DATA
+import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
+
 
 import {FaInstagram, FaArrowRight, FaFacebook} from 'react-icons/fa6'
 
@@ -23,15 +22,12 @@ import AnimationInView from '../components/Animations/AnimationInView';
 import ButtonLink from '../components/Buttons/ButtonLink';
 import ButtonScrollToTop from '../components/Buttons/ButtonScrollToTop';
 
-import CardsFirst from '../components/cards/CardsFirst';
+import CardImage from '../components/cards/CardImage';
+
+import CardProfilMahasiswa from '../components/cards/CardProfilMahasiswa';
 
 const Home = () => {
     AnimationTitle('TitleHome', 1.3)
-
-    AnimationInView('HomeCard1', 0.5)
-    AnimationInView('HomeCard2', 1)
-    AnimationInView('HomeCard3', 1.5)
-    AnimationInView('HomeCard4', 2)
 
     AnimationInView('CardSambutanImage', 1)
     AnimationInView('ContentSambutan', 1.5)
@@ -51,14 +47,15 @@ const Home = () => {
         </div>
 
         <div className='px-32 py-24 SectionContents'>
-            <div className='flex flex-row justify-between gap-8 SambutanContents'>
-                <div className='text-center w-80 flex items-center flex-col gap-8' id='CardSambutanImage'>
-                    <img id='ImageKajur' className='h-96 object-cover rounded-2xl shadow-lg shadow-orange-950' src={image1} />
-                    <div>
-                    <h3>Oktavianus Lumasuge, M.Kom</h3>
-                    <h3>- Ketua Jurusan Teknologi Informatika</h3>
-                    </div>
-                </div>
+            <div className='flex flex-row justify-between gap-12 SambutanContents'>
+                
+                <CardImage
+                CardId={'CardSambutanImage'}
+                CardImage={image1}
+                CardName={'Oktavianus Lumasuge, S.Kom, M.Kom'}
+                CardNameSpan={'- Ketua Jurusan Teknologi Informatika'}
+                />
+                
                 <div className='Sambutan leading-loose' id='ContentSambutan'>
                     <h2>KATA SAMBUTAN</h2>
                     <hr className='border-black mb-4' />
@@ -68,7 +65,7 @@ const Home = () => {
                     <p className='select-text cursor-auto'>Salam hangat dan sukses selalu!</p>
                 </div>
             </div>
-            <div className='flex flex-row justify-between gap-8 pt-32 PengantarContents'>
+            <div className='flex flex-row justify-between gap-8 mt-32 PengantarContents'>
                 <div className='Pengantar leading-loose text-end' id='ContentPengantar'>
                     <h2>KATA PENGANTAR</h2>
                     <hr className='border-black mb-4' />
@@ -76,85 +73,29 @@ const Home = () => {
                     <p className='leading-loose text-justify select-text cursor-auto'>Sebagai Ketua Panitia Proyek Kerja Akhir, saya merasa bangga dan bersyukur melihat hasil karya yang telah dicapai oleh para mahasiswa. Melalui berbagai tahapan proses, mulai dari perencanaan hingga implementasi, setiap proyek yang dihasilkan tidak hanya menunjukkan kemampuan akademik, tetapi juga kemampuan analitis, problem solving, dan kreativitas yang diharapkan dapat berguna bagi dunia industri an masyarakat. Website ini menjadi wadah untuk menghimpun berbagai hasil kerja keras tersebut dan juga menjadi kenangan - kenangan yang berharga bagi para alumni.</p>
                     <p className='leading-loose text-justify select-text cursor-auto'>Akhir kata, saya ucapkan selamat kepada seluruh mahasiswa yang telah menyelesaikan Proyek Kerja Akhir dan meraih gelar Ahli Madya, Semoga ilmu yang telah diperoleh selama menempuh pendidikan di Program Studi D3 Sistem Informasi dapat diaplikasikan di dunia kerja dan berkontribusi positif bagi perkembangan teknologi informasi di Indonesia. Terima kasih kepada semua pihak yang telah mendukung penyelenggaraan Proyek Kerja Akhir ini. Selamat berkarya dan semoga sukses di masa depan!</p>
                 </div>
-                <div className='text-center w-80 flex items-center flex-col gap-8' id='CardPengantarImage'>
-                    <img id='ImageKajur' className='h-96 object-cover rounded-2xl shadow-lg shadow-orange-950' src={image1} />
-                    <div>
-                    <h3>Christian Koloay, M.Kom</h3>
-                    <h3>- Ketua Panitia</h3>
-                    </div>
-                </div>
+                <CardImage
+                CardId={'CardPengantarImage'}
+                CardImage={image1}
+                CardName={'Christian Koloay, M.Kom'}
+                CardNameSpan={'- Ketua Panitia'}
+                />
             </div>
 
         {/* LIST MAHASISWA */}
         <div className='mt-32'>
             <h2 className='flex justify-center py-16 text-center'>MAHASISWA ALUMNI</h2>
-        <div className='flex flex-row gap-8 justify-center CardsWrapper'>
+        <div className='flex-wrap flex gap-4 justify-center CardsWrapper'>
             {/* Cards */}
-            <CardsFirst
-            CardId={'HomeCard1'}
-            ImageCover={billy}
-            Name={'Billy Amstrong Tempolenehe'}
-            NIM={'NIM : 2205066'}
-            iconBtn1=
-            {<FaInstagram
-            size={25}/>}
-            iconBtn2=
-            {<FaFacebook
-            size={25}/>}
-            iconBtn3=
-            {<FaArrowRight
-            size={25}/>}
-            ViewProfile={'/mahasiswa/billy-tempolenehe'}
+        {cardDataMahasiswa.slice (0, 4).map((card, index) => (
+            <CardProfilMahasiswa
+            key={index}
+            cardMahasiswa={card}
+            BtnLeft={<FaInstagram size={25}/>}
+            BtnMid={<FaFacebook size={25}/>}
+            BtnRight={<FaArrowRight size={25}/>}
             />
-            <CardsFirst
-            CardId={'HomeCard2'}
-            ImageCover={evandrix}
-            Name={'Evandrix Mamintade'}
-            NIM={'NIM : 2205020'}
-            iconBtn1=
-            {<FaInstagram
-            size={25}/>}
-            iconBtn2=
-            {<FaFacebook
-            size={25}/>}
-            iconBtn3=
-            {<FaArrowRight
-            size={25}/>}
-            ViewProfile={'/mahasiswa/evandrix-mamintade'}
-            />
-            <CardsFirst
-            CardId={'HomeCard3'}
-            ImageCover={supriadi}
-            Name={'Supriadinata Masihor'}
-            NIM={'NIM : 2205066'}
-            iconBtn1=
-            {<FaInstagram
-            size={25}/>}
-            iconBtn2=
-            {<FaFacebook
-            size={25}/>}
-            iconBtn3=
-            {<FaArrowRight
-            size={25}/>}
-            ViewProfile={'/mahasiswa/supriadinata-masihor'}
-            />
-            <CardsFirst
-            CardId={'HomeCard4'}
-            ImageCover={leo}
-            Name={'Leo Richardo Alelo'}
-            NIM={'NIM : 2205064'}
-            iconBtn1=
-            {<FaInstagram
-            size={25}/>}
-            iconBtn2=
-            {<FaFacebook
-            size={25}/>}
-            iconBtn3=
-            {<FaArrowRight
-            size={25}
-            />}
-            ViewProfile={'/mahasiswa/sean-adare'}
-            />
+        )
+    )}
 
         </div>
         <div className='flex justify-center mt-[7rem]'>
