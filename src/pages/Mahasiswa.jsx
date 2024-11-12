@@ -10,7 +10,7 @@ const Mahasiswa = () => {
   const MahasiswaCardsPerRow = 4;
 
   const showMoreCards = () => {
-    setMahasiswaCardRows(prevRowsVisible => prevRowsVisible + 2);
+    setMahasiswaCardRows(prevRowsVisible => prevRowsVisible + 3);
 
   };
 

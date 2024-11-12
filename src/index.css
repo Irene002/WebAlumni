@@ -225,10 +225,6 @@ scale: 1.1;
 }
 
 @media(max-width:1222px){
-  .CardsWrapper{
-    flex-direction: column;
-    align-items: center;
-  }
 
   #CarddImage{
     width: 60% !important;

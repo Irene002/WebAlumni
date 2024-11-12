@@ -83,9 +83,9 @@ const Home = () => {
         {/* LIST MAHASISWA */}
         <div className='mt-32'>
             <h2 className='flex justify-center py-16 text-center'>MAHASISWA ALUMNI</h2>
-        <div className='flex-wrap flex gap-4 justify-center CardsWrapper'>
+        <div className='flex-wrap flex gap-4 justify-center'>
             {/* Cards */}
-        {cardDataMahasiswa.slice (0, 4).map((card, index) => (
+        {cardDataMahasiswa.slice (0, 3).map((card, index) => (
             <CardProfilMahasiswa
             key={index}
             cardMahasiswa={card}
