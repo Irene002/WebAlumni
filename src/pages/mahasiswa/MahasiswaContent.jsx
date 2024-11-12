@@ -19,7 +19,7 @@ const MahasiswaContent = ({NamaMahasiswa,GambarMahasiswa,NIM,JudulProyek,Abstrak
   const mahasiswa = cardDataMahasiswa.find ((card) => card.url === currentPath);
 
   return (
-    <section className='px-24 pt-12 pb-32'>
+    <section className='px-24 pt-12 pb-32 SectionMahasiswa'>
       <button onClick={() => navigate (-1)} className='mb-12 flex flex-row gap-4 items-center hover:text-orange-500 transition-all duration-300 hover:scale-110'><FaArrowLeft/> Kembali</button>
       <div className='flex flex-row justify-center gap-8 MahasiswaContentWrapper'>
 { mahasiswa ? (

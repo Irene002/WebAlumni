@@ -239,7 +239,7 @@ scale: 1.1;
   }
 
   #CardImage{
-    width: 50%;
+    width: 30%;
   }
 
   .MahasiswaContentWrapper div{
@@ -320,6 +320,11 @@ Footer{
     align-items: center;
   }
 
+  .SectionMahasiswa{
+    padding-left:1rem;
+    padding-right: 1rem;
+  }
+
   .MahasiswaContentWrapper{
     align-items: center;
   }
@@ -369,17 +374,28 @@ Footer{
     align-items: center;
     gap: 3rem;
   }
+
+}
+
+@media(max-width:450px){
+  #CardImage{
+    width: 100%;
+  }
 }
 
 @media (max-width:425px){
   #TitleHome h1{
     font-size: 3rem;
   }
+  #CardImage{
+    width: 100%;
+  }
 
   #TitleHome{
     text-align: center;
     width: 80%;
   }
+
 }
 
 @media (max-width:320px){
