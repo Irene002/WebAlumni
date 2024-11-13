@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import AnimationSlideDown from '../Animations/AnimationSlideDown';
-import logo1 from '../../assets/logo-ti.png'
+import logo1 from '../../assets/logo-ti.png?format=webp'
 import { FaBars } from 'react-icons/fa6';
 
 import { navLink } from '../Links';

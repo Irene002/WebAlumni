@@ -205,6 +205,10 @@ scale: 1.1;
     max-width: 100%;
   }
 
+  #GalleryContainer{
+    width: 65rem;
+  }
+
   #ContentPengantar{
     width: 70%;
     max-width:100%;
@@ -229,6 +233,14 @@ scale: 1.1;
 
   #CardImage{
     width: 40%;
+  }
+
+  .PengantarContents{
+    gap: 0;
+  }
+
+  .SambutanContents{
+    gap: 0;
   }
 }
 

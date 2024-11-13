@@ -6,7 +6,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import AnimationInView from '../../components/Animations/AnimationInView';
 import cardDataMahasiswa from '../../components/cards/cardData/CardDataMahasiswa';
 
-const MahasiswaContent = ({NamaMahasiswa,GambarMahasiswa,NIM,JudulProyek,AbstrakContent}) => {
+const MahasiswaContent = () => {
   
   AnimationInView('CardImage', 0.5)
   AnimationInView('ContentRight', 1.5)
@@ -29,28 +29,39 @@ const MahasiswaContent = ({NamaMahasiswa,GambarMahasiswa,NIM,JudulProyek,Abstrak
       </div>
       <div className='w-[100%]' id='ContentRight'>
         <h2>{mahasiswa.nama}</h2>
-        <h3>{mahasiswa.Nim}</h3>
+        <h3>NIM : {mahasiswa.Nim}</h3>
         <hr className='border-black my-4 opacity-50' />
         <h2>Judul Proyek Akhir</h2>
-        <h3>{mahasiswa.judulProyek}</h3>
+        <h3 className='text-lg mt-2'>{mahasiswa.judulProyek}</h3>
         <div className='my-5'>
         <h2>Abstrak</h2>
-        <p className='leading-loose text-justify'>{mahasiswa.abstrakContent}</p>
-        <button onClick={() => navigate(mahasiswa.linkJurnal)} className='underline text-orange-500 mt-4'>Lihat Journal Selengkapnya</button>
+        <p className='leading-[2.6] text-justify'>{mahasiswa.abstrakContent}</p>
+        {mahasiswa?.linkJurnal && (
+            <button onClick={() => window.open(mahasiswa.linkJurnal, '_blank')}
+                    className='underline text-orange-500 mt-4'>
+            Lihat Journal Selengkapnya
+            </button>
+                )}
         </div>
         <div className='my-5'>
         <h2>Lampiran</h2>
         <p className='leading-loose text-justify'></p>
         <div className='flex flex-wrap xl:justify-start lg:justify-start gap-8 md:justify-center sm:justify-center mt-8'>
+        {mahasiswa?.lampiran1 && (
           <div className='flex w-96 h-60 overflow-clip rounded-lg shadow-md shadow-orange-950'>
             <img className='w-full h-auto object-cover' src={mahasiswa.lampiran1} />
-            </div>
+          </div>  
+        )}
+        {mahasiswa?.lampiran2 && (
           <div className='flex w-96 h-60 overflow-clip rounded-lg shadow-md shadow-orange-950'>
-            <img className='w-full h-auto object-cover' src={mahasiswa.lampiran2}/>
-            </div>
+            <img className='w-full h-auto object-cover' src={mahasiswa.lampiran2} />
+          </div>  
+        )}
+        {mahasiswa?.lampiran3 && (
           <div className='flex w-96 h-60 overflow-clip rounded-lg shadow-md shadow-orange-950'>
-            <img className='w-full h-auto object-cover'src={mahasiswa.lampiran3} />
-            </div>
+            <img className='w-full h-auto object-cover' src={mahasiswa.lampiran3} />
+          </div>  
+        )}
         </div>
         </div>
       </div>

@@ -1,15 +1,15 @@
 import React from 'react'
 
 // IMAGES
-import image1 from '../assets/image1.jpeg';
-import angkatan from '../assets/angkatan.jpg'
-import idax from '../assets/evandrix.jpg'
+import image1 from '../assets/image1.jpeg?format=webp';
+import angkatan from '../assets/angkatan.jpg?format=webp'
+import idax from '../assets/evandrix.jpg?format=webp'
 
 
 // LOGO
-import logo1 from '../assets/logo-ti.png'
+import logo1 from '../assets/logo-ti.png?format=webp'
 import logo2 from '../assets/Hima.gif'
-import logo3 from '../assets/polnustar.png'
+import logo3 from '../assets/polnustar.png?format=webp'
 
 // DATA
 import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
@@ -26,6 +26,9 @@ import ButtonScrollToTop from '../components/Buttons/ButtonScrollToTop';
 import CardImage from '../components/cards/CardImage';
 
 import CardProfilMahasiswa from '../components/cards/CardProfilMahasiswa';
+import CardVisiMisi from '../components/cards/CardVisiMisi';
+
+import VisiMisiData from '../components/cards/cardData/VisiMisiData';
 
 const Home = () => {
     AnimationTitle('TitleHome', 1.3)
@@ -50,7 +53,6 @@ const Home = () => {
 
         <div className='px-32 py-24 SectionContents'>
             <div className='flex flex-row justify-between gap-8 SambutanContents'>
-                
                 <CardImage
                 CardId={'CardSambutanImage'}
                 CardImage={idax}
@@ -61,7 +63,7 @@ const Home = () => {
                 <div className='Sambutan leading-loose' id='ContentSambutan'>
                     <h2>KATA SAMBUTAN</h2>
                     <hr className='border-black mb-4' />
-                    <p className='leading-loose text-justify select-text cursor-auto'>Sebagai Ketua Jurusan Teknologi Informatika, saya merasa bangga dengan pencapaian para mahasiswa yang berhasil menyelesaikan Proyek Kerja Akhir. Setiap proyek yang dihasilkan bukan hanya cerminan dari kemampuan teknis dan intelektual mereka, tetapi juga membawa nilai - nilai lokal Sangihe, seperti kebersamaan, gotong royong, dan rasa cinta terhadap tanah kelahiran. Dengan memadukan teknologi modern dan kekayaan budaya, mereka telah menciptakan karya - karya yang memiliki dampak positif bagi masyarakat dan potensi lokal, sejalan dengan tantangan perkembangan zaman yang semakin dinamis. Salam hangat dan sukses selalu!</p>
+                    <p className='leading-[2.5] text-justify select-text cursor-auto'>Sebagai Ketua Jurusan Teknologi Informatika, saya merasa bangga dengan pencapaian para mahasiswa yang berhasil menyelesaikan Proyek Kerja Akhir. Setiap proyek yang dihasilkan bukan hanya cerminan dari kemampuan teknis dan intelektual mereka, tetapi juga membawa nilai - nilai lokal Sangihe, seperti kebersamaan, gotong royong, dan rasa cinta terhadap tanah kelahiran. Dengan memadukan teknologi modern dan kekayaan budaya, mereka telah menciptakan karya - karya yang memiliki dampak positif bagi masyarakat dan potensi lokal, sejalan dengan tantangan perkembangan zaman yang semakin dinamis. Salam hangat dan sukses selalu!</p>
                 </div>
             </div>
             <div className='flex flex-row justify-between gap-12 mt-32 PengantarContents'>
@@ -77,6 +79,18 @@ const Home = () => {
                 CardNameSpan={'- Ketua Panitia'}
                 />
             </div>
+
+            {/* CARD VISI & MISI */}
+
+        <div className='flex justify-center gap-8'>
+            {VisiMisiData.slice(0,2).map ((value,index) => ( 
+                <CardVisiMisi
+                key={index}
+                Texts={value.Texts}
+                button={value.button}
+                />
+            ))}
+        </div>
 
         {/* LIST MAHASISWA */}
         <div className='mt-32'>
@@ -106,14 +120,15 @@ const Home = () => {
         {/* GALERY */}
         <div className='flex items-center flex-col gap-20 mt-44 mb-32'>
             <h2>Lampiran Gambar</h2>
-            <div className='flex justify-center w-[90rem] h-[45rem] overflow-clip rounded-xl shadow-md shadow-orange-950'>
+            <div id='GalleryContainer' className='flex justify-center w-[55rem] h-[38rem] overflow-clip rounded-xl shadow-md shadow-orange-950'>
             <div id='HomeGallery' className='flex flex-row overflow-x-scroll snap-mandatory snap-x'>
                 <img className='w-full h-auto object-cover snap-start' src={angkatan} alt="" />
-                <img className='w-full h-auto object-cover snap-start ' src={image1} alt="" />
-                <img className='w-full h-auto object-cover snap-end' src={angkatan} alt="" />
+                <img className='w-full h-auto snap-start ' src={image1} alt="" />
             </div>
             </div>
         </div>
+
+        {/* LOGOS */}
 
         <div className='mt-56 mb-32 flex flex-col items-center'>
             <hr className='border-zinc-500 mb-8 LineTop' />
