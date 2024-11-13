@@ -5,9 +5,9 @@ import { FaArrowRight } from 'react-icons/fa6'
 const CardImage = ({CardId,CardImage,CardName,CardNameSpan}) => {
     // id='CardSambutanImage'
   return (
-    <div className='text-center w-80 flex items-center flex-col gap-8 relative overflow-clip' id={CardId}>
-        <div className='overflow-clip flex h-96 rounded-2xl shadow-lg shadow-orange-950'>
-        <img id='ImageHomeCard' className='w-full h-auto object-cover transition-all duration-500' src={CardImage} />
+    <div className='text-center mx-[3rem] flex items-center flex-col gap-8 relative overflow-clip' id={CardId}>
+        <div className='overflow-clip w-[25rem] h-[30rem] flex rounded-2xl shadow-lg shadow-orange-950'>
+        <img id='ImageHomeCard' className='pointer-events-none !w-full h-auto object-cover transition-all duration-500' src={CardImage} />
         </div>
             <div>
                 <h3>{CardName}</h3>

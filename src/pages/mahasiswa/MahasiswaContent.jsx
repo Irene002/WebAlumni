@@ -25,7 +25,7 @@ const MahasiswaContent = ({NamaMahasiswa,GambarMahasiswa,NIM,JudulProyek,Abstrak
 { mahasiswa ? (
   <>
       <div className='overflow-clip rounded-2xl shadow-md shadow-orange-950 flex h-96 w-[25%]' id="CardImage">
-        <img className='w-full h-auto object-cover' src={mahasiswa.ProfileImage} />      
+        <img className='pointer-events-none w-full h-auto object-cover' src={mahasiswa.ProfileImage} />      
       </div>
       <div className='w-[100%]' id='ContentRight'>
         <h2>{mahasiswa.nama}</h2>

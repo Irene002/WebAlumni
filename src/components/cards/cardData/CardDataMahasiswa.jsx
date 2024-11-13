@@ -1,18 +1,18 @@
 // IMAGES
 
-import logo1 from '../../../assets/test.png'
-import billy from '../../../assets/billy.jpg'
-import evandrix from '../../../assets/evandrix.jpg'
-import leo from '../../../assets/leo.jpg'
-import supriadi from '../../../assets/supriadi.jpg'
-import achel from '../../../assets/achel.jpg'
-import citra from '../../../assets/gabriella.png'
-import farrel from '../../../assets/farrel.jpg'
-import iya from '../../../assets/iya.jpg'
-import geo from '../../../assets/geo.jpg'
-import dilla from '../../../assets/dilla.jpg'
-import cici from '../../../assets/cici.jpg'
-import angkatan from '../../../assets/angkatan.jpg'
+import logo1 from '../../../assets/test.png?format=webp'
+import billy from '../../../assets/billy.jpg?format=webp'
+import evandrix from '../../../assets/evandrix.jpg?format=webp'
+import leo from '../../../assets/leo.jpg?format=webp'
+import supriadi from '../../../assets/supriadi.jpg?format=webp'
+import achel from '../../../assets/achel.jpg?format=webp'
+import citra from '../../../assets/gabriella.png?format=webp'
+import farrel from '../../../assets/farrel.jpg?format=webp'
+import iya from '../../../assets/iya.jpg?format=webp'
+import geo from '../../../assets/geo.jpg?format=webp'
+import dilla from '../../../assets/dilla.jpg?format=webp'
+import cici from '../../../assets/cici.jpg?format=webp'
+import angkatan from '../../../assets/angkatan.jpg?format=webp'
 
 // DATA MAHASISWA
 

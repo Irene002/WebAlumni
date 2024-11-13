@@ -15,7 +15,7 @@ const NavBar = () => {
 
   return (
     <>
-    <nav className='py-8 px-24 flex flex-row items-center justify-between' id='Navbar'>
+    <nav className='py-8 px-24 flex flex-row items-center justify-between shadow-sm shadow-orange-950' id='Navbar'>
         <Link className='flex flex-row gap-4 text-white items-center xl:text-xl lg:text-xl md:text-md sm:text-md' to={'/'} id='NavLogo'>
             <img className='w-14 h-14' src={logo1}/>
             EAST PENYNSULA

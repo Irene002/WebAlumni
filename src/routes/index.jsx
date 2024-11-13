@@ -9,6 +9,7 @@ import TablePage from '../Tabel/TablePage';
 import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
 
 import MahasiswaContent from '../pages/mahasiswa/MahasiswaContent';
+import Tentang from '../pages/Tentang';
 
 const Routing = () => {
   return (
@@ -19,6 +20,7 @@ const Routing = () => {
         >
         </Route>
         <Route path='/mahasiswa' element={<Mahasiswa/>}></Route>
+        <Route path='/tentang' element={<Tentang/>}></Route>
 
         {/* MAHASISWA ROUTES */}
        {cardDataMahasiswa.map ((card, index) =>(

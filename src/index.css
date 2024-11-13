@@ -17,6 +17,10 @@ html,body{
   cursor:default;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 /* MISC */
 
 #HomeGallery::-webkit-scrollbar{
