@@ -21,7 +21,7 @@ const MahasiswaContent = ({NamaMahasiswa,GambarMahasiswa,NIM,JudulProyek,Abstrak
   return (
     <section className='px-24 pt-12 pb-32 SectionMahasiswa'>
       <button onClick={() => navigate (-1)} className='mb-12 flex flex-row gap-4 items-center hover:text-orange-500 transition-all duration-300 hover:scale-110'><FaArrowLeft/> Kembali</button>
-      <div className='flex flex-row justify-center gap-8 MahasiswaContentWrapper'>
+      <div className='flex flex-row justify-center gap-[3.5rem] MahasiswaContentWrapper'>
 { mahasiswa ? (
   <>
       <div className='overflow-clip rounded-2xl shadow-md shadow-orange-950 flex h-96 w-[25%]' id="CardImage">
@@ -36,6 +36,22 @@ const MahasiswaContent = ({NamaMahasiswa,GambarMahasiswa,NIM,JudulProyek,Abstrak
         <div className='my-5'>
         <h2>Abstrak</h2>
         <p className='leading-loose text-justify'>{mahasiswa.abstrakContent}</p>
+        <button onClick={() => navigate(mahasiswa.linkJurnal)} className='underline text-orange-500 mt-4'>Lihat Journal Selengkapnya</button>
+        </div>
+        <div className='my-5'>
+        <h2>Lampiran</h2>
+        <p className='leading-loose text-justify'></p>
+        <div className='flex flex-wrap xl:justify-start lg:justify-start gap-8 md:justify-center sm:justify-center mt-8'>
+          <div className='flex w-96 h-60 overflow-clip rounded-lg shadow-md shadow-orange-950'>
+            <img className='w-full h-auto object-cover' src={mahasiswa.lampiran1} />
+            </div>
+          <div className='flex w-96 h-60 overflow-clip rounded-lg shadow-md shadow-orange-950'>
+            <img className='w-full h-auto object-cover' src={mahasiswa.lampiran2}/>
+            </div>
+          <div className='flex w-96 h-60 overflow-clip rounded-lg shadow-md shadow-orange-950'>
+            <img className='w-full h-auto object-cover'src={mahasiswa.lampiran3} />
+            </div>
+        </div>
         </div>
       </div>
       </>

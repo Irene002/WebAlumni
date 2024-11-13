@@ -16,9 +16,9 @@ const NavBar = () => {
   return (
     <>
     <nav className='py-8 px-24 flex flex-row items-center justify-between' id='Navbar'>
-        <Link className='flex flex-row gap-4 text-white items-center text-xl' to={'/'} id='NavLogo'>
+        <Link className='flex flex-row gap-4 text-white items-center xl:text-xl lg:text-xl md:text-md sm:text-md' to={'/'} id='NavLogo'>
             <img className='w-14 h-14' src={logo1}/>
-            TEKNOLOGI INFORMATIKA
+            EAST PENYNSULA
         </Link>
         <ul className='text-white flex flex-row gap-10'>
           {navLink.map((value) => (

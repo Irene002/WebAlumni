@@ -19,6 +19,10 @@ html,body{
 
 /* MISC */
 
+#HomeGallery::-webkit-scrollbar{
+  display: none;
+}
+
 .CardContainer:hover .ProfileImage img{
   scale: 1.1 !important;
 }
@@ -220,7 +224,7 @@ scale: 1.1;
   }
 
   #CardImage{
-    width: 30%;
+    width: 40%;
   }
 }
 
@@ -239,7 +243,7 @@ scale: 1.1;
   }
 
   #CardImage{
-    width: 30%;
+    width: 50%;
   }
 
   .MahasiswaContentWrapper div{

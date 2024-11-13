@@ -7,6 +7,7 @@ import image1 from '../assets/image1.jpeg';
 import logo1 from '../assets/logo-ti.png'
 import logo2 from '../assets/Hima.gif'
 import logo3 from '../assets/polnustar.png'
+import angkatan from '../assets/angkatan.jpg'
 
 // DATA
 import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
@@ -37,12 +38,12 @@ const Home = () => {
     <section>
         <div className='flex w-full h-[700px] relative'>
             <div className='absolute z-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' id='TitleHome'>
-            <h2>Edisi 2025</h2>
-            <h1>WEBSITE ALUMNI</h1>
+            <h2>Website Alumni Edisi 2025</h2>
+            <h1>ANGKATAN 2022</h1>
             <h2>Politeknik Negeri Nusa Utara</h2>
             <p>Angkatan 2022 nih bos... angkatan lain mana bisa?</p>
             </div>
-            <img className='w-full h-auto object-cover brightness-50' src={image1} />
+            <img className='w-full h-auto object-cover brightness-50' src={angkatan} />
         </div>
 
         <div className='px-32 py-24 SectionContents'>
@@ -103,6 +104,18 @@ const Home = () => {
         linkLabel={'Lihat Selengkapnya'}
         />
         </div>
+        </div>
+
+        {/* GALERY */}
+        <div className='flex items-center flex-col gap-20 mt-44 mb-32'>
+            <h2>Lampiran Gambar</h2>
+            <div className='flex justify-center'>
+            <div id='HomeGallery' className='flex w-[80rem] h-[45rem] overflow-y-hidden overflow-x-auto snap-mandatory snap-x rounded-xl shadow-md shadow-orange-950'>
+                <img className='w-full h-auto object-cover snap-start' src={angkatan} alt="" />
+                <img className='w-full h-auto object-cover snap-start' src={angkatan} alt="" />
+                <img className='w-full h-auto object-cover snap-start' src={angkatan} alt="" />
+            </div>
+            </div>
         </div>
 
         <div className='mt-56 mb-32 flex flex-col items-center'>
