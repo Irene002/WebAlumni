@@ -42,14 +42,18 @@ const cardDataMahasiswa = [
 {ProfileImage: achel, nama: 'Firstonly Marshel Naharia', url: '/firstonly-marshel-naharia', Nim: '2205021', 
     judulProyek: 'adjadjfalsdjfas;fj' , 
     abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''
-}, 
+},
 
-{ProfileImage: geo, nama: 'Geovani Marchiano Monok', url: '/geovani-marchiano-monok', Nim: '2205042', 
-    judulProyek: 'The quick brown fox jumps over the lazy dog.' , abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''  }, 
+{ProfileImage: iya, nama: 'Zuwairyah Kantohe', url: '/zuwairyah-kantohe', Nim: '2205026',
+    judulProyek: 'The quick brown fox jumps over the lazy dog.' ,
+    abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''  },
 
-{ProfileImage: supriadi, nama: 'Supriadinata Masihor', url: '/supriadinata-masihor', Nim: '2205032', 
-    judulProyek: 'adjadjfalsdjfas;fj' , abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''  }, 
+{ProfileImage: supriadi, nama: 'Supriadinata Masihor', url: '/supriadinata-masihor', Nim: '2205032',
+    judulProyek: 'adjadjfalsdjfas;fj' ,
+    abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''  },
 
+{ProfileImage: geo, nama: 'Geovani Marchiano Monok', url: '/geovani-marchiano-monok', Nim: '2205042',
+    judulProyek: 'The quick brown fox jumps over the lazy dog.' , abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''  },
 
 {ProfileImage: citra, nama: 'Gabriella Christania Citra Kakomole', url: '/gabriella-christania-citra-kakomole', Nim: '2205057', 
     lampiran1: angkatan,
@@ -60,11 +64,6 @@ const cardDataMahasiswa = [
     abstrakContent: 'dajadadlkfasjfsaf',
 }, 
 
- 
-{ProfileImage: iya, nama: 'Zuwairyah Kantohe', url: '/zuwairyah-kantohe', Nim: '2205026', 
-    judulProyek: 'The quick brown fox jumps over the lazy dog.' , abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''  },
-     
-
 {ProfileImage: billy, nama: 'Billy Amstrong Tempolenehe', url: '/billy-amstrong-tempolenehe', Nim: '2205059', 
     judulProyek: 'adjadjfalsdjfas;fj' , 
     abstrakContent: 'dajadadlkfasjfsaf' , 
@@ -74,8 +73,7 @@ const cardDataMahasiswa = [
     judulProyek: 'SISTEM INFORMASI PROFIL DINAS SOSIAL DAERAH KABUPATEN KEPULAUAN SANGIHE' , 
     abstrakContent: 'dajadadlkfasjfsaf',
 },
-
-
+    
 {ProfileImage: leo, nama: 'Leo Richardo Alelo', url: '/leo-richardo-alelo', Nim: '2205064', linkJurnal:'', 
     lampiran1: angkatan, 
     lampiran2: angkatan, 
