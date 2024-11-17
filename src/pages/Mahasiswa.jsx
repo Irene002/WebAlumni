@@ -1,6 +1,8 @@
 import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
 import CardProfilMahasiswa from '../components/cards/CardProfilMahasiswa';
 
+import {useState} from "react";
+
 import {FaInstagram, FaArrowRight, FaFacebook} from 'react-icons/fa6'
 
 const Mahasiswa = () => {
