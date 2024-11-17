@@ -4,6 +4,7 @@ import image1 from '../assets/image1.jpeg?format=webp';
 import angkatan from '../assets/angkatan.jpg?format=webp'
 import idax from '../assets/evandrix.jpg?format=webp'
 
+import {useState, useEffect} from "react";
 
 // LOGO
 import logo1 from '../assets/logo-ti.png?format=webp'
@@ -17,10 +18,12 @@ import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
 import {FaInstagram, FaArrowRight, FaFacebook} from 'react-icons/fa6'
 
 // COMPONTENTS
-import AnimationTitle from '../components/Animations/AnimationTitle'
+import AnimationTitle from '../components/Animations/AnimationTitle.jsx'
 import AnimationInView from '../components/Animations/AnimationInView';
 import ButtonLink from '../components/Buttons/ButtonLink';
 import ButtonScrollToTop from '../components/Buttons/ButtonScrollToTop';
+
+import GalleryCard from '../components/cards/GalleryCard.jsx';
 
 import CardImage from '../components/cards/CardImage';
 
@@ -30,6 +33,22 @@ import CardVisiMisi from '../components/cards/CardVisiMisi';
 import VisiMisiData from '../components/cards/cardData/VisiMisiData';
 
 const Home = () => {
+
+    const images = [
+        image1,
+        angkatan,image1,
+        angkatan,image1,
+        angkatan,image1,
+        angkatan,image1,
+        angkatan,image1,
+        angkatan,image1,
+        angkatan,image1,
+        angkatan,image1,
+        angkatan,]
+
+
+
+
     AnimationTitle('TitleHome', 1.3)
 
     AnimationInView('CardSambutanImage', 1)
@@ -37,6 +56,24 @@ const Home = () => {
 
     AnimationInView('CardPengantarImage', 1)
     AnimationInView('ContentPengantar', 1.5)
+
+    const [randomCards, setRandomCards] = useState([]);
+
+    // Function to shuffle the array
+    const shuffleArray = (array) => {
+        let shuffledArray = [...array];
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        }
+        return shuffledArray;
+    };
+
+    useEffect(() => {
+        // Shuffle and pick first 3 cards
+        const shuffledCards = shuffleArray(cardDataMahasiswa).slice(0, 3);
+        setRandomCards(shuffledCards);
+    }, []);
 
   return (
     <section>
@@ -53,10 +90,9 @@ const Home = () => {
         <div className='flex flex-col gap-48 px-32 mt-32 SectionContents'>
             <div className='flex flex-row justify-between gap-8 SambutanContents'>
                 <CardImage
-                    CardId={'CardSambutanImage'}
-                    CardImage={idax}
-                    CardName={'Oktavianus Lumasuge, S.Kom, M.Kom'}
-                    CardNameSpan={'- Ketua Jurusan Teknologi Informatika'}
+                    ImageCard={idax}
+                    CardName={'Oktavianus Lumasuge, M.Kom'}
+                    TextPosition={`top-[80%] left-[45%] w-[15rem]`}
                 />
 
                 <div className='Sambutan leading-loose' id='ContentSambutan'>
@@ -73,7 +109,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='flex flex-row justify-between gap-12 mt-32 PengantarContents'>
-                <div className='Pengantar leading-[2.5] text-end' id='ContentPengantar'>
+                <div className='leading-[2.5] text-end' id='ContentPengantar'>
                     <h2>KATA PENGANTAR</h2>
                     <hr className='border-black mb-4'/>
                     <p className='leading-[2.5] text-justify select-text cursor-auto'>Sebagai Ketua Panitia Proyek Kerja
@@ -85,10 +121,9 @@ const Home = () => {
                         juga menjadi kenangan - kenangan yang berharga bagi para alumni.</p>
                 </div>
                 <CardImage
-                    CardId={'CardPengantarImage'}
-                    CardImage={image1}
+                    ImageCard={idax}
                     CardName={'Christian Koloay, M.Kom'}
-                    CardNameSpan={'- Ketua Panitia'}
+                    TextPosition={`top-[80%] left-[45%] w-[15rem]`}
                 />
             </div>
 
@@ -97,7 +132,7 @@ const Home = () => {
             <div className='flex justify-center w-full mb-24'>
                 <h2>Visi & Misi</h2>
             </div>
-            <div className='flex justify-between gap-24 items-start w-[65%] VisiMisiWrapper'>
+            <div className='flex flex-col items-center gap-20 VisiMisiWrapper'>
                 {VisiMisiData.slice(0, 2).map((value, index) => (
                     <CardVisiMisi
                         key={index}
@@ -116,7 +151,7 @@ const Home = () => {
                 <h2 className='flex justify-center py-16 text-center'>MAHASISWA ALUMNI</h2>
                 <div className='flex-wrap flex gap-8 justify-center'>
                     {/* Cards */}
-                    {cardDataMahasiswa.slice(0, 3).map((card, index) => (
+                    {randomCards.map((card, index) => (
                             <CardProfilMahasiswa
                                 key={index}
                                 cardMahasiswa={card}
@@ -137,16 +172,13 @@ const Home = () => {
             </div>
 
             {/* GALERY */}
-            <div className='flex items-center flex-col gap-20'>
-                <h2>Lampiran Gambar</h2>
-                <div id='GalleryContainer'
-                     className='flex justify-center w-[55rem] h-[38rem] overflow-clip rounded-xl shadow-md shadow-orange-950'>
-                    <div id='HomeGallery' className='flex flex-row overflow-x-scroll snap-mandatory snap-x'>
-                        <img className='w-full h-auto object-cover snap-start' src={angkatan} alt=""/>
-                        <img className='w-full h-auto snap-start ' src={image1} alt=""/>
-                    </div>
-                </div>
+            <div className='flex flex-col items-center gap-12'>
+                <h2 className='flex justify-center text-center'>GALLERY</h2>
+            <div className='p-4'>
+                <GalleryCard images={images}/>
             </div>
+            </div>
+
 
             {/* LOGOS */}
 

@@ -30,10 +30,10 @@ const MahasiswaContent = () => {
         <h2>{mahasiswa.nama}</h2>
         <h3>NIM : {mahasiswa.Nim}</h3>
         <hr className='border-black my-4 opacity-50' />
-        <h2>Judul Proyek Akhir</h2>
+        <h2 className='text-2xl'>Judul Proyek Akhir</h2>
         <h3 className='text-lg mt-2'>{mahasiswa.judulProyek}</h3>
-        <div className='my-5'>
-        <h2>Abstrak</h2>
+        <div className='my-8'>
+        <h2 className='text-2xl'>Abstrak</h2>
         <p className='leading-[2.6] text-justify'>{mahasiswa.abstrakContent}</p>
         {mahasiswa?.linkJurnal && (
             <button onClick={() => window.open(mahasiswa.linkJurnal, '_blank')}
@@ -43,7 +43,7 @@ const MahasiswaContent = () => {
                 )}
         </div>
         <div className='my-5'>
-        <h2>Lampiran</h2>
+        <h2 className='text-2xl'>Lampiran</h2>
         <p className='leading-loose text-justify'></p>
         <div className='flex flex-wrap xl:justify-start lg:justify-start gap-8 md:justify-center sm:justify-center mt-8'>
         {mahasiswa?.lampiran1 && (

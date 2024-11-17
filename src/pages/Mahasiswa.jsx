@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
 import CardProfilMahasiswa from '../components/cards/CardProfilMahasiswa';
 
@@ -20,7 +19,7 @@ const Mahasiswa = () => {
     <section className='mt-24 px-24 mb-32'>
       <h2 className='grid justify-center py-2 text-center'>MAHASISWA ANGKATAN 2022</h2>
 
-        <div className='py-8 flex-wrap flex gap-8 justify-center'>
+        <div className='mt-20 flex-wrap flex gap-8 justify-center'>
           {/* Card */}
 
           {visibleCards.map((card, index) =>(
@@ -32,8 +31,6 @@ const Mahasiswa = () => {
             BtnRight={<FaArrowRight size={25}/>}
             />
           ))}
-
-
 
         </div>
 

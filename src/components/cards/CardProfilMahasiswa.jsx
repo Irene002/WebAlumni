@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const CardProfilMahasiswa = ({cardMahasiswa, BtnLeft, BtnMid, BtnRight}) => {
@@ -6,9 +5,9 @@ const CardProfilMahasiswa = ({cardMahasiswa, BtnLeft, BtnMid, BtnRight}) => {
 
   return (
     <>
-    <div className='CardContainer p-4 py-8 bg-white rounded-xl shadow-md shadow-red-950 w-[30rem] max-w-96 animate-slide-up'>
+    <div className='CardContainer bg-white rounded-xl pb-8 overflow-clip shadow-md shadow-red-950 w-[100%] min-w-[18rem] max-w-[20rem] animate-slide-up'>
         <div className='flex flex-col items-center mb-4'>
-            <div className='ProfileImage rounded-full w-52 h-52 overflow-clip flex shadow-md bg-gray-600 shadow-orange-100'> 
+            <div className='ProfileImage flex w-full h-64 overflow-clip bg-gray-600'>
                 <img className='transition-all duration-500 w-full h-auto object-cover pointer-events-none' src={cardMahasiswa.ProfileImage} />
             </div>
             <div className='flex flex-col gap-2 items-center text-center mt-4'>

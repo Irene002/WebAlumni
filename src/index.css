@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 *{
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -23,7 +23,12 @@ body::-webkit-scrollbar{
 
 /* MISC */
 
-#HomeGallery::-webkit-scrollbar{
+.scrollbar-hide{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar{
   display: none;
 }
 
@@ -108,31 +113,88 @@ footer{
 
 /* CONTENTS */
 
+.CardImage:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(0deg, #faa73a 20%, transparent);
+  z-index: 1;
+}
+
+
+.CardImage:hover img{
+  scale: 1.1;
+}
+
+.TextContainerVisiMisi{
+  user-select: text;
+  cursor:auto;
+}
+
+.VisiMisiCard button{
+  width: fit-content;
+}
+
+.ArrowDown{
+  transition: transform 0.5s ease-in-out;
+  transform: rotateY(0deg);
+
+}
+
 .rotateArrow{
   transition: transform 0.5s ease-in-out;
   transform: rotate(180deg);
 }
 
 @keyframes fade-down {
-  from{
+  from {
+    visibility: hidden;
     opacity: 0;
-    max-height: 0px;
+    max-height: 0;
     transform-origin: bottom;
     transform: translateY(-50px);
   }
-  to{
+  to {
+    visibility: visible;
+    opacity: 1;
+    max-height: 3100px;
+    transform-origin: top;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fade-up {
+  from{
     opacity: 1;
     max-height: 2000px;
     transform-origin: top;
     transform: translateY(0);
+  }
+  to{
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0px;
+    transform-origin: top;
+    transform: translateY(-50px);
   }
 
 }
 
 .fade-down{
   animation: fade-down 1.1s forwards;
-  overflowy: hidden;
+  overflow-y: hidden;
 }
+
+.fade-up{
+  animation: fade-up 1.1s forwards;
+  overflow-y: hidden;
+}
+
 #ImageHomeCard{
   width: 20rem;
 }
@@ -148,29 +210,6 @@ footer{
   background-color: #FA812F;
 }
 
-.CardImage img{
-  transition: all 0.5s ease-in-out;
-}
-
-.Card1:hover .CardImage img{
-scale: 1.1;
-}
-
-#CardSambutanImage:hover img, #CardPengantarImage:hover img{
-  scale: 1.1;
-  filter: brightness(0.8);
-}
-
-
-#CardSambutanImage:hover .CardImageLabel, #CardPengantarImage:hover .CardImageLabel{
-  opacity: 1;
-  display: flex;
-  left: 70%;
-}
-
-#CardSambutanImage:hover .CardImageLabel .IconBtn, #CardPengantarImage:hover .CardImageLabel .IconBtn{
-  animation: scaleBtn 0.5s ease-in-out forwards 0.2s;
-}
 
 .IconBtn{
   scale: 0;
@@ -278,6 +317,25 @@ scale: 1.1;
 }
 
 @media (max-width:1024px){
+
+  .SambutanContents{
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  #ContentSambutan{
+    width: 100%;
+  }
+
+  .PengantarContents{
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  #ContentPengantar{
+    width: 100%;
+  }
+
   .VisiMisiWrapper{
     width: 100%;
   }
@@ -375,6 +433,11 @@ Footer{
     gap: 5rem !important;
   }
 
+  .VisiMisiCard button:hover{
+    background-color: inherit  !important;
+    scale: 1.0 !important;
+  }
+
   .VisiMisiWrapper{
     flex-direction: column;
     width: 100%;
@@ -466,6 +529,11 @@ Footer{
 
   .VisiMisiCard{
     width: 100%;
+  }
+
+  .SectionContents{
+    padding-left:1rem;
+    padding-right: 1rem;
   }
 
 }

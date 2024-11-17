@@ -1,4 +1,3 @@
-import React from 'react'
 import {Link} from 'react-router-dom';
 import AnimationSlideDown from '../Animations/AnimationSlideDown';
 import logo1 from '../../assets/logo-ti.png?format=webp'
@@ -12,6 +11,10 @@ const NavBar = () => {
   const toggleVisibility = () => {
     document.querySelector('.menuHome').classList.toggle('visible');
 };
+
+    const closeMenu = () => {
+        document.querySelector('.menuHome').classList.remove('visible');
+    };
 
   return (
     <>
@@ -29,11 +32,11 @@ const NavBar = () => {
         <button onClick={toggleVisibility} className='text-white text-2xl menuBtn'><FaBars/></button>
     </nav>
 
-    <div className='bg-[#FA812F] absolute w-full top-30 h-[10rem] p-12 py-8 z-30 menuHome'>
-      <ul className='text-white flex flex-col gap-4'>
+    <div className='bg-[#FA812F] absolute w-full top-30 p-12 py-8 z-30 menuHome'>
+      <ul className='text-white flex flex-col gap-8'>
       {navLink.map((value) => (
-            <Link className='hover:scale-110 transition-all duration-300'
-            to={value.path}>{value.link}</Link>
+            <Link onClick={closeMenu} className='hover:scale-110 transition-all duration-300' to={value.path}>{value.link}
+            </Link>
           ))}
       </ul>
     </div>

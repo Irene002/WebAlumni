@@ -19,7 +19,7 @@ import alicia from '../../../assets/alicia.jpg?format=webp'
 
 const cardDataMahasiswa = [
 {ProfileImage: alicia, nama: 'Alicia Aurelia Hebingadil', url: '/alicia-aurelia-hebingadil', Nim: '2205003', lampiran1: angkatan, lampiran2: angkatan, lampiran3: angkatan,
-    linkJurnal:'https://google.com',
+    linkJurnal:'https://youtube.com',
     judulProyek: 'The quick brown fox jumps over the lazy dog.', 
     abstrakContent: 'Sistem manajemen kehadiran yang efektif merupakan salah satu faktor penting dalam mengoptimalkan proses belajar dan mengajar di institusi pendidikan. Infinite Learning, sebagai salah satu platform pendidikan, memerlukan solusi yang terintegrasi untuk memantau dan mengelola kehadiran peserta didik serta pengajar secara real-time dan akurat. Penelitian ini bertujuan untuk merancang dan mengimplementasikan website berbasis Attendance Management System yang dapat digunakan untuk mencatat kehadiran secara otomatis dan mendukung pemantauan data kehadiran secara komprehensif. Sistem ini dibangun menggunakan teknologi web yang responsif dan user-friendly, sehingga memudahkan akses bagi pengguna di berbagai perangkat.'
 },
@@ -53,7 +53,7 @@ const cardDataMahasiswa = [
     abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''  },
 
 {ProfileImage: geo, nama: 'Geovani Marchiano Monok', url: '/geovani-marchiano-monok', Nim: '2205042',
-    judulProyek: 'The quick brown fox jumps over the lazy dog.' , abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''  },
+    judulProyek: 'Sistem Monitoring Aktivitas Kunjungan Diguning Sahendaruman II' , abstrakContent: 'dajadadlkfasjfsaf', urlSoc1:'', urlSoc2:''  },
 
 {ProfileImage: citra, nama: 'Gabriella Christania Citra Kakomole', url: '/gabriella-christania-citra-kakomole', Nim: '2205057', 
     lampiran1: angkatan,
@@ -73,7 +73,7 @@ const cardDataMahasiswa = [
     judulProyek: 'SISTEM INFORMASI PROFIL DINAS SOSIAL DAERAH KABUPATEN KEPULAUAN SANGIHE' , 
     abstrakContent: 'dajadadlkfasjfsaf',
 },
-    
+
 {ProfileImage: leo, nama: 'Leo Richardo Alelo', url: '/leo-richardo-alelo', Nim: '2205064', linkJurnal:'', 
     lampiran1: angkatan, 
     lampiran2: angkatan, 

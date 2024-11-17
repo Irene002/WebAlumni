@@ -11,8 +11,8 @@ const VisiMisiData = [
     },
 
     { TextTitle1 : 'Visi',
-      Description1 : 'Pada tauhn 2029, menjadi program studi yang menghasilkan sumber daya manusia unggul, dan berdaya saing dalam proses transformasi digital melalui bidang analisis, desain, pengembangan, implementasi, dan pemeliharaan sistem informasi yang relevan dengan kebutuhan industri selaras dengan pembangunan nasional di wilayah kepulauan. Visi Kelimuan Program Studi Sistem Informasi dapat dijabarkan sebagai berikut:' +
-          '\n1. Unggul bermakna bahwa program studi sistem informasi berupaya mendidik dan latih mahasiswa sehingga memiliki kompetensi yang dibutuhkan dalam dunia industri, serta memiliki adaptasi terhadap perkembangan teknologi.' +
+      Description1 : 'Pada tauhn 2029, menjadi Program Studi yang menghasilkan sumber daya manusia unggul, dan berdaya saing dalam proses transformasi digital melalui bidang analisis, desain, pengembangan, implementasi, dan pemeliharaan sistem informasi yang relevan dengan kebutuhan industri selaras dengan pembangunan nasional di wilayah kepulauan. Visi Kelimuan Program Studi Sistem Informasi dapat dijabarkan sebagai berikut:' +
+          '\n1. Unggul bermakna bahwa Program Studi Sistem Informasi berupaya mendidik dan latih mahasiswa sehingga memiliki kompetensi yang dibutuhkan dalam dunia industri, serta memiliki adaptasi terhadap perkembangan teknologi.' +
           '\n2. Teknologi Informasi berarti bahwa teknologi informasi yang merupakan area selalu mengikuti perkembangan teknologi yang berbasis pada sistem dan aplikasi.' +
           '\n3. Berdaya saing tinggi mengandung dalam transformasi digital mengandung maknsa, bahwa Program Studi Sistem Informasi mempersiapkan lulusan yang mampu bersaing ditingkat nasional dan internasional, dengan cara mengembangkan kurikulum dan terus memperbaharui sesuai kebutuhan industri.' +
           '\n4. Mendukung pembangunan nasional diwilayah kepulauan mengandung makna, menciptakan solusi teknologi yang dapat diterapkan di wilayah kepulauan untuk meningkatkan kualitas hidup masyarakat.',
