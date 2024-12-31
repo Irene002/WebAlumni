@@ -37,7 +37,7 @@ const DataMahasiswa = [
     },
     {
         Photo: 'https://via.placeholder.com/150',
-        Nama: 'Mersita Letunggamu',
+        Nama: 'Mersita Trisce Letunggamu',
         NIM: '2205006',
         Angkatan: '2022',
     },
@@ -115,7 +115,7 @@ const DataMahasiswa = [
     },
     {
         Photo: 'https://via.placeholder.com/150',
-        Nama: 'Jessica Lombontari',
+        Nama: 'Jessica Juanita Lombontari',
         NIM: '2205024',
         Angkatan: '2022',
     },
@@ -133,7 +133,7 @@ const DataMahasiswa = [
     },
     {
         Photo: 'https://via.placeholder.com/150',
-        Nama: 'Sheren Makawimbang',
+        Nama: 'Sheren Zyallomitha Zhakilla Makawimbang',
         NIM: '2205030',
         Angkatan: '2022',
     },

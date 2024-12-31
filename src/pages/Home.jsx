@@ -7,6 +7,7 @@ import logoTI from '../assets/logo-ti.png?format=webp'
 import { FaChevronUp } from 'react-icons/fa6'
 import DataMahasiswa from '../DataMap/MahasiswaAlumni'
 import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 const Home = () => {
 
@@ -19,6 +20,14 @@ const Home = () => {
         Button2: 'Tentang Kami',
         Button2Navigate: (() => Navigate('/Tentang')),
     }
+
+    const [isTitle, setIsTitle] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsTitle(true)
+        }, 1500);
+    })
 
     const cardData = [
         {
@@ -59,18 +68,24 @@ const Home = () => {
         <>
             <section onContextMenu={(e) => e.preventDefault()} className='relative'>
                 <div className='relative'>
-                    <div className='absolute z-10 left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
-                        <h1 className='text-white text-3xl mb-4 sm:text-3xl md:text-4xl lg:text-5xl'>Website Alumni 2024</h1>
-                        <p className='text-white text-md sm:text-md md:text-lg xl:text-xl'>Website Alumni 2024 adalah platform bagi alumni untuk terhubung, berbagi pengalaman, dan berkontribusi pada komunitas.</p>
-                        <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row gap-8 mt-8 justify-center items-center'>
-                            <button onClick={NavigateBtn.Button1Navigate} className=' border-2 border-white text-white rounded-md p-4 transition-all duration-300 hover:bg-orange-400 hover:border-orange-400'>
-                                {NavigateBtn.Button1}
-                            </button>
-                            <button onClick={NavigateBtn.Button2Navigate} className=' border-2 border-white text-white rounded-md p-4 transition-all duration-300 hover:bg-orange-400 hover:border-orange-400'>
-                                {NavigateBtn.Button2}
-                            </button>
+                    {isTitle && (
+                        <div className='absolute z-10 left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
+                            <div className='FadeIn'>
+                            <div className={`transition-all duration-500`}>
+                                <h1 className='text-white text-3xl mb-4 sm:text-3xl md:text-4xl lg:text-5xl'>Website Alumni 2024</h1>
+                                <p className='text-white text-md sm:text-md md:text-lg xl:text-xl'>Website Alumni 2024 adalah platform bagi alumni untuk terhubung, berbagi pengalaman, dan berkontribusi pada komunitas.</p>
+                            </div>
+                            <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row gap-8 mt-8 justify-center items-center'>
+                                <button onClick={NavigateBtn.Button1Navigate} className=' border-2 border-white text-white rounded-md p-4 transition-all duration-300 hover:bg-orange-400 hover:border-orange-400'>
+                                    {NavigateBtn.Button1}
+                                </button>
+                                <button onClick={NavigateBtn.Button2Navigate} className=' border-2 border-white text-white rounded-md p-4 transition-all duration-300 hover:bg-orange-400 hover:border-orange-400'>
+                                    {NavigateBtn.Button2}
+                                </button>
+                            </div>
+                            </div>
                         </div>
-                    </div>
+                    )}
                     <img className='object-cover h-[700px] w-full brightness-[.4]' src={imageBanner} alt="" />
                 </div>
                 <div className=' py-32 px-4 bg-orange-100 sm:px-4 md:px-24 lg:px-24 xl:px-24 2xl:px-32'>

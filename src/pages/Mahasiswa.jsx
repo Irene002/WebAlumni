@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import DataMahasiswa from '../DataMap/MahasiswaAlumni'
 import { useNavigate } from 'react-router-dom'
-import { FaChevronUp } from 'react-icons/fa6'
+import { FaChevronUp, FaMagnifyingGlass } from 'react-icons/fa6'
 
 const Mahasiswa = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -37,24 +37,30 @@ const Mahasiswa = () => {
         <div className='flex justify-center mb-8'>
           <h2>MAHASISWA ALUMNI</h2>
         </div>
-        <div className='flex justify-end mb-8'>
-          <input onChange={handleSearchChange} value={searchQuery} type="text" className='px-4 py-2 bg-white focus:outline-none border-white shadow-md focus:border-orange-500 border rounded-md' placeholder='Cari Mahasiswa...' />
+        <div className='flex justify-between items-center'>
+          <div>
+            <p>Total Mahasiswa: <span className='font-bold'> {filteredDataMahasiswa.length} </span></p>
+          </div>
+          <div className='flex flex-row items-center w-full max-w-[400px] min-w-[300px] gap-4 mb-8 p-4 rounded-md bg-white shadow-sm'>
+            <FaMagnifyingGlass />
+            <input onChange={handleSearchChange} value={searchQuery} type="text" className='w-full focus:outline-none' placeholder='Nama / NIM' />
+          </div>
         </div>
         <div className='grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
           {filteredDataMahasiswa.length > 0 ? (
-          filteredDataMahasiswa.slice(0, rows * 12).map((mhs, index) => (
-            <button onClick={() => Navigate(generateLink(mhs.Nama))} style={{ animationDelay: `${index * 0.2}s` }} key={index} className='FadeIn flex h-[450px] rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
-              <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
-                <p className='font-bold mb-2'>{mhs.Nama}</p>
-                <p>{mhs.NIM}</p>
-              </div>
-              <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo} />
-            </button>
-          ))
-        ) : (
-          <div className='col-span-4 text-center text-gray-500'>No Results Found</div>
-        )
-        }
+            filteredDataMahasiswa.slice(0, rows * 12).map((mhs, index) => (
+              <button onClick={() => Navigate(generateLink(mhs.Nama))} style={{ animationDelay: `${index * 0.2}s` }} key={index} className='FadeIn flex h-[450px] rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
+                <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
+                  <p className='font-bold mb-2'>{mhs.Nama}</p>
+                  <p>{mhs.NIM}</p>
+                </div>
+                <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo} />
+              </button>
+            ))
+          ) : (
+            <div className='col-span-4 text-center text-gray-500 h-screen'>No Results Found</div>
+          )
+          }
         </div>
         {rows * 12 < filteredDataMahasiswa.length && (
           <div className='flex w-full justify-center mt-12'>
