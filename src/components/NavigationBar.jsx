@@ -2,10 +2,6 @@ import { Link } from "react-router-dom"
 import logo from '../assets/logo-ti.png'
 
 const NavigationBar = () => {
-    const Links = [
-        { link: '/mahasiswa', linkname: 'Mahasiswa'},
-        { link: '/tentang', linkname: 'Tentang'}
-    ]
 
     return (
         <>
@@ -18,9 +14,8 @@ const NavigationBar = () => {
                         <p className="text-xl">East Penynsula</p>
                     </Link>
                     <li className="flex flex-row gap-8">
-                        {Links.map ((value , index) => (
-                            <Link key={index} className="transition-all duration-500 hover:scale-110" to={value.link}>{value.linkname}</Link>
-                        ))}
+                        <Link className="transition-all duration-500 hover:scale-110" to={'/mahasiswa'}>Mahasiswa</Link>
+                        <Link className="transition-all duration-500 hover:scale-110" to={'/tentang'}>Tentang</Link>
                     </li>
                 </ul>
             </nav>
