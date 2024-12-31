@@ -1,9 +1,7 @@
-import React from 'react'
-
 // COMPONTENTS
 import Routing from './routes';
-import NavigationBar from './Components/NavigationBar';
-import Footer from './Components/Footer';
+import NavigationBar from './components/NavigationBar';
+import Footer from './components/Footer';
 const App = () => {
   return (
     <>

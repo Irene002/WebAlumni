@@ -1,10 +1,10 @@
 import React, { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-const Home = lazy(() => import('../pages/Home'))
-const Mahasiswa = lazy(() => import('../Pages/Mahasiswa.jsx'))
-const About = lazy(() => import('../Pages/About.jsx'))
-const MahasiswaDetail = lazy(() => import('../Pages/MahasiswaDetail.jsx'))
+const Home = lazy(() => import('../pages/Home.jsx'))
+const Mahasiswa = lazy(() => import('../pages/Mahasiswa.jsx'))
+const About = lazy(() => import('../pages/About.jsx'))
+const MahasiswaDetail = lazy(() => import('../pages/MahasiswaDetail.jsx'))
 
 const Routing = () => {
   return (
