@@ -2,12 +2,12 @@ import React from 'react'
 
 // COMPONTENTS
 import Routing from './routes';
-import NavBar from './Components/Navbar';
+import NavigationBar from './Components/NavigationBar';
 import Footer from './components/Footer';
 const App = () => {
   return (
     <>
-    <NavBar/>
+    <NavigationBar/>
     <section>
     <Routing/>
     </section>
