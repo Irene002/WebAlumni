@@ -3,7 +3,7 @@ import React from 'react'
 // COMPONTENTS
 import Routing from './routes';
 import NavigationBar from './Components/NavigationBar';
-import Footer from './components/Footer';
+import Footer from './Components/Footer';
 const App = () => {
   return (
     <>
