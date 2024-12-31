@@ -1,44 +1,27 @@
-import React from 'react'
-import {Routes, Route} from 'react-router-dom'
+import React, { lazy, Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom'
 
-import Home from "../pages/Home";
-import Mahasiswa from '../pages/Mahasiswa';
-import Tabel from '../Tabel/Tabel'
-import TablePage from '../Tabel/TablePage';
-
-import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
-
-import MahasiswaContent from '../pages/mahasiswa/MahasiswaContent';
-import Tentang from '../pages/Tentang';
-import DosenPembimbing from '../pages/DosenPembimbing';
+const Home = lazy(() => import('../pages/Home'))
+const Mahasiswa = lazy(() => import('../Pages/Mahasiswa.jsx'))
+const About = lazy(() => import('../Pages/About.jsx'))
+const MahasiswaDetail = lazy(() => import('../Pages/MahasiswaDetail.jsx'))
 
 const Routing = () => {
   return (
-    <Routes>
-        <Route
-        path='/'
-        element={<Home/>}
-        >
-        </Route>
-        <Route path='/mahasiswa' element={<Mahasiswa/>}></Route>
-        <Route path='/tentang' element={<Tentang/>}></Route>
-        <Route path='/dosen-pembimbing' element={<DosenPembimbing/>}></Route>
-
-        {/* MAHASISWA ROUTES */}
-       {cardDataMahasiswa.map ((card, index) =>(
-        <Route
-        key={index}
-        path={card.url}
-        element={<MahasiswaContent/>}
-        >
-
-        </Route>
-       ))}
-
-        <Route path='/tabel' element={<Tabel/>}></Route>
-        <Route path='/table-page' element={<TablePage/>}></Route>
-    </Routes>
-    
+    <>
+        <Suspense fallback={
+          <div className='w-full flex justify-center items-center inset-0 bg-orange-200 h-screen'>
+            <h1 className='animate-pulse'>Loading...</h1>
+          </div>
+        }>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/mahasiswa' element={<Mahasiswa />} />
+            <Route path='/tentang' element={<About />} />
+            <Route path='/mahasiswa/:name' element={<MahasiswaDetail />} />
+          </Routes>
+        </Suspense>
+    </>
   )
 }
 

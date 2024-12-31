@@ -1,212 +1,181 @@
-
-// IMAGES
-import image1 from '../assets/image1.jpeg?format=webp';
-import angkatan from '../assets/angkatan.jpg?format=webp'
-import idax from '../assets/evandrix.jpg?format=webp'
-
-import {useState, useEffect} from "react";
-
-// LOGO
-import logo1 from '../assets/logo-ti.png?format=webp'
-import logo2 from '../assets/Hima.gif'
-import logo3 from '../assets/polnustar.png?format=webp'
-
-// DATA
-import cardDataMahasiswa from '../components/cards/cardData/CardDataMahasiswa';
-
-
-import {FaInstagram, FaArrowRight, FaFacebook} from 'react-icons/fa6'
-
-// COMPONTENTS
-import AnimationTitle from '../components/Animations/AnimationTitle.jsx'
-import AnimationInView from '../components/Animations/AnimationInView';
-import ButtonLink from '../components/Buttons/ButtonLink';
-import ButtonScrollToTop from '../components/Buttons/ButtonScrollToTop';
-
-import GalleryCard from '../components/cards/GalleryCard.jsx';
-
-import CardImage from '../components/cards/CardImage';
-
-import CardProfilMahasiswa from '../components/cards/CardProfilMahasiswa';
-import CardVisiMisi from '../components/cards/CardVisiMisi';
-
-import VisiMisiData from '../components/cards/cardData/VisiMisiData';
+import imageBanner from '../assets/angkatan.jpg?format=webp'
+import visionSVG from '../assets/visionsvg.png?format=webp'
+import missionSVG from '../assets/missionsvg.png?format=webp'
+import hima from '../assets/Hima.gif'
+import polnustar from '../assets/polnustar.png?format=webp'
+import logoTI from '../assets/logo-ti.png?format=webp'
+import { FaChevronUp } from 'react-icons/fa6'
+import DataMahasiswa from '../DataMap/MahasiswaAlumni'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
 
-    const images = [
-        image1,
-        angkatan,image1,
-        angkatan,image1,
-        angkatan,image1,
-        angkatan,image1,
-        angkatan,image1,
-        angkatan,image1,
-        angkatan,image1,
-        angkatan,image1,
-        angkatan,]
+    const shuffleCardData = [...DataMahasiswa].sort(() => Math.random() - 0.5)
 
+    const NavigateBtn = {
+        Button1: 'Daftar Mahasiswa Alumni',
+        Button1Navigate: (() => Navigate('/Mahasiswa')),
 
+        Button2: 'Tentang Kami',
+        Button2Navigate: (() => Navigate('/Tentang')),
+    }
 
+    const cardData = [
+        {
+            title: 'Geoinformasi',
+            description: 'Sistem Informasi Geografis adalah alat berbasis komputer yang menganalisis dan menampilkan data yang dirujuk secara geografis.'
+        },
+        {
+            title: 'UI/UX',
+            description: 'User Interface (UI) dan User Experience (UX) desain berfokus pada membuat produk digital yang intuitif dan menarik secara visual.'
+        },
+        {
+            title: 'Web Development',
+            description: 'Pengembangan Web adalah proses membangun dan memelihara situs web dan aplikasi web yang dapat diakses melalui internet.'
+        },
+        {
+            title: 'Data Management',
+            description: 'Data Management adalah proses penyimpanan, pengambilan, dan analisis data untuk mendukung pengambilan keputusan yang tepat.'
+        },
+    ]
 
-    AnimationTitle('TitleHome', 1.3)
+    const VisiMisi = {
+        VisiDescription: 'Visi kami adalah menjadi wadah bagi para alumni untuk terus berkembang dan berkontribusi pada masyarakat. Kami berkomitmen untuk menciptakan komunitas yang kuat dan solid, sehingga para alumni dapat saling mendukung dan berbagi pengalaman. Kami juga berharap dapat menjadi sumber inspirasi bagi generasi muda dan menjadi contoh bagi masyarakat dalam hal kesadaran sosial dan tanggung jawab. Dengan demikian, kami dapat membantu menciptakan masyarakat yang lebih baik dan lebih sejahtera.',
+        MisiDescription: 'Misi kami adalah untuk menyediakan platform bagi para alumni untuk berbagi pengetahuan, pengalaman, dan keterampilan. Kami juga berkomitmen untuk meningkatkan kesadaran dan partisipasi masyarakat dalam berbagai kegiatan sosial dan komunitas. Kami berharap dapat membantu meningkatkan kualitas hidup masyarakat dan menciptakan kesadaran akan pentingnya pendidikan dan pengembangan diri. Dengan demikian, kami dapat membantu menciptakan masyarakat yang lebih cerdas, lebih kreatif, dan lebih inovatif.'
+    }
 
-    AnimationInView('CardSambutanImage', 1)
-    AnimationInView('ContentSambutan', 1.5)
+    const handleClickTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-    AnimationInView('CardPengantarImage', 1)
-    AnimationInView('ContentPengantar', 1.5)
+    const generateLink = (nama) => {
+        return `/mahasiswa/${nama.replace(/\s+/g, '-').toLowerCase()}`
+    }
 
-    const [randomCards, setRandomCards] = useState([]);
+    const Navigate = useNavigate();
 
-    // Function to shuffle the array
-    const shuffleArray = (array) => {
-        let shuffledArray = [...array];
-        for (let i = shuffledArray.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-        }
-        return shuffledArray;
-    };
+    return (
 
-    useEffect(() => {
-        // Shuffle and pick first 3 cards
-        const shuffledCards = shuffleArray(cardDataMahasiswa).slice(0, 3);
-        setRandomCards(shuffledCards);
-    }, []);
-
-  return (
-    <section>
-        <div className='flex w-full h-[700px] relative'>
-            <div className='absolute z-10 text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' id='TitleHome'>
-            <h2>Website Alumni Edisi 2025</h2>
-            <h1>ANGKATAN 2022</h1>
-            <h2>Politeknik Negeri Nusa Utara</h2>
-            <p>Angkatan 2022 nih bos... angkatan lain mana bisa?</p>
-            </div>
-            <img className='pointer-events-none w-full h-auto object-cover brightness-50' src={angkatan} />
-        </div>
-
-        <div className='flex flex-col gap-48 px-32 mt-32 SectionContents'>
-            <div className='flex flex-row justify-between gap-8 SambutanContents'>
-                <CardImage
-                    ImageCard={idax}
-                    CardName={'Oktavianus Lumasuge, M.Kom'}
-                    TextPosition={`top-[80%] left-[45%] w-[15rem]`}
-                />
-
-                <div className='Sambutan leading-loose' id='ContentSambutan'>
-                    <h2>KATA SAMBUTAN</h2>
-                    <hr className='border-black mb-4'/>
-                    <p className='leading-[2.5] text-justify select-text cursor-auto'>Sebagai Ketua Jurusan Teknologi
-                        Informatika, saya merasa bangga dengan pencapaian para mahasiswa yang berhasil menyelesaikan
-                        Proyek Kerja Akhir. Setiap proyek yang dihasilkan bukan hanya cerminan dari kemampuan teknis dan
-                        intelektual mereka, tetapi juga membawa nilai - nilai lokal Sangihe, seperti kebersamaan, gotong
-                        royong, dan rasa cinta terhadap tanah kelahiran. Dengan memadukan teknologi modern dan kekayaan
-                        budaya, mereka telah menciptakan karya - karya yang memiliki dampak positif bagi masyarakat dan
-                        potensi lokal, sejalan dengan tantangan perkembangan zaman yang semakin dinamis. Salam hangat
-                        dan sukses selalu!</p>
-                </div>
-            </div>
-            <div className='flex flex-row justify-between gap-12 mt-32 PengantarContents'>
-                <div className='leading-[2.5] text-end' id='ContentPengantar'>
-                    <h2>KATA PENGANTAR</h2>
-                    <hr className='border-black mb-4'/>
-                    <p className='leading-[2.5] text-justify select-text cursor-auto'>Sebagai Ketua Panitia Proyek Kerja
-                        Akhir, saya merasa bangga dan bersyukur melihat hasil karya yang telah dicapai oleh para
-                        mahasiswa. Melalui berbagai tahapan proses, mulai dari perencanaan hingga implementasi, setiap
-                        proyek yang dihasilkan tidak hanya menunjukkan kemampuan akademik, tetapi juga kemampuan
-                        analitis, problem solving, dan kreativitas yang diharapkan dapat berguna bagi dunia industri an
-                        masyarakat. Website ini menjadi wadah untuk menghimpun berbagai hasil kerja keras tersebut dan
-                        juga menjadi kenangan - kenangan yang berharga bagi para alumni.</p>
-                </div>
-                <CardImage
-                    ImageCard={idax}
-                    CardName={'Christian Koloay, M.Kom'}
-                    TextPosition={`top-[80%] left-[45%] w-[15rem]`}
-                />
-            </div>
-
-            {/* CARD VISI & MISI */}
-            <div className=' flex flex-col items-center w-full'>
-            <div className='flex justify-center w-full mb-24'>
-                <h2>Visi & Misi</h2>
-            </div>
-            <div className='flex flex-col items-center gap-20 VisiMisiWrapper'>
-                {VisiMisiData.slice(0, 2).map((value, index) => (
-                    <CardVisiMisi
-                        key={index}
-                        TextTitle1={value.TextTitle1}
-                        Description1={value.Description1}
-                        TextTitle2={value.TextTitle2}
-                        Description2={value.Description2}
-                        button={value.button}
-                    />
-                ))}
-            </div>
-            </div>
-
-            {/* LIST MAHASISWA */}
-            <div>
-                <h2 className='flex justify-center py-16 text-center'>MAHASISWA ALUMNI</h2>
-                <div className='flex-wrap flex gap-8 justify-center'>
-                    {/* Cards */}
-                    {randomCards.map((card, index) => (
-                            <CardProfilMahasiswa
-                                key={index}
-                                cardMahasiswa={card}
-                                BtnLeft={<FaInstagram size={25}/>}
-                                BtnMid={<FaFacebook size={25}/>}
-                                BtnRight={<FaArrowRight size={25}/>}
-                            />
-                        )
-                    )}
-
-                </div>
-                <div className='flex justify-center mt-[4rem]'>
-                    <ButtonLink
-                        path={'/mahasiswa'}
-                        linkLabel={'Lihat Selengkapnya'}
-                    />
-                </div>
-            </div>
-
-            {/* GALERY */}
-            <div className='flex flex-col items-center gap-12'>
-                <h2 className='flex justify-center text-center'>GALLERY</h2>
-            <div className='p-4'>
-                <GalleryCard images={images}/>
-            </div>
-            </div>
-
-
-            {/* LOGOS */}
-
-            <div className=' mb-32 flex flex-col items-center'>
-                <hr className='border-zinc-500 mb-8 LineTop'/>
-                <div className='flex flex-row gap-24 justify-center ContentSpons'>
-                    <div className='flex flex-col items-center gap-4'>
-                        <img className='pointer-events-none w-32 h-32' src={logo1} alt="Teknologi Informatika"/>
-                        <h3 className='text-center'>Teknologi Informatika</h3>
+        <>
+            <section onContextMenu={(e) => e.preventDefault()} className='relative'>
+                <div className='relative'>
+                    <div className='absolute z-10 left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
+                        <h1 className='text-white text-3xl mb-4 sm:text-3xl md:text-4xl lg:text-5xl'>Website Alumni 2024</h1>
+                        <p className='text-white text-md sm:text-md md:text-lg xl:text-xl'>Website Alumni 2024 adalah platform bagi alumni untuk terhubung, berbagi pengalaman, dan berkontribusi pada komunitas.</p>
+                        <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row gap-8 mt-8 justify-center items-center'>
+                            <button onClick={NavigateBtn.Button1Navigate} className=' border-2 border-white text-white rounded-md p-4 transition-all duration-300 hover:bg-orange-400 hover:border-orange-400'>
+                                {NavigateBtn.Button1}
+                            </button>
+                            <button onClick={NavigateBtn.Button2Navigate} className=' border-2 border-white text-white rounded-md p-4 transition-all duration-300 hover:bg-orange-400 hover:border-orange-400'>
+                                {NavigateBtn.Button2}
+                            </button>
+                        </div>
                     </div>
-                    <div className='flex flex-col items-center gap-4 w-64'>
-                        <img className='pointer-events-none w-fit h-32' src={logo2} alt="Teknologi Informatika"/>
-                        <h3 className='text-center'>HIMPUNAN MAHASISWA PROGRAM STUDI SISTEM INFORMASI</h3>
+                    <img className='object-cover h-[700px] w-full brightness-[.4]' src={imageBanner} alt="" />
+                </div>
+                <div className=' py-32 px-4 bg-orange-100 sm:px-4 md:px-24 lg:px-24 xl:px-24 2xl:px-32'>
+                    <div className='justify-between mb-24 sm:flex sm:flex-col sm:items-center md:flex-col md:items-center xl:flex xl:flex-row xl:mb-4'>
+                        <div className='sm:w-full md:w-full lg:w-full xl:w-[50%] 2xl:w-[50%]'>
+                            <h2 className='mb-2'>VISION</h2>
+                            <p className='leading-10'>{VisiMisi.VisiDescription}</p>
+                        </div>
+                        <div>
+                            <img className='h-auto w-[600px] flex-shrink-0' src={visionSVG} alt="vision" />
+                        </div>
                     </div>
-                    <div className='flex flex-col items-center gap-4 w-36'>
-                        <img className='pointer-events-none w-32 h-32' src={logo3} alt="Teknologi Informatika"/>
-                        <h3 className='text-center'>Politeknik Negeri Nusa Utara</h3>
+
+                    <div className='justify-between flex-col-reverse items-center flex sm:flex sm:flex-col-reverse md:flex-col-reverse md:flex xl:flex xl:flex-row'>
+                        <div>
+                            <img className='h-auto w-[550px] flex-shrink-0' src={missionSVG} alt="" />
+                        </div>
+                        <div className='w-full sm:w-full md:w-full xl:w-[55%]'>
+                            <h2 className='mb-2'>MISSION</h2>
+                            <p className='leading-10'>{VisiMisi.MisiDescription}</p>
+                        </div>
+
                     </div>
                 </div>
-                <hr className='border-zinc-500 mt-8 LineBottom'/>
-            </div>
-        </div>
 
-        <div className='flex justify-center'>
-            <ButtonScrollToTop/>
-        </div>
-    </section>
-  )
+                <div className='bg-orange-600 p-12 flex justify-center'>
+                    <div className='text-white'>
+                        <div className='mb-12 text-center'>
+                            <h2>METRIKS KAMI</h2>
+                        </div>
+                        <div className='justify-between flex-col flex gap-12 sm:flex-row md:flex-row lg:flex-row '>
+                            <div className='text-center'>
+                                <h3 className='text-3xl'>{DataMahasiswa.length}</h3>
+                                <p>Lulusan</p>
+                            </div>
+                            <div className='text-center'>
+                                <h3 className='text-3xl'>18</h3>
+                                <p>Angkatan</p>
+                            </div>
+                            <div className='text-center'>
+                                <h3 className='text-3xl'>18</h3>
+                                <p>Angkatan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='bg-orange-100 p-32 px-4 pb-0 sm:px-8 md:px-12 lg:px-24 xL:px-32'>
+                    <div className='flex justify-center text-center mb-24'>
+                        <h2>PROGRAM ALUMNI</h2>
+                    </div>
+                    <div className='grid grid-cols-1 gap-8 w-full sm:grid-cols-1 md:grid-cols-2'>
+                        {cardData.map((value, index) => (
+                            <div key={index} className=' rounded-md bg-white p-8 border border-orange-400 transition-all duration-500 hover:scale-[1.03]'>
+                                <h3 className='mb-2'>{value.title}</h3>
+                                <p className='leading-loose'>{value.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className='p-32 px-4 pb-0 bg-orange-100 sm:px-8 md:px-12 lg:px-24 xl:px-32'>
+                    <div className='flex justify-center text-center mb-24'>
+                        <h2>MAHASISWA ALUMNI</h2>
+                    </div>
+                    <div className='grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+                        {shuffleCardData.slice(0, 4).map((mhs, index) => (
+                            <button onClick={() => Navigate(generateLink(mhs.Nama))} key={index} className='flex h-[450px] bg-black rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
+                                <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
+                                    <p className='font-bold mb-2'>{mhs.Nama}</p>
+                                    <p>{mhs.NIM}</p>
+                                </div>
+                                <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo} />
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                <div className='bg-orange-100 p-32 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32'>
+                    <hr className='border-orange-400 mb-12' />
+                    <div className='grid grid-cols-1 gap-24 w-full items-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-0'>
+                        <div className='rounded-md text-center flex flex-col gap-4 items-center'>
+                            <img className='w-44 h-auto' src={polnustar} alt="" />
+                            <p className='w-60'>Politeknik Negeri Nusa Utara</p>
+                        </div>
+                        <div className='rounded-md text-center flex flex-col gap-8 items-center'>
+                            <img className='w-72 h-auto' src={hima} alt="" />
+                            <p className='w-60'>Himpunan Mahasiswa Program Studi Sistem Informasi</p>
+                        </div>
+                        <div className='rounded-md text-center flex flex-col gap-8 items-center'>
+                            <img className='w-44 h-auto' src={logoTI} alt="" />
+                            <p className='w-60'>Jurusan Teknologi Informatika</p>
+                        </div>
+                    </div>
+                    <hr className='border-orange-400 mt-12' />
+                </div>
+
+                <button onClick={handleClickTop} className='absolute -translate-x-1/2 -translate-y-1/2 -bottom-10 left-1/2 bg-orange-600 text-white rounded-full p-4 transition-all duration-300 hover:-bottom-9'><FaChevronUp /></button>
+
+
+
+            </section>
+
+        </>
+    )
 }
 
 export default Home

@@ -3,66 +3,31 @@
 @tailwind utilities;
 
 *{
-  font-family: Inter, sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter';
 }
 
-html,body{
-  background-color: #FEF3E2;
-  margin: 0;
-  padding: 0;
+body, html{
+  overflow-x:hidden;
   user-select: none;
-  overflow-x: hidden;
-  cursor:default;
-}
-
-body::-webkit-scrollbar{
-  display: none;
+  cursor: default;
 }
 
 /* MISC */
-
-.scrollbar-hide{
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+li{
+  list-style: none;
 }
 
-.scrollbar-hide::-webkit-scrollbar{
-  display: none;
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
-.CardContainer:hover .ProfileImage img{
-  scale: 1.1 !important;
-}
-
-
-.LineHorizontal{
-  display: none;
-}
-
-.menuBtn{
-  display: none;
-  cursor: pointer;
-}
-
-
-td,th{
-  border: solid 1px black;
-  padding: 1rem;
-}
-
-table{
-  border: solid black 1px;
-  border-collapse: collapse;
-}
-
-h1, h2, h3{
+h1,h2,h3,h4{
   font-weight: bold;
 }
 
 h1{
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 h2{
@@ -70,477 +35,46 @@ h2{
 }
 
 h3{
+  font-size: 1.5rem;
+}
+
+h4{
+  font-size: 1.2rem;
+}
+
+p{
   font-size: 1rem;
+  line-height: 1.6;
 }
 
-nav{
-  background-color: #FA812F;
-  opacity: 0;
-}
 
-footer{
-  background-color: #FA4032;
-}
-
-/* NAVBAR */
-#NavLogo{
-  perspective: 1000px;
-}
-
-#NavLogo img{
-  transform-style: preserve-3d;
-  animation: spin 10s infinite linear;
-}
-
-@keyframes spin{
-  from{
-    transform: rotateY(0deg);
-  }
-  to{
-    transform: rotateY(360deg);
-  }
-}
-
-@keyframes menuAnimate{
-  from{
-    opacity: 0;
-    transform: translateY(-50px);
-  } to{
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* CONTENTS */
 
-.CardImage:before{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  top: 120%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(0deg, #faa73a 20%, transparent);
-  z-index: 1;
+.CardMahasiswa:hover img {
+  transform: scale(1.0);
 }
 
-
-.CardImage:hover img{
-  scale: 1.1;
+.CardMahasiswa:hover .CardMahasiswaLabel{
+  bottom: -1.25rem
 }
 
-.TextContainerVisiMisi{
-  user-select: text;
-  cursor:auto;
+/* ANIMATION */
+.FadeIn{
+  opacity: 0;
+  visibility: hidden;
+  animation: fadein 1s forwards;
 }
 
-.VisiMisiCard button{
-  width: fit-content;
-}
-
-.ArrowDown{
-  transition: transform 0.5s ease-in-out;
-  transform: rotateY(0deg);
-
-}
-
-.rotateArrow{
-  transition: transform 0.5s ease-in-out;
-  transform: rotate(180deg);
-}
-
-@keyframes fade-down {
+@keyframes fadein {
   from {
-    visibility: hidden;
     opacity: 0;
-    max-height: 0;
-    transform-origin: bottom;
-    transform: translateY(-50px);
+    visibility: hidden;
+    transform: translateY(40px);
   }
   to {
     visibility: visible;
-    opacity: 1;
-    max-height: 3100px;
-    transform-origin: top;
     transform: translateY(0);
-  }
-}
-
-
-@keyframes fade-up {
-  from{
     opacity: 1;
-    max-height: 2000px;
-    transform-origin: top;
-    transform: translateY(0);
-  }
-  to{
-    visibility: hidden;
-    opacity: 0;
-    max-height: 0px;
-    transform-origin: top;
-    transform: translateY(-50px);
-  }
-
-}
-
-.fade-down{
-  animation: fade-down 1.1s forwards;
-  overflow-y: hidden;
-}
-
-.fade-up{
-  animation: fade-up 1.1s forwards;
-  overflow-y: hidden;
-}
-
-#ImageHomeCard{
-  width: 20rem;
-}
-
-.Sambutan{
-  width: 76%;
-}
-.Pengantar{
-  width: 76%;
-}
-
-.PrimaryBtn{
-  background-color: #FA812F;
-}
-
-
-.IconBtn{
-  scale: 0;
-}
-
-@keyframes scaleBtn {
-  from{
-    scale: 0;
-  }
-  to{
-    scale: 1.0;
-  }
-  
-}
-
-#CardImage, 
-#ContentRight, 
-#TitleHome, 
-#CardSambutanImage,
-#ContentSambutan,
-#ContentPengantar,
-#CardPengantarImage
-{
-  opacity: 0;
-}
-
-
-/* BUTTONS */
-.ScrollBtn{
-  background-color: #FA4032;
-}
-
-/* BREAKPOINTS */
-@media (max-width:2560px){
-  #ContentSambutan{
-    width: 83%;
-  }
-
-  #ContentPengantar{
-    width: 83%;
-  }
-
-  .LineTop{
-    width: 70%;
-  }
-  .LineBottom{
-    width: 70%;
-  }
-
-  .menuHome{
-    display: none;
-  }
-}
-
-@media(max-width:1440px){
-  #ContentSambutan{
-    width: 70%;
-    max-width: 100%;
-  }
-
-  #GalleryContainer{
-    width: 65rem;
-  }
-
-  #ContentPengantar{
-    width: 70%;
-    max-width:100%;
-  }
-
-  .SectionContents{
-    padding: 6rem 3rem;
-  }
-
-  .LineTop{
-    width: 100%;
-  }
-  .LineBottom{
-    width: 100%;
-  }
-}
-
-@media(max-width:1366px){
-  #Navbar{
-    padding: 2rem 2rem;
-  }
-
-  #CardImage{
-    width: 40%;
-  }
-
-  .PengantarContents{
-    gap: 0;
-  }
-
-  .SambutanContents{
-    gap: 0;
-  }
-}
-
-@media(max-width:1222px){
-
-  #CarddImage{
-    width: 60% !important;
-  }
-}
-
-@media (max-width:1024px){
-
-  .SambutanContents{
-    flex-direction: column;
-    gap: 4rem;
-  }
-
-  #ContentSambutan{
-    width: 100%;
-  }
-
-  .PengantarContents{
-    flex-direction: column;
-    gap: 4rem;
-  }
-
-  #ContentPengantar{
-    width: 100%;
-  }
-
-  .VisiMisiWrapper{
-    width: 100%;
-  }
-
-  .VisiMisiCard{
-    width: 100%;
-  }
-
-  .MahasiswaContentWrapper{
-    flex-direction: column !important;
-    align-items: center;
-    gap: 4rem;
-  }
-
-  #CardImage{
-    width: 50%;
-  }
-
-  .MahasiswaContentWrapper div{
-    opacity: 1 !important;
-  }
-
-  #TitleHome{
-    width: 60%;
-  }
-
-  .CardsWrapper{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .animate-slide-down{
-    animation: inherit;
-    opacity: 1;
-  }
-
-  .animate-slide-up{
-    animation: inherit;
-    opacity: 1;
-  }
-
-  #CardSambutanImage, #ContentSambutan, #ContentPengantar, #CardPengantarImage{
-    opacity: 1;
-  }
-
-  #HomeCard1,
-#HomeCard2,
-#HomeCard3,
-#HomeCard4,
-#HomeCard5,
-#HomeCard6,
-#HomeCard7,
-#HomeCard8,
-#HomeCard9,
-#HomeCard10,
-#HomeCard11,
-#HomeCard12
-{
-  opacity: 1;
-}
-
-Footer{
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-}
-}
-
-@media (max-width:948px){
-  footer ul{
-    flex-direction: column !important;
-    align-items: center;
-    gap: 1rem !important;
-  }
-
-  footer{
-    flex-direction: column !important;
-    gap: 2rem;
-    align-items: center;
-    text-align: center;
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-
-  .LineHorizontal{
-    display: block;
-    width: 100%;
-    min-width: 50%;
-  }
-}
-
-@media (max-width:768px){
-  .SambutanContents{
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem !important;
-  }
-
-  .VisiMisiCard button:hover{
-    background-color: inherit  !important;
-    scale: 1.0 !important;
-  }
-
-  .VisiMisiWrapper{
-    flex-direction: column;
-    width: 100%;
-    justify-content: inherit;
-    align-items: center;
-  }
-
-
-  .SectionMahasiswa{
-    padding-left:1rem;
-    padding-right: 1rem;
-  }
-
-  .MahasiswaContentWrapper{
-    align-items: center;
-  }
-
-  #CardImage{
-    width: 50%;
-  }
-
-  #ContentSambutan{
-    width: 100%;
-  }
-
-  .PengantarContents{
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem !important;
-  }
-
-  #ContentPengantar{
-    width: 100%;
-  }
-}
-
-@media (max-width:700px){
-  nav ul{
-    display: none !important;
-  }
-
-  .menuBtn{
-    display: block;
-  }
-
-  .menuHome{
-    display: none;
-    transition: all 0.5s ease-in-out;
-    animation: menuAnimate 0.3s ease-out;
-  }
-  
-  .visible{
-    display: flex;
-  }
-
-}
-
-@media (max-width:680px){
-  .ContentSpons{
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-  }
-
-}
-
-@media(max-width:450px){
-  #CardImage{
-    width: 100%;
-  }
-}
-
-@media (max-width:425px){
-  #TitleHome h1{
-    font-size: 3rem;
-  }
-  #CardImage{
-    width: 100%;
-  }
-
-  #TitleHome{
-    text-align: center;
-    width: 80%;
-  }
-
-  .VisiMisiWrapper{
-    width: 100%;
-  }
-
-  .VisiMisiCard{
-    width: 100%;
-  }
-
-  .SectionContents{
-    padding-left:1rem;
-    padding-right: 1rem;
-  }
-
-}
-
-@media (max-width:320px){
-  .SectionContents{
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }
