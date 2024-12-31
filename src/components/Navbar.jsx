@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import logo from '../assets/logo-ti.png'
 
-const Navbar = () => {
+const NavBar = () => {
 
     const Links = [
         { link: '/mahasiswa', linkname: 'Mahasiswa'},
@@ -29,4 +29,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default NavBar
