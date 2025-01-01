@@ -5,17 +5,37 @@ import farrel from '../assets/farrel.jpg?format=webp'
 import geo from '../assets/geo.jpg?format=webp'
 import fadhilla from '../assets/dilla.jpg?format=webp'
 import cici from '../assets/cici.jpg?format=webp'
-import gabriella from '../assets/gabriella.png?format=webp'
+import gabriella from '../assets/gabriella.jpg?format=webp'
 import iya from '../assets/iya.jpg?format=webp'
 import billy from '../assets/billy.jpg?format=webp'
 import idax from '../assets/evandrix.jpg?format=webp'
 import supriadi from '../assets/supriadi.jpg?format=webp'
+import sean from '../assets/sean.jpg?format=webp'
+import januard from '../assets/januard.jpg?format=webp'
+import niken from '../assets/niken.jpg?format=webp'
+import indriani from '../assets/indriani.jpg?format=webp'
+import delon from '../assets/delon.jpg?format=webp'
+import mega from '../assets/mega.jpg?format=webp'
+import andika from '../assets/andika.jpg?format=webp'
+import amel from '../assets/amel.jpg?format=webp'
+import muzamil from '../assets/muzamil.jpg?format=webp'
+import reisky from '../assets/reisky.jpg?format=webp'
+import valen from '../assets/valen.jpg?format=webp'
+import christy from '../assets/christy.jpg?format=webp'
+import aisyah from '../assets/aisyah.jpg?format=webp'
+import julieo from '../assets/julieo.jpg?format=webp'
+import faujia from '../assets/faujia.jpg?format=webp'
+import stifangki from '../assets/stifangki.jpg?format=webp'
+import jenifer from '../assets/jenifer.jpg?format=webp'
+import stevani from '../assets/stevani.jpg?format=webp'
+
+
 
 
 
 const DataMahasiswa = [
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: amel,
         Nama: 'Amels Wisye Margareth Sasauw',
         NIM: '2205002',
         Angkatan: '2022',
@@ -42,7 +62,7 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: reisky,
         Nama: 'Reisky Mendalora Sahentumuwo',
         NIM: '2205009',
         Angkatan: '2022',
@@ -60,19 +80,19 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
-        Nama: 'Jauanrd Reynaldi Alexandro Andaria',
+        Photo: januard,
+        Nama: 'Januard Reynaldi Alexandro Andaria',
         NIM: '2205013',
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: valen,
         Nama: 'Greyfer Valentino Papendang Legrants',
         NIM: '2205014',
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: mega,
         Nama: 'Mega Olivia Busia Pinta',
         NIM: '2205015',
         Angkatan: '2022',
@@ -84,13 +104,13 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: christy,
         Nama: 'Christy Stevani Tamusa',
         NIM: '2205017',
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: aisyah,
         Nama: 'Sitti Aisyah Mahare',
         NIM: '2205019',
         Angkatan: '2022',
@@ -108,7 +128,7 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: andika,
         Nama: 'Andika Eka Koming',
         NIM: '2205023',
         Angkatan: '2022',
@@ -120,7 +140,7 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: faujia,
         Nama: 'Faujia Kondoalumang',
         NIM: '2205025',
         Angkatan: '2022',
@@ -138,7 +158,7 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: julieo,
         Nama: 'Julieo Yusuf Kagingge',
         NIM: '2205031',
         Angkatan: '2022',
@@ -153,8 +173,8 @@ const DataMahasiswa = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
-        Nama: 'Stifangki Josua Kakunsi',
+        Photo: stifangki,
+        Nama: 'Stifangki Josua Rivan Kakunsi',
         NIM: '2205033',
         Angkatan: '2022',
     },
@@ -165,25 +185,25 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: delon,
         Nama: 'Novaldi Delon Takalalumang',
         NIM: '2205038',
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: jenifer,
         Nama: 'Jenifer Lalenoh',
         NIM: '2205039',
         Angkatan: '2022',
     },
     {
         Photo: 'https://via.placeholder.com/150',
-        Nama: 'Revalin Wolff',
+        Nama: 'Revalin Terah Wolff',
         NIM: '2205040',
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: stevani,
         Nama: 'Stevani Patiri',
         NIM: '2205041',
         Angkatan: '2022',
@@ -195,7 +215,7 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: muzamil,
         Nama: 'Muzamil Paputungan',
         NIM: '2205043',
         Angkatan: '2022',
@@ -225,7 +245,7 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: niken,
         Nama: 'Aniken Amasya Lendeon',
         NIM: '2205050',
         Angkatan: '2022',
@@ -243,7 +263,7 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: indriani,
         Nama: 'Indriani Gratsia Tumimbang',
         NIM: '2205054',
         Angkatan: '2022',
@@ -274,7 +294,7 @@ const DataMahasiswa = [
     },
     {
         Photo: 'https://via.placeholder.com/150',
-        Nama: 'Vanessa Bundel',
+        Nama: 'Vanessa Tesalonika Dhea Bundel',
         NIM: '2205061',
         Angkatan: '2022',
     },
@@ -300,7 +320,7 @@ const DataMahasiswa = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: sean,
         Nama: 'Sean Ishak Adare',
         NIM: '2205066',
         Angkatan: '2022',

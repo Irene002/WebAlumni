@@ -35,7 +35,7 @@ const Home = () => {
             description: 'Sistem Informasi Geografis adalah alat berbasis komputer yang menganalisis dan menampilkan data yang dirujuk secara geografis.'
         },
         {
-            title: 'UI/UX',
+            title: 'Desain UI/UX',
             description: 'User Interface (UI) dan User Experience (UX) desain berfokus pada membuat produk digital yang intuitif dan menarik secara visual.'
         },
         {
@@ -118,15 +118,11 @@ const Home = () => {
                         </div>
                         <div className='justify-between flex-col flex gap-12 sm:flex-row md:flex-row lg:flex-row '>
                             <div className='text-center'>
-                                <h3 className='text-3xl'>{DataMahasiswa.length}</h3>
+                                <h3 className='text-3xl mb-2'>{DataMahasiswa.length}</h3>
                                 <p>Lulusan</p>
                             </div>
                             <div className='text-center'>
-                                <h3 className='text-3xl'>18</h3>
-                                <p>Angkatan</p>
-                            </div>
-                            <div className='text-center'>
-                                <h3 className='text-3xl'>18</h3>
+                                <h3 className='text-3xl mb-2'>1</h3>
                                 <p>Angkatan</p>
                             </div>
                         </div>
