@@ -33,23 +33,32 @@ const Mahasiswa = () => {
 
   return (
     <>
-      <section onContextMenu={(e) => e.preventDefault()} className='p-32 px-4 pb-64 sm:px-8 md:px-12 lg:px-24 xl:px-32 bg-orange-100 relative'>
-        <div className='flex justify-center mb-8'>
+      <section onContextMenu={(e) => e.preventDefault()} className='p-32 px-4 pb-64 sm:px-8 md:px-12 lg:px-24 2xl:px-32 bg-orange-100 relative'>
+        <div className='flex justify-center mb-8 text-center'>
           <h2>MAHASISWA ALUMNI</h2>
         </div>
-        <div className='flex justify-between items-center'>
+        <div className='flex flex-col items-center gap-4 mb-12 lg:flex-row lg:justify-between'>
           <div>
-            <p>Total Mahasiswa: <span className='font-bold'> {filteredDataMahasiswa.length} </span></p>
+            <p>Found
+              <span className='font-bold'> {filteredDataMahasiswa.length} </span>
+              of 
+              <span className='font-bold'> {DataMahasiswa.length} </span>
+            </p>
           </div>
-          <div className='flex flex-row items-center w-full max-w-[400px] min-w-[300px] gap-4 mb-8 p-4 rounded-md bg-white shadow-sm'>
+          {/* <div className='flex flex-row items-center w-full max-w-[400px] min-w-[300px] gap-4 p-4 rounded-md bg-white shadow-sm'>
             <FaMagnifyingGlass />
             <input onChange={handleSearchChange} value={searchQuery} type="text" className='w-full focus:outline-none' placeholder='Nama / NIM' />
+          </div> */}
+          <div className='relative'>
+            <FaMagnifyingGlass className='absolute left-6 top-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-500' />
+            <input onChange={handleSearchChange} value={searchQuery} type="text" className='focus:outline-orange-500 p-4 rounded-md shadow-md  pl-12 transition-all duration-500 w-[300px] sm:w-[400px] lg:w-[250px] lg:focus:w-[400px]' placeholder='Nama / NIM' />
           </div>
         </div>
-        <div className='grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+        <div className='flex justify-center'>
+        <div className='grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
           {filteredDataMahasiswa.length > 0 ? (
             filteredDataMahasiswa.slice(0, rows * 12).map((mhs, index) => (
-              <button onClick={() => Navigate(generateLink(mhs.Nama))} style={{ animationDelay: `${index * 0.2}s` }} key={index} className='FadeIn flex h-[450px] rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
+              <button onClick={() => Navigate(generateLink(mhs.Nama))} style={{ animationDelay: `${index * 0.2}s` }} key={index} className='FadeIn flex h-[450px] w-full max-w-[390px] min-w-[290px] rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
                 <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
                   <p className='font-bold mb-2'>{mhs.Nama}</p>
                   <p>{mhs.NIM}</p>
@@ -61,6 +70,7 @@ const Mahasiswa = () => {
             <div className='col-span-4 text-center text-gray-500 h-screen'>No Results Found</div>
           )
           }
+        </div>
         </div>
         {rows * 12 < filteredDataMahasiswa.length && (
           <div className='flex w-full justify-center mt-12'>

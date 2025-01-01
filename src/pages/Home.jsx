@@ -15,10 +15,10 @@ const Home = () => {
 
     const NavigateBtn = {
         Button1: 'Daftar Mahasiswa Alumni',
-        Button1Navigate: (() => Navigate('/Mahasiswa')),
+        Button1Navigate: (() => Navigate('/mahasiswa')),
 
         Button2: 'Tentang Kami',
-        Button2Navigate: (() => Navigate('/Tentang')),
+        Button2Navigate: (() => Navigate('/tentang')),
     }
 
     const [isTitle, setIsTitle] = useState(false)
@@ -147,13 +147,14 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='p-32 px-4 pb-0 bg-orange-100 sm:px-8 md:px-12 lg:px-24 xl:px-32'>
+                <div className='p-32 px-4 pb-0 bg-orange-100 sm:px-8 md:px-12 lg:px-24 xl:px-24 2xl:px-32'>
                     <div className='flex justify-center text-center mb-24'>
                         <h2>MAHASISWA ALUMNI</h2>
                     </div>
-                    <div className='grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+                    <div className='flex justify-center'>
+                    <div className='grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
                         {shuffleCardData.slice(0, 4).map((mhs, index) => (
-                            <button onClick={() => Navigate(generateLink(mhs.Nama))} key={index} className='flex h-[450px] bg-black rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
+                            <button onClick={() => Navigate(generateLink(mhs.Nama))} key={index} className='flex h-[450px] w-full max-w-[390px] min-w-[290px] bg-black rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
                                 <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
                                     <p className='font-bold mb-2'>{mhs.Nama}</p>
                                     <p>{mhs.NIM}</p>
@@ -161,6 +162,7 @@ const Home = () => {
                                 <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo} />
                             </button>
                         ))}
+                    </div>
                     </div>
                 </div>
 

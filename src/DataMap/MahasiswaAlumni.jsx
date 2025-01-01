@@ -148,6 +148,9 @@ const DataMahasiswa = [
         Nama: 'Supriadinata Masihor',
         NIM: '2205032',
         Angkatan: '2022',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
     },
     {
         Photo: 'https://via.placeholder.com/150',
