@@ -27,7 +27,7 @@ const Home = () => {
         setTimeout(() => {
             setIsTitle(true)
         }, 1500);
-    })
+    }, [])
 
     const cardData = [
         {

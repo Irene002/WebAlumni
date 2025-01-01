@@ -30,10 +30,12 @@ const MahasiswaDetail = () => {
             <br />
             <hr className='border-black' />
             <br />
+            {(mahasiswa.judul) && (
             <div className='mb-4 flex flex-col gap-2'>
               <h3>Judul Proyek</h3>
-              <p>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.</p>
+              <p>{mahasiswa.judul}</p>
             </div>
+            )}
             <h3>Abstrak</h3>
             <p className='leading-[2.5rem] text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptates exercitationem perferendis reprehenderit incidunt recusandae totam minima, perspiciatis commodi voluptatum tenetur reiciendis ipsum asperiores saepe atque ad inventore quas aliquid officia iusto nobis facilis minus mollitia. Ipsum, voluptate omnis. Neque repellat rem dolores adipisci dolor deserunt illum eius, ab ducimus quas eaque amet consectetur impedit, explicabo labore itaque veritatis debitis alias minima enim atque! Saepe, adipisci esse. Temporibus sequi nam magni incidunt debitis quis ad, minima dolorem ipsam quam perspiciatis autem! Fuga odio sequi alias numquam quam voluptatem molestiae, atque perferendis blanditiis aliquid, labore eveniet maiores, aliquam iusto illo odit quasi dicta. Odit aliquid sed nobis omnis delectus dignissimos assumenda voluptates vel minus fuga quidem ad molestiae asperiores, nemo quisquam! Consequuntur minus rem ipsum eligendi non iure, unde a vitae. Reiciendis beatae doloremque id. Nulla impedit velit suscipit rem dolor ipsum nostrum, id, similique facilis sapiente tempora error, esse dignissimos nesciunt? Reiciendis molestias consequatur quasi cupiditate laboriosam culpa nihil eius quis vero natus maiores cumque suscipit quod, esse sit libero amet sapiente voluptas quos aspernatur placeat sint error? Illum voluptas ratione beatae, necessitatibus libero blanditiis quibusdam natus maiores totam, nam eaque perferendis, assumenda nisi illo numquam labore harum sequi aspernatur?</p>
             <button className='bg-orange-500 rounded-md shadow-md text-white p-4 mt-4 transition-all duration-500 hover:bg-orange-400'> Lihat Journal</button>
