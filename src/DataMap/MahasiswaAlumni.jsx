@@ -28,6 +28,7 @@ import faujia from '../assets/faujia.jpg?format=webp'
 import stifangki from '../assets/stifangki.jpg?format=webp'
 import jenifer from '../assets/jenifer.jpg?format=webp'
 import stevani from '../assets/stevani.jpg?format=webp'
+import marentek from '../assets/marentek.jpg?format=webp'
 
 
 
@@ -257,7 +258,7 @@ const DataMahasiswa = [
         Angkatan: '2022',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: marentek,
         Nama: 'Marchel Hezzel Marentek',
         NIM: '2205052',
         Angkatan: '2022',
