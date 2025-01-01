@@ -1,3 +1,5 @@
+// PHOTO GAMBAR
+
 import alicia from '../assets/alicia.jpg?format=webp'
 import achel from '../assets/achel.jpg?format=webp'
 import leo from '../assets/leo.jpg?format=webp'
@@ -31,6 +33,14 @@ import stevani from '../assets/stevani.jpg?format=webp'
 import marentek from '../assets/marentek.jpg?format=webp'
 import tirsa from '../assets/tirsa.jpg?format=webp'
 import debora from '../assets/debora.jpg?format=webp'
+
+// LAMPIRAN
+
+// Sean
+import seanLampiran1 from '../assets/lampiran/sean/Picture1.png?format=jpg'
+import seanLampiran2 from '../assets/lampiran/sean/Picture2.png?format=jpg'
+
+
 
 
 
@@ -499,8 +509,10 @@ const DataMahasiswa = [
         NIM: '2205066',
         Angkatan: '2022',
         judul: 'Pengembangan Frontend Website Attendance Management System Berbasis ReactJS & TailwindCSS',
-        lampiran: 'https://via.placeholder.com/150',
-        lampiran1: 'https://via.placeholder.com/150',
+        abstrak: 'Attendance Management System (AMS) merupakan sebuah aplikasi berbasis web yang dirancang untuk mempermudah pengelolaan data kehadiran secara efisien dan terintegrasi. Sistem ini bertujuan untuk menggantikan metode manual yang rentan terhadap kesalahan pencatatan dan membutuhkan waktu lama dengan solusi digital yang lebih akurat dan mudah digunakan. AMS memungkinkan pengguna, baik administrator maupun pengguna akhir, untuk mencatat, memantau, dan mengelola kehadiran secara real - time melalui antarmuka yang intuitif. Pengembangan AMS menggunakan teknologi ReactJS, Vite, TailwindCSS untuk antarmuka pengguna, serta ExpressJS pada sisi backend, memastikan performa yang cepat dan responsif. Sistem ini mendukung berbagai fitur seperti pencatatan kehadiran berbasis waktu nyata, pengelolaan data pengguna, laporan kehadiran yang dapat diunduh, dan pengaturan izin pengguna. Dengan implementasi AMS, institusi pendidikan, perusahaan, maupun organisasi lainnya dapat meningkatkan efisiensi pengelolaan kehadiran, mengurangi risiko kesalahan data, serta mempermudah analisis kehadiran melalui laporan yang komprehensif. Sistem ini memberikan solusi yang relevan untuk kebutuhan manajemen kehadiran modern.',
+        journalLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        lampiran: seanLampiran1,
+        lampiran1: seanLampiran2,
         lampiran2: 'https://via.placeholder.com/150',
     },
 ]
