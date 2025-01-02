@@ -9,7 +9,7 @@ const Angkatan2019 = lazy(() => import('../pages/angkatan/Angkatan2019.jsx'))
 const Angkatan2020 = lazy(() => import('../pages/angkatan/Angkatan2020.jsx'))
 const Angkatan2021 = lazy(() => import('../pages/angkatan/Angkatan2021.jsx'))
 const Angkatan2022 = lazy(() => import('../pages/angkatan/Angkatan2022.jsx'))
-const SpeedInsights = lazy(() => import('../pages/misc/SpeedInsights.jsx'))
+const SpeedInsights = lazy(() => import('../pages/misc/SpeedInsighting.jsx'))
 
 const Routing = () => {
   return (

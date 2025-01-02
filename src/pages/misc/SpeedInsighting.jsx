@@ -1,6 +1,6 @@
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-const SpeedInsights = () => {
+const SpeedInsighting = () => {
   return (
     <>
     <section  className="bg-orange-100">
@@ -12,4 +12,4 @@ const SpeedInsights = () => {
   )
 }
 
-export default SpeedInsights
+export default SpeedInsighting
