@@ -60,7 +60,7 @@ const Angkatan2022 = () => {
                   <p className='font-bold mb-2'>{mhs.Nama}</p>
                   <p>{mhs.NIM}</p>
                 </div>
-                <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo} />
+                <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo || 'https://via.placeholder.com/150'} />
               </button>
             ))
           ) : (

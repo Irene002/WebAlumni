@@ -14,8 +14,10 @@ const Mahasiswa = () => {
           </div>
           <div className="flex justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-12">
-            {DataAngkatan.slice(0,2).map((angkatan, index) => (
-              <button style={{ animationDelay: `${index * 0.5}s` }}  onClick={() => Navigate(`/mahasiswa/${angkatan.Angkatan}`)} className="FadeIn w-full max-w-[400px] min-w-[290px] bg-white shadow-md rounded-md p-8 border font-bold border-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300" key={index}>{angkatan.Angkatan} - {angkatan.NamaAngkatan}</button>
+            {DataAngkatan.map((angkatan, index) => (
+              <button style={{ animationDelay: `${index * 0.5}s` }}  onClick={() => Navigate(`/mahasiswa/${angkatan.Angkatan}`)} className="FadeIn w-full max-w-[400px] min-w-[290px] bg-white shadow-md rounded-md p-8 border font-bold border-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300" key={index}>{angkatan.Angkatan} 
+              {(angkatan.NamaAngkatan) ? (` - ${angkatan.NamaAngkatan}`) : ('')}
+              </button>
             ))}
           </div>
           </div>

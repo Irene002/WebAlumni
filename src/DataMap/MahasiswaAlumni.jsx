@@ -40,6 +40,12 @@ import debora from '../assets/debora.jpg?format=webp'
 import seanLampiran1 from '../assets/lampiran/sean/Picture1.png?format=jpg'
 import seanLampiran2 from '../assets/lampiran/sean/Picture2.png?format=jpg'
 
+// PHOTO GAMBAR 2019
+import gina from '../assets/2021/christy.png?format=webp'
+
+// PHOTO GAMBAR 2020
+import judha from '../assets/2021/judha.png?format=webp'
+
 // PHOTO GAMBAR 2021
 import alesandro from '../assets/2021/alesandro.png?format=webp'
 import alexandro from '../assets/2021/alexandro.png?format=webp'
@@ -85,9 +91,29 @@ import reni from '../assets/2021/reni.png?format=webp'
 import richi from '../assets/2021/richi.png?format=webp'
 import rivandi from '../assets/2021/rivandi.png?format=webp'
 import ruthlady from '../assets/2021/ruthlady.png?format=webp'
+import sadillah from '../assets/2021/sadillah.png?format=webp'
+import sarmila from '../assets/2021/sarmila.png?format=webp'
+import sastia from '../assets/2021/sastia.png?format=webp'
+import seventiny from '../assets/2021/seventiny.png?format=webp'
+import sifki from '../assets/2021/sifki.png?format=webp'
+import silvia from '../assets/2021/silvia.png?format=webp'
+import siti from '../assets/2021/siti.png?format=webp'
+import vivinmema from '../assets/2021/vivinmema.png?format=webp'
+import vivinsahede from '../assets/2021/vivinsahede.png?format=webp'
+import yusuf from '../assets/2021/yusuf.png?format=webp'
+import chelinda from '../assets/2021/chelinda.png?format=webp'
+import pangeran from '../assets/2021/pangeran.png?format=webp'
 
 
 const DataAngkatan = [
+    {
+        Angkatan: '2019',
+        NamaAngkatan: '',
+    },
+    {
+        Angkatan: '2020',
+        NamaAngkatan: '',
+    },
     {
         Angkatan: '2021',
         NamaAngkatan: 'U Be Goal',
@@ -96,15 +122,42 @@ const DataAngkatan = [
         Angkatan: '2022',
         NamaAngkatan: 'East Penynsula',
     },
-    {
-        Angkatan: '2023',
-    },
-    {
-        Angkatan: '2024',
-    },
 ]
 
 export { DataAngkatan }
+
+const DataMahasiswa2019 = [
+    {
+        Photo: gina,
+        Nama: 'Christy Regina Sasauw',
+        NIM: '1905034',
+        Angkatan: '2019',
+        judul: 'Penerapan Object-Oriented Model (OOM) pada Pengolahan Data Spasial Tutupan Lahan Dalam Kawasan Hutan Berbasis Geographic Information System (GIS)',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+
+]
+
+export {DataMahasiswa2019}
+
+
+const DataMahasiswa2020 = [
+    {
+        Photo: judha,
+        Nama: 'Judha Rachmat Surudani',
+        NIM: '2005105',
+        Angkatan: '2020',
+        judul: 'Sistem Informasi Pengurusan Rekomendasi Izin Jalan pada Dinas Perhubungan Kepulauan Sangihe',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+
+]
+
+export {DataMahasiswa2020}
 
 const DataMahasiswa2021 = [
     {
@@ -636,7 +689,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: sadillah,
         Nama: 'Sadillah Madinah Muji Astutik',
         NIM: '2105078',
         Angkatan: '2021',
@@ -646,7 +699,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: sarmila,
         Nama: 'Sarmila Salilo',
         NIM: '2105079',
         Angkatan: '2021',
@@ -656,7 +709,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: sastia,
         Nama: 'Sastia Asti Pido',
         NIM: '2105081',
         Angkatan: '2021',
@@ -666,7 +719,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: seventiny,
         Nama: 'Seventiny Novrianingsih Lantemona',
         NIM: '2105082',
         Angkatan: '2021',
@@ -676,7 +729,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: sifki,
         Nama: 'Sifky Alexanro Makaluwu',
         NIM: '2105083',
         Angkatan: '2021',
@@ -686,7 +739,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: silvia,
         Nama: 'Silvia Regina Makarui',
         NIM: '2105084',
         Angkatan: '2021',
@@ -696,7 +749,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: siti,
         Nama: 'Siti Srifanti Lesawengen',
         NIM: '2105085',
         Angkatan: '2021',
@@ -706,7 +759,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: vivinmema,
         Nama: 'Vivin Evie Mema',
         NIM: '2105090',
         Angkatan: '2021',
@@ -716,7 +769,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: vivinsahede,
         Nama: 'Vivin Lelly Sahede',
         NIM: '2105091',
         Angkatan: '2021',
@@ -726,7 +779,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: yusuf,
         Nama: 'Yusuf Gabriel Wuaten',
         NIM: '2105092',
         Angkatan: '2021',
@@ -736,7 +789,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: chelinda,
         Nama: 'Chelinda Runtuwene',
         NIM: '2105095',
         Angkatan: '2021',
@@ -746,7 +799,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: pangeran,
         Nama: 'Pangeran Jouce Djarang',
         NIM: '2105096',
         Angkatan: '2021',
@@ -755,19 +808,10 @@ const DataMahasiswa2021 = [
         lampiran1: 'https://via.placeholder.com/150',
         lampiran2: 'https://via.placeholder.com/150',
     },
-    {
-        Photo: 'https://via.placeholder.com/150',
-        Nama: 'Judha Rachmat Surudani',
-        NIM: '2105105',
-        Angkatan: '2021',
-        judul: 'Sistem Informasi Pengurusan Rekomendasi Izin Jalan pada Dinas Perhubungan Kepulauan Sangihe',
-        lampiran: 'https://via.placeholder.com/150',
-        lampiran1: 'https://via.placeholder.com/150',
-        lampiran2: 'https://via.placeholder.com/150',
-    },
+    
 ]
 
-export {DataMahasiswa2021}
+export { DataMahasiswa2021 }
 
 const DataMahasiswa2022 = [
     {

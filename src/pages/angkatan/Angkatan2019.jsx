@@ -1,9 +1,9 @@
-import { DataMahasiswa2021 } from '../../DataMap/MahasiswaAlumni';
+import { DataMahasiswa2019 } from '../../DataMap/MahasiswaAlumni';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { FaChevronUp, FaMagnifyingGlass } from 'react-icons/fa6'
 
-const Angkatan2021 = () => {
+const Angkatan2019 = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const Navigate = useNavigate();
   const [rows, setRows] = useState(1);
@@ -16,7 +16,7 @@ const Angkatan2021 = () => {
     setSearchQuery(e.target.value);
   }
 
-  const filteredDataMahasiswa = DataMahasiswa2021.filter((mhs) =>
+  const filteredDataMahasiswa = DataMahasiswa2019.filter((mhs) =>
     mhs.Nama?.toLowerCase().includes(searchQuery.toLowerCase()) ||
     mhs.NIM?.toLowerCase().includes(searchQuery.toLowerCase()) ||
     mhs.Alias?.toLowerCase().includes(searchQuery.toLowerCase())
@@ -43,7 +43,7 @@ const Angkatan2021 = () => {
             <p>Found
               <span className='font-bold'> {filteredDataMahasiswa.length} </span>
               of
-              <span className='font-bold'> {DataMahasiswa2021.length} </span>
+              <span className='font-bold'> {DataMahasiswa2019.length} </span>
             </p>
           </div>
           <div className='relative'>
@@ -80,4 +80,4 @@ const Angkatan2021 = () => {
   )
 }
 
-export default Angkatan2021
+export default Angkatan2019

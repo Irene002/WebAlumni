@@ -6,8 +6,11 @@ import polnustar from '../assets/polnustar.png?format=webp'
 import logoTI from '../assets/logo-ti.png?format=webp'
 import { FaChevronUp } from 'react-icons/fa6'
 
+// DATA MAHASISWA
 import DataMahasiswa2022 from '../DataMap/MahasiswaAlumni'
 import { DataMahasiswa2021 } from '../DataMap/MahasiswaAlumni'
+import { DataMahasiswa2020 } from '../DataMap/MahasiswaAlumni'
+import { DataMahasiswa2019 } from '../DataMap/MahasiswaAlumni'
 
 import { DataAngkatan } from '../DataMap/MahasiswaAlumni'
 import { useNavigate } from 'react-router-dom'
@@ -15,7 +18,7 @@ import { useEffect, useState } from 'react'
 
 const Home = () => {
 
-    const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021]
+    const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021, ...DataMahasiswa2020, ...DataMahasiswa2019]
 
     const shuffleCardData = [...DataSeluruhMahasiswa].sort(() => Math.random() - 0.5)
 
@@ -163,7 +166,7 @@ const Home = () => {
                                     <p className='font-bold mb-2'>{mhs.Nama}</p>
                                     <p>{mhs.NIM}</p>
                                 </div>
-                                <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo} />
+                                <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo || 'https://via.placeholder.com/150'} />
                             </button>
                         ))}
                     </div>

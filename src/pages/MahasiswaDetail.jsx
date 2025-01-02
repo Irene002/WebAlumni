@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
+
 import DataMahasiswa2022 from '../DataMap/MahasiswaAlumni'
 import { DataMahasiswa2021 } from '../DataMap/MahasiswaAlumni'
+import { DataMahasiswa2020 } from '../DataMap/MahasiswaAlumni'
+import { DataMahasiswa2019 } from '../DataMap/MahasiswaAlumni'
+
 import { FaXmark } from 'react-icons/fa6'
 
 const MahasiswaDetail = () => {
   const { angkatan, name } = useParams()
   const formattedName = name.replace(/-/g, ' ')
-  const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021]
+  const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021, ...DataMahasiswa2020, ...DataMahasiswa2019 ]
   
   const mahasiswa = DataSeluruhMahasiswa.find(mhs => mhs.Angkatan === angkatan && mhs.Nama.toLowerCase() === formattedName.toLowerCase())
 
