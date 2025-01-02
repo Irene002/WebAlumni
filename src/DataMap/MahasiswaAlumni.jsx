@@ -130,6 +130,7 @@ const DataMahasiswa2019 = [
     {
         Photo: gina,
         Nama: 'Christy Regina Sasauw',
+        Alias: 'gina',
         NIM: '1905034',
         Angkatan: '2019',
         judul: 'Penerapan Object-Oriented Model (OOM) pada Pengolahan Data Spasial Tutupan Lahan Dalam Kawasan Hutan Berbasis Geographic Information System (GIS)',
@@ -164,6 +165,7 @@ const DataMahasiswa2021 = [
     {
         Photo: alesandro,
         Nama: 'Alessandro Danielo Pangandaheng',
+        Alias:'cano',
         NIM: '2105003',
         Angkatan: '2021',
         judul: 'Sistem Monitoring Kelistrikan Billboard LED Videotron Berbasis IoT',

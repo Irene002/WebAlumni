@@ -7,7 +7,7 @@ const Mahasiswa = () => {
 
   return (
     <>
-      <section onContextMenu={(e) => e.preventDefault()} className="p-32 px-4 sm:px-24 2xl:px-96 bg-orange-100 h-screen">
+      <section onContextMenu={(e) => e.preventDefault()} className="p-64 px-4 sm:px-24 2xl:px-96 bg-orange-100 pt-24  md:h-screen md:pt-32 md:p-32 md:px-12">
         <div className="">
           <div className="flex justify-center text-center mb-12">
           <h2>Angkatan</h2>

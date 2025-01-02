@@ -76,7 +76,7 @@ return (
               </button>
             ))
           ) : (
-            <div className='col-span-4 text-center text-gray-500 h-screen'>Tidak ada mahasiswa ditemukan untuk Angkatan {angkatan}</div>
+            <div className='col-span-4 text-center text-gray-500 h-screen'>Tidak ada mahasiswa <span className='text-orange-500'> {searchQuery} </span> ditemukan untuk Angkatan {angkatan}</div>
           )
           }
         </div>
