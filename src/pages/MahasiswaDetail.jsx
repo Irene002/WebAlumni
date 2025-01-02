@@ -46,7 +46,7 @@ const MahasiswaDetail = () => {
 
       <section className='p-32 px-4 sm:px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-32 bg-orange-50' onContextMenu={(e) => e.preventDefault()}>
         <div className='flex flex-col gap-16 items-center sm:flex-col md:flex-col lg:flex-col xl:flex-row xl:items-start'>
-          <div className='flex w-full max-w-[380px] min-w-[290px] h-[460px] rounded-md overflow-clip shadow-md FadeIn flex-shrink-0'>
+          <div className='flex w-[300px] h-[360px] sm:w-[300px] sm:h-[360px] 2xl:w-[380px] 2xl:h-[460px] rounded-md overflow-clip shadow-md FadeIn flex-shrink-0'>
             <img className='w-full h-auto object-cover' src={mahasiswa.Photo} alt="" />
           </div>
           <div className='w-full'>
@@ -62,7 +62,7 @@ const MahasiswaDetail = () => {
             <br />
             {(mahasiswa.judul) && (
               <div className='mb-4 flex flex-col gap-2'>
-                <h3>Judul Proyek</h3>
+                <h3>Judul Proyek Akhir</h3>
                 <p>{mahasiswa.judul}</p>
               </div>
             )}

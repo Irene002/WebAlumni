@@ -11,7 +11,7 @@ const NavigationBar = () => {
                         <div className="flex w-12 h-auto">
                             <img src={logo} alt="" />
                         </div>
-                        <p className="text-xl">East Penynsula</p>
+                        <p className="text-xl">Teknologi Informatika</p>
                     </Link>
                     <li className="flex-row gap-8 hidden sm:hidden md:hidden lg:flex xl:flex">
                         <Link className="transition-all duration-500 hover:scale-110" to={'/mahasiswa'}>Mahasiswa</Link>

@@ -43,14 +43,58 @@ import seanLampiran2 from '../assets/lampiran/sean/Picture2.png?format=jpg'
 // PHOTO GAMBAR 2021
 import alesandro from '../assets/2021/alesandro.png?format=webp'
 import alexandro from '../assets/2021/alexandro.png?format=webp'
+import alfira from '../assets/2021/alfira.png?format=webp'
+import alisapapendang from '../assets/2021/alisapapendang.png?format=webp'
+import anggraini from '../assets/2021/anggraini.png?format=webp'
+import aprilia from '../assets/2021/aprilia.png?format=webp'
+import ariel from '../assets/2021/ariel.png?format=webp'
+import arum from '../assets/2021/arum.png?format=webp'
+import astika from '../assets/2021/astika.png?format=webp'
+import itin from '../assets/2021/itin.png?format=webp'
+import desy from '../assets/2021/desy.png?format=webp'
+import devid from '../assets/2021/devid.png?format=webp'
+import dian from '../assets/2021/dian.png?format=webp'
+import enginia from '../assets/2021/enginia.png?format=webp'
+import febry from '../assets/2021/febry.png?format=webp'
+import febryan from '../assets/2021/febryan.png?format=webp'
+import fhiqry from '../assets/2021/fhiqry.png?format=webp'
+import firma from '../assets/2021/firma.png?format=webp'
+import fitriani from '../assets/2021/fitriani.png?format=webp'
+import friskamundewoba from '../assets/2021/friskamundewoba.png?format=webp'
+import friskamakaluase from '../assets/2021/friskamakaluase.png?format=webp'
+import gisca from '../assets/2021/gisca.png?format=webp'
+import grece from '../assets/2021/grece.png?format=webp'
+import haswanti from '../assets/2021/haswanti.png?format=webp'
+import jeane from '../assets/2021/jeane.png?format=webp'
+import jerianto from '../assets/2021/jerianto.png?format=webp'
+import joshua from '../assets/2021/joshua.png?format=webp'
+import juliomododahi from '../assets/2021/juliomododahi.png?format=webp'
+import juliolantemona from '../assets/2021/juliolantemona.png?format=webp'
+import kristia from '../assets/2021/kristia.png?format=webp'
+import leonardo from '../assets/2021/leonardo.png?format=webp'
+import lia from '../assets/2021/lia.png?format=webp'
+import maria from '../assets/2021/maria.png?format=webp'
+import maysi from '../assets/2021/maysi.png?format=webp'
+import mayske from '../assets/2021/mayske.png?format=webp'
+import novlin from '../assets/2021/novlin.png?format=webp'
+import nurafni from '../assets/2021/nurafni.png?format=webp'
+import nurvita from '../assets/2021/nurvita.png?format=webp'
+import rahmawatiussu from '../assets/2021/rahmawatiussu.png?format=webp'
+import enal from '../assets/2021/enal.png?format=webp'
+import reni from '../assets/2021/reni.png?format=webp'
+import richi from '../assets/2021/richi.png?format=webp'
+import rivandi from '../assets/2021/rivandi.png?format=webp'
+import ruthlady from '../assets/2021/ruthlady.png?format=webp'
 
 
 const DataAngkatan = [
     {
         Angkatan: '2021',
+        NamaAngkatan: 'U Be Goal',
     },
     {
         Angkatan: '2022',
+        NamaAngkatan: 'East Penynsula',
     },
     {
         Angkatan: '2023',
@@ -86,37 +130,40 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: alfira,
         Nama: 'Alfira Anggela Tamusa',
         NIM: '2105006',
         Angkatan: '2021',
         judul: 'Proyeksi Data Penduduk Diwilayah Tahuna Dengan Metode Least Square',
+        abstrak: 'Penelitian ini mengeksplorasi peran Badan Pusat Statistik (BPS) Kabupaten Sangihe dalam pengumpulan, pengolahan, dan penyajian data statistik yang berhubungan dengan berbagai aspek kehidupan di wilayah tersebut. Kajian ini menguraikan bagaimana proses proyeksi data penduduk, menggunakan metode least square, memberikan pendekatan statistik untuk memprediksi perkembangan populasi di masa depan. Analisis ini mencakpu variabel-variabel utama seperti laju kelahiran, kematian, dan migrasi yang memiliki pengaruh signifikan terhadap tren pertumbuhan penduduk. Tujuan dari proyeksi ini adalah untuk memberikan wawasan yang lebih mendalam tentang komposisi umur dan jenis kelamin penduduk, serta perubahan global yang mungkin mempengaruhi laju pertumbuhan demografis di wilayah tersebut. Studi ini memberikan kontribusi penting dalam perencanaan dan pengembangan kebijakan yang berbasis data untuk mendukung keberlanjutan sosial dan ekonomi di Kabupaten Sangihe.',
         lampiran: 'https://via.placeholder.com/150',
         lampiran1: 'https://via.placeholder.com/150',
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: alisapapendang,
         Nama: 'Alisa Papendang',
         NIM: '2105007',
         Angkatan: '2021',
         judul: 'Website Pengolahan Data Jemaat GMIST Ararat Nahepese',
+        abstrak: 'Website Pengolahan Data Jemaat merupakan salah satu cara yang sangat diperlukan dalam memanipulasi suatu data ke dalam informasi yang berguna. Sistem teresbut menjadikan penyimpanan data, penambahan, perngubahan, penjadwalan hingga pelaporan menjadi terintegrasi dengan baik dan benar. Sehingga dapat membantu bagian-bagian untuk saling bertukar informasi dan mengambil Keputusan dengan cepat. Permasalaan yang dihadapi adalah Gereja GMIST Ararat Nahepese masih menggunakan Microsoft Excel dan dalam penyebaran informasi seperti data-data jemaat. Selain itu pengumpulan dan penyimpanan data masih terdapat kekurangan di antaranya mencatat beberapa data pada buku kesulitan untuk mengolah data dalam jumlah besar dan tersimpan hanya pada satu tempat khusus yang sifatnya pasif. Berdasarkan permasalahan yang ada, penulis tertarik untuk melakukan penelitian dengan judul Website Pengolahan Data Jemaat GMIST Ararat Nahepese. Tujuan penelitian ini adalah untuk merancang dan menghasilkan suatu sistem Pengolahan Data untuk gereja. Metode yang digunakan yaitu metode waterfall dengan tahapan menganalisis kebutuhan dilapangan, membuat desain produk, mengimplementasikan melalui pengkodean, setelah itu pengujian program dan terakhir pemeliharaan. Database yang digunakan adalah MySQL dengan Bahasa Pemrograman PHP.',
         lampiran: 'https://via.placeholder.com/150',
         lampiran1: 'https://via.placeholder.com/150',
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: anggraini,
         Nama: 'Anggraini Makianggung',
         NIM: '2105009',
         Angkatan: '2021',
         judul: 'Sistem Informasi Penerbitan Rekomendasi Izin Usaha Ternak Berbasis Web',
+        abstrak: 'Sektor peternakan merupakan salah satu sektor yang berkontribusi signifikan terhadap perekonomian Indonesia. Namun, proses penerbitan Rekomendasi Izin Usaha Peternakan seringkali menghadapi kendala seperti lambatnya alur birokrasi, kurangnya transparansi, dan minimnya akses informasi bagi masyarakat. Hal ini dapat menghambat perkembangan usaha peternakan dan menurunkan minat investor untuk berinvestasi di sektor ini. Dengan menggunakan teknologi web seperti PHP dan MySQL, sistem informasi penerbitan rekomendasi izi usaha peternakan dapat memberikan kemudahan bagi pemohon dalam melengkap persyaratan, melakukan pengunggahan dokumen, dan memantau statu pengajuan izin secara real-time. Di sisi lain, pihak pemerintah juga dapat memproses permohonan dengan lebih cepat, akurat, dan terkoordinasi dengan baik.',
         lampiran: 'https://via.placeholder.com/150',
         lampiran1: 'https://via.placeholder.com/150',
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: aprilia,
         Nama: 'Aprilia Angelika Dalapan',
         NIM: '2105010',
         Angkatan: '2021',
@@ -126,7 +173,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: ariel,
         Nama: 'Ariel Ludvic Makakombo',
         NIM: '2105013',
         Angkatan: '2021',
@@ -136,7 +183,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: arum,
         Nama: 'Arum Sari Anwar',
         NIM: '2105015',
         Angkatan: '2021',
@@ -156,7 +203,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: astika,
         Nama: 'Astika Theresa Jangkobus',
         NIM: '2105017',
         Angkatan: '2021',
@@ -176,8 +223,9 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: itin,
         Nama: 'Christin Valentine Kaburuang',
+        Alias: 'itin',
         NIM: '2105020',
         Angkatan: '2021',
         judul: 'Design Thinking Pengembangan UI/UX Website Sangihe Learning Center',
@@ -206,7 +254,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: desy,
         Nama: 'Desy Natalia Singa',
         NIM: '2105026',
         Angkatan: '2021',
@@ -216,7 +264,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: devid,
         Nama: 'Devid Cordias Diamanis',
         NIM: '2105027',
         Angkatan: '2021',
@@ -226,7 +274,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: dian,
         Nama: 'Dian Nastasia Bogar',
         NIM: '2105028',
         Angkatan: '2021',
@@ -246,7 +294,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: enginia,
         Nama: 'Enginia Natalia Mandiangan',
         NIM: '2105032',
         Angkatan: '2021',
@@ -256,7 +304,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: febry,
         Nama: 'Febry Angeline Sirape',
         NIM: '2105033',
         Angkatan: '2021',
@@ -266,7 +314,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: febryan,
         Nama: 'Febryan Luther Barahama',
         NIM: '2105034',
         Angkatan: '2021',
@@ -276,8 +324,8 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
-        Nama: 'Fihqry Syawal Y. Achmad',
+        Photo: fhiqry,
+        Nama: 'Fhiqry Syawal Y. Achmad',
         NIM: '2105035',
         Angkatan: '2021',
         judul: 'Sistem Infromasi Manajemen Program Kerja Tim Penggerak PKK Kampung Petta Berbasis Web',
@@ -286,7 +334,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: firma,
         Nama: 'Firma Lasar Tasin',
         NIM: '2105036',
         Angkatan: '2021',
@@ -296,7 +344,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: fitriani,
         Nama: 'Fitriani Hamenda',
         NIM: '2105037',
         Angkatan: '2021',
@@ -306,7 +354,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: friskamundewoba,
         Nama: 'Friska Gabriella Mundewoba',
         NIM: '2105039',
         Angkatan: '2021',
@@ -316,7 +364,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: friskamakaluase,
         Nama: 'Friska Teresya Makaluase',
         NIM: '2105040',
         Angkatan: '2021',
@@ -326,7 +374,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: gisca,
         Nama: 'Gisca Gian Mehengkelambung',
         NIM: '2105042',
         Angkatan: '2021',
@@ -346,7 +394,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: grece,
         Nama: 'Grece Norani Tamanung',
         NIM: '2105044',
         Angkatan: '2021',
@@ -356,7 +404,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: haswanti,
         Nama: 'Haswanti Daeng Salasa',
         NIM: '2105045',
         Angkatan: '2021',
@@ -366,7 +414,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: jeane,
         Nama: 'Jeane Chatrina Bulele',
         NIM: '2105048',
         Angkatan: '2021',
@@ -376,7 +424,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: jerianto,
         Nama: 'Jerianto Yohanes Mandalika',
         NIM: '2105049',
         Angkatan: '2021',
@@ -386,7 +434,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: joshua,
         Nama: 'Joshua Ebenhaezer Manossoh',
         NIM: '2105051',
         Angkatan: '2021',
@@ -396,7 +444,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: juliomododahi,
         Nama: 'Julio Jilberd Mododahi',
         NIM: '2105053',
         Angkatan: '2021',
@@ -406,7 +454,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: juliolantemona,
         Nama: 'Julio Rikcofandi Lantemona',
         NIM: '2105054',
         Angkatan: '2021',
@@ -416,7 +464,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: kristia,
         Nama: 'Kristia Mirnawati Tumpias',
         NIM: '2105057',
         Angkatan: '2021',
@@ -426,7 +474,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: leonardo,
         Nama: 'Leondardo Rio Patras',
         NIM: '2105058',
         Angkatan: '2021',
@@ -436,7 +484,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: lia,
         Nama: 'Lia Christy Masoara',
         NIM: '2105059',
         Angkatan: '2021',
@@ -446,7 +494,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: maria,
         Nama: 'Maria Andriani Nani',
         NIM: '2105061',
         Angkatan: '2021',
@@ -456,7 +504,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: maysi,
         Nama: 'Maysi Sisilia Belawati Israel',
         NIM: '2105062',
         Angkatan: '2021',
@@ -466,7 +514,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: mayske,
         Nama: 'Mayske Angelica Takasihaeng',
         NIM: '2105063',
         Angkatan: '2021',
@@ -486,7 +534,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: novlin,
         Nama: 'Novlin Viyolces Ingrita Kumalaka',
         NIM: '2105066',
         Angkatan: '2021',
@@ -496,7 +544,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: nurafni,
         Nama: 'Nur Afni Tulusang',
         NIM: '2105067',
         Angkatan: '2021',
@@ -506,7 +554,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: nurvita,
         Nama: 'Nurvita Sene',
         NIM: '2105068',
         Angkatan: '2021',
@@ -516,7 +564,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: rahmawatiussu,
         Nama: 'Rahmawati Ussu',
         NIM: '2105071',
         Angkatan: '2021',
@@ -536,8 +584,9 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: enal,
         Nama: 'Reinalto Derek',
+        Alias: 'enal',
         NIM: '2105073',
         Angkatan: '2021',
         judul: 'Implementasi Agile Scrum dalam Pengembangan Learning Management System di Infinite Learning',
@@ -546,7 +595,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: reni,
         Nama: 'Reni Mehare',
         NIM: '2105074',
         Angkatan: '2021',
@@ -556,8 +605,9 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: richi,
         Nama: 'Richi Natanael Lawere',
+        Alias: 'cakrawala, garis waktu',
         NIM: '2105075',
         Angkatan: '2021',
         judul: 'Desain Perencangan Survei Keanekaragaman Spesies Hutan Lindung Gunung Sahendaruman II Menggunakan Model Line Transec dan Point Count Berbasis On Screen Mobile Maps',
@@ -566,7 +616,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: rivandi,
         Nama: 'Rivandi Lambari',
         NIM: '2105076',
         Angkatan: '2021',
@@ -576,7 +626,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: ruthlady,
         Nama: 'Ruth Lady Trully Mambrasar',
         NIM: '2105077',
         Angkatan: '2021',
