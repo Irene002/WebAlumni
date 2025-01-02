@@ -76,7 +76,7 @@ const AngkatanDetail = () => {
                 </button>
               ))
             ) : (
-              <div className='col-span-4 text-center text-gray-500 h-screen'>No Results Found</div>
+              <div className='col-span-4 text-center text-gray-500 h-screen'>Tidak ada mahasiswa ditemukan untuk Angkatan {angkatan}</div>
             )
             }
           </div>

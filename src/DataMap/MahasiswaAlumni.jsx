@@ -122,6 +122,10 @@ const DataAngkatan = [
         Angkatan: '2022',
         NamaAngkatan: 'East Penynsula',
     },
+    {
+        Angkatan: '2023',
+        NamaAngkatan: '',
+    },
 ]
 
 export { DataAngkatan }
