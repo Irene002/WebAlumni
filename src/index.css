@@ -65,6 +65,16 @@ p{
   visibility: hidden;
   animation: fadein 1s forwards;
 }
+.FadeInRef{
+  opacity: 0;
+  visibility: hidden;
+  animation: fadein 1s forwards 0.5s;
+}
+.FadeOutRef{
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeout 1s forwards;
+}
 
 @keyframes fadein {
   from {
@@ -76,5 +86,17 @@ p{
     visibility: visible;
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
   }
 }

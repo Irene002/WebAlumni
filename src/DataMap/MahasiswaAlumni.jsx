@@ -122,10 +122,6 @@ const DataAngkatan = [
         Angkatan: '2022',
         NamaAngkatan: 'East Penynsula',
     },
-    {
-        Angkatan: '2023',
-        NamaAngkatan: '',
-    },
 ]
 
 export { DataAngkatan }
@@ -153,6 +149,7 @@ const DataMahasiswa2020 = [
         Nama: 'Judha Rachmat Surudani',
         NIM: '2005105',
         Angkatan: '2020',
+        abstrak:'Jalan Raya adalah elemen vital dalam kehidupan masyarakat, berfungsi sebagai prasarana perhubungan darat yang mendukung berbagai aktivitas dan kebutuhan dasar manusia. Dinas Perhubungan bertugas membantu pemerintah dalam mengelola perhubungan, termasuk izin penggunaan jalan nasional, provinsi, kabupaten/kota, dan desa. Izin penggunaan jalan dapat diberikan untuk kepentingan umum dan pribadi, dengan syarat adanya jalur alternatif dan rambu lalu lintas sementara. Pengelolaan rekomendasi izin penggunaan jalan membutuhkan informasi lokasi, jenis kegiatan, durasi kegiatan, serta data jalur alternatif. Digitalisasi informasi, seperti foto lokasi dan syarat pengurusan izin, dapat mempermudah proses pengecekan dan pencarian jalur alternatif oleh dinas perhubungan. Dengan meningkatnya jumlah pemohon izin penggunaan jalan, diperlukan sistem yang efisien dan efektif untuk mengelola data dan memproses permohonan. Sistem ini juga bertujuan untuk menginformasikan penutupan jalan dan jalur alternatif kepada masyarakat. Penelitian ini bertujuan untuk merancang dan mengembangkan sistem manajemen rekomendasi izin penggunaan jalan yang dapat meningkatkan efisiensi dan efektivitas pengelolaan izin, serta memfasilitasi penyampaian informasi kepada masyarakat.',
         judul: 'Sistem Informasi Pengurusan Rekomendasi Izin Jalan pada Dinas Perhubungan Kepulauan Sangihe',
         lampiran: 'https://via.placeholder.com/150',
         lampiran1: 'https://via.placeholder.com/150',
@@ -250,7 +247,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Arya Marselino Putra Adrian',
         NIM: '2105016',
         Angkatan: '2021',
@@ -270,7 +267,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Calvin Datundelang',
         NIM: '2105018',
         Angkatan: '2021',
@@ -291,7 +288,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Cicilia Hontong',
         NIM: '2105021',
         Angkatan: '2021',
@@ -301,7 +298,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Dejoses Mesias Pianaung',
         NIM: '2105025',
         Angkatan: '2021',
@@ -341,7 +338,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Eferson Saselah',
         NIM: '2105030',
         Angkatan: '2021',
@@ -441,7 +438,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Gledis Lauransia Lohige',
         NIM: '2105043',
         Angkatan: '2021',
@@ -581,7 +578,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Marlin Angelita Lukas',
         NIM: '2105064',
         Angkatan: '2021',
@@ -631,7 +628,7 @@ const DataMahasiswa2021 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Remona Amanda Patricia Kakunsi',
         NIM: '2105072',
         Angkatan: '2021',
@@ -840,7 +837,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Junior Kefas Mahino',
         NIM: '2205004',
         Angkatan: '2022',
@@ -850,7 +847,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Mersita Trisce Letunggamu',
         NIM: '2205006',
         Angkatan: '2022',
@@ -924,7 +921,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Akhsa Angel Tumbale',
         Alias: 'emot batu, emotbatu',
         NIM: '2205016',
@@ -987,7 +984,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Jessica Juanita Lombontari',
         Alias: 'emot batu, emotbatu',
         NIM: '2205024',
@@ -1019,7 +1016,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Sheren Zyallomitha Zhakilla Makawimbang',
         Alias: 'eyen',
         NIM: '2205030',
@@ -1063,7 +1060,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Muhammad Syahban Tempongbuka',
         NIM: '2205034',
         judul: 'Sistem Informasi Jalur Pipa PDAM Berbasis Web GIS',
@@ -1094,7 +1091,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Revalin Terah Wolff',
         NIM: '2205040',
         Angkatan: '2022',
@@ -1137,7 +1134,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Reggi Saputra Salawangi',
         Alias: 'Zeus, eggi',
         NIM: '2205044',
@@ -1147,7 +1144,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Salsabillah Kaehe',
         NIM: '2205047',
         Angkatan: '2022',
@@ -1156,7 +1153,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Fryska Armelia Towoliu',
         Alias: 'pika',
         NIM: '2205048',
@@ -1219,7 +1216,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Yohana Tompo',
         NIM: '2205055',
         Angkatan: '2022',
@@ -1249,7 +1246,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Tasya Lawitang',
         Alias: 'aca',
         NIM: '2205060',
@@ -1260,7 +1257,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Vanessa Tesalonika Dhea Bundel',
         NIM: '2205061',
         Alias: 'dea',
@@ -1281,7 +1278,7 @@ const DataMahasiswa2022 = [
         lampiran2: 'https://via.placeholder.com/150',
     },
     {
-        Photo: 'https://via.placeholder.com/150',
+        Photo: '',
         Nama: 'Sela Ester Laodini',
         Alias: 'selbe',
         NIM: '2205063',

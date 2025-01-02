@@ -11,12 +11,21 @@ import { FaXmark } from 'react-icons/fa6'
 const MahasiswaDetail = () => {
   const { angkatan, name } = useParams()
   const formattedName = name.replace(/-/g, ' ')
-  const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021, ...DataMahasiswa2020, ...DataMahasiswa2019 ]
-  
+  const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021, ...DataMahasiswa2020, ...DataMahasiswa2019]
+
   const mahasiswa = DataSeluruhMahasiswa.find(mhs => mhs.Angkatan === angkatan && mhs.Nama.toLowerCase() === formattedName.toLowerCase())
 
   if (!mahasiswa) {
-    return <div>Mahasiswa not found</div>
+    return (
+      <>
+      <div className='flex h-screen justify-center items-center p-32'> 
+        <div className='text-center'>
+          <h1 className='text-1xl'>Error 404</h1>
+          <h2 className='text-xl font-normal'>Mahasiswa <span className='text-red-500'> {formattedName} </span> not Found</h2>
+        </div>
+      </div>
+      </>
+    )
   }
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -51,13 +60,15 @@ const MahasiswaDetail = () => {
       <section className='p-32 px-4 sm:px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-32 bg-orange-50' onContextMenu={(e) => e.preventDefault()}>
         <div className='flex flex-col gap-16 items-center sm:flex-col md:flex-col lg:flex-col xl:flex-row xl:items-start'>
           <div className='flex w-[300px] h-[360px] sm:w-[300px] sm:h-[360px] 2xl:w-[380px] 2xl:h-[460px] rounded-md overflow-clip shadow-md FadeIn flex-shrink-0'>
-            <img className='w-full h-auto object-cover' src={mahasiswa.Photo} alt={mahasiswa.Nama} />
+            <img className='w-full h-auto object-cover' src={mahasiswa.Photo || 'https://via.placeholder.com/150'} alt={mahasiswa.Nama} />
           </div>
           <div className='w-full'>
             <div>
               <h2>{mahasiswa.Nama}</h2>
               <div className='mt-4'>
-                <h4>NIM : {mahasiswa.NIM}</h4>
+                {mahasiswa.NIM ? (
+                  <h4>NIM : {mahasiswa.NIM}</h4>
+                ) : ('')}
                 <h4>Angkatan : {mahasiswa.Angkatan}</h4>
               </div>
             </div>
@@ -76,7 +87,7 @@ const MahasiswaDetail = () => {
                 <p className='leading-[2.5rem] text-justify'>{mahasiswa.abstrak}</p>
               </>
             ) : (
-              <div>Tidak ada Abstrak....</div>
+              <div className='opacity-45'>Tidak ada Abstrak....</div>
             )}
 
             {mahasiswa.journalLink && (

@@ -14,15 +14,16 @@ import { DataMahasiswa2019 } from '../DataMap/MahasiswaAlumni'
 
 import { DataAngkatan } from '../DataMap/MahasiswaAlumni'
 import { useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 const Home = () => {
+
+    const [isVisible, setIsVisible] = useState(false);
+    const componentRef = useRef(null);
 
     const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021, ...DataMahasiswa2020, ...DataMahasiswa2019]
 
     const shuffleCardData = [...DataSeluruhMahasiswa].sort(() => Math.random() - 0.5)
-
-
 
     const NavigateBtn = {
         Button1: 'Daftar Mahasiswa Alumni',
@@ -31,14 +32,6 @@ const Home = () => {
         Button2: 'Tentang Kami',
         Button2Navigate: (() => Navigate('/tentang')),
     }
-
-    const [isTitle, setIsTitle] = useState(false)
-
-    useEffect(() => {
-        setTimeout(() => {
-            setIsTitle(true)
-        }, 1500);
-    }, [])
 
     const cardData = [
         {
@@ -74,14 +67,28 @@ const Home = () => {
 
     const Navigate = useNavigate();
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => { setIsVisible(entry.isIntersecting); },
+            { threshold: 0.1 }
+        );
+        if (componentRef.current) {
+        }
+        observer.observe(componentRef.current);
+        return () => {
+            if (componentRef.current) {
+                observer.unobserve(componentRef.current);
+            }
+        };
+    }, []);
+
     return (
 
         <>
             <section onContextMenu={(e) => e.preventDefault()} className='relative'>
                 <div className='relative'>
-                    {isTitle && (
-                        <div className='absolute z-10 left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
-                            <div className='FadeIn'>
+                    <div className='absolute z-10 left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
+                        <div ref={componentRef} className={` ${isVisible ? 'FadeInRef' : 'FadeOutRef'}`}>
                             <div className={`transition-all duration-500`}>
                                 <h1 className='text-white text-3xl mb-4 sm:text-3xl md:text-4xl lg:text-5xl'>Website Alumni 2025</h1>
                                 <p className='text-white text-md sm:text-md md:text-lg xl:text-xl'>Website Alumni 2025  adalah platform bagi alumni untuk terhubung, berbagi pengalaman, dan berkontribusi pada komunitas.</p>
@@ -94,9 +101,8 @@ const Home = () => {
                                     {NavigateBtn.Button2}
                                 </button>
                             </div>
-                            </div>
                         </div>
-                    )}
+                    </div>
                     <img className='object-cover h-[700px] w-full brightness-[.4]' src={imageBanner} alt="" />
                 </div>
                 <div className=' py-32 px-4 bg-orange-100 sm:px-4 md:px-24 lg:px-24 xl:px-24 2xl:px-32'>
@@ -159,17 +165,17 @@ const Home = () => {
                         <h2>MAHASISWA ALUMNI</h2>
                     </div>
                     <div className='flex justify-center'>
-                    <div className='grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
-                        {shuffleCardData.slice(0, 4).map((mhs, index) => (
-                            <button onClick={() => Navigate(generateLink(mhs.Angkatan, mhs.Nama))} key={index} className='flex h-[450px] w-full max-w-[390px] min-w-[290px] bg-black rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
-                                <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
-                                    <p className='font-bold mb-2'>{mhs.Nama}</p>
-                                    <p>{mhs.NIM}</p>
-                                </div>
-                                <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo || 'https://via.placeholder.com/150'} alt={mhs.Nama} />
-                            </button>
-                        ))}
-                    </div>
+                        <div className='grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+                            {shuffleCardData.slice(0, 4).map((mhs, index) => (
+                                <button onClick={() => Navigate(generateLink(mhs.Angkatan, mhs.Nama))} key={index} className='flex h-[450px] w-full max-w-[390px] min-w-[290px] bg-black rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
+                                    <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
+                                        <p className='font-bold mb-2'>{mhs.Nama}</p>
+                                        <p>{mhs.NIM}</p>
+                                    </div>
+                                    <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo || 'https://via.placeholder.com/150'} alt={mhs.Nama} />
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
