@@ -5,13 +5,21 @@ import hima from '../assets/Hima.gif'
 import polnustar from '../assets/polnustar.png?format=webp'
 import logoTI from '../assets/logo-ti.png?format=webp'
 import { FaChevronUp } from 'react-icons/fa6'
-import DataMahasiswa from '../DataMap/MahasiswaAlumni'
+
+import DataMahasiswa2022 from '../DataMap/MahasiswaAlumni'
+import { DataMahasiswa2021 } from '../DataMap/MahasiswaAlumni'
+
+import { DataAngkatan } from '../DataMap/MahasiswaAlumni'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 const Home = () => {
 
-    const shuffleCardData = [...DataMahasiswa].sort(() => Math.random() - 0.5)
+    const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021]
+
+    const shuffleCardData = [...DataSeluruhMahasiswa].sort(() => Math.random() - 0.5)
+
+
 
     const NavigateBtn = {
         Button1: 'Daftar Mahasiswa Alumni',
@@ -57,8 +65,8 @@ const Home = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    const generateLink = (nama) => {
-        return `/mahasiswa/${nama.replace(/\s+/g, '-').toLowerCase()}`
+    const generateLink = (angkatan, nama) => {
+        return `/mahasiswa/${angkatan}/${nama.replace(/\s+/g, '-').toLowerCase()}`
     }
 
     const Navigate = useNavigate();
@@ -118,11 +126,11 @@ const Home = () => {
                         </div>
                         <div className='justify-between flex-col flex gap-12 sm:flex-row md:flex-row lg:flex-row '>
                             <div className='text-center'>
-                                <h3 className='text-3xl mb-2'>{DataMahasiswa.length}</h3>
+                                <h3 className='text-3xl mb-2'>{DataSeluruhMahasiswa.length}</h3>
                                 <p>Lulusan</p>
                             </div>
                             <div className='text-center'>
-                                <h3 className='text-3xl mb-2'>1</h3>
+                                <h3 className='text-3xl mb-2'>{DataAngkatan.length}</h3>
                                 <p>Angkatan</p>
                             </div>
                         </div>
@@ -150,7 +158,7 @@ const Home = () => {
                     <div className='flex justify-center'>
                     <div className='grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
                         {shuffleCardData.slice(0, 4).map((mhs, index) => (
-                            <button onClick={() => Navigate(generateLink(mhs.Nama))} key={index} className='flex h-[450px] w-full max-w-[390px] min-w-[290px] bg-black rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
+                            <button onClick={() => Navigate(generateLink(mhs.Angkatan, mhs.Nama))} key={index} className='flex h-[450px] w-full max-w-[390px] min-w-[290px] bg-black rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
                                 <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
                                     <p className='font-bold mb-2'>{mhs.Nama}</p>
                                     <p>{mhs.NIM}</p>

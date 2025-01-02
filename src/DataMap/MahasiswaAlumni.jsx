@@ -1,4 +1,4 @@
-// PHOTO GAMBAR
+// PHOTO GAMBAR 2022
 
 import alicia from '../assets/alicia.jpg?format=webp'
 import achel from '../assets/achel.jpg?format=webp'
@@ -40,13 +40,216 @@ import debora from '../assets/debora.jpg?format=webp'
 import seanLampiran1 from '../assets/lampiran/sean/Picture1.png?format=jpg'
 import seanLampiran2 from '../assets/lampiran/sean/Picture2.png?format=jpg'
 
+// PHOTO GAMBAR 2021
+import alesandro from '../assets/2021/alesandro.png?format=webp'
+import alexandro from '../assets/2021/alexandro.png?format=webp'
 
 
+const DataAngkatan = [
+    {
+        Angkatan: '2021',
+    },
+    {
+        Angkatan: '2022',
+    },
+    {
+        Angkatan: '2023',
+    },
+    {
+        Angkatan: '2024',
+    },
+]
 
+export { DataAngkatan }
 
+const DataMahasiswa2021 = [
+    {
+        Photo: alesandro,
+        Nama: 'Alessandro Danielo Pangandaheng',
+        NIM: '2105003',
+        Angkatan: '2021',
+        judul: 'Sistem Monitoring Kelistrikan Billboard LED Videotron Berbasis IoT',
+        abstrak: 'Kebutuhan akan Listrik pada kehidupan sehari-hari sangatlah penting bagi para masyarakat. Sakaeng Solata adalah bagian instansi yang bergerak sebagai penyedia jasa internet dan multimedia, pada penelitian ini dibuatlah sistem pemantauan kelistrikan pada sebuah billboard atau yang biasanya disebut papan iklan, yang berteknologi videotron. Dashboard pada sistem pemantauan tersebut dibuat berbasis web agar lebih memudahkan pengguna untuk melakukan pemantauan pada sistem kelistrikan tersebut. Pemantauan kelistrikan ini diperlukan agar pengguna bisa memantau sekian banyak total penggunaan Daya, kWh, Arus, Tegangan Listrik dan juga memberi peringatan ketika melibihi beban arus agar terhindar dari kebakaran. Pemanfaatan Teknologi IoT dengan baik dapat membantu pengguna bisa mendapatkan informasi melallui website tersebut. Maka dibutuhkannya sebuah Sistem Monitoring Kelistrikan Billboard LED Videotron Berbasis IoT.',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: alexandro,
+        Nama: 'Alexandro Savior Manihing',
+        NIM: '2105004',
+        Angkatan: '2021',
+        judul: 'elitian ini bertujuan untuk mengumpulkan, mengelola, dan menganalisis data geografis atau spasial guna menyediakan data kependudukan di Kampung Pinebentengang. Data spasial ini memberikan informasi komprehensif mengenai distribusi bantuan program pemerintah, ketersediaan sumber air bersih, kondisi jaringan listrik, infrastruktur umum, batas lindongan, dan lokasi pemukiman. Dengan menggunakan perangkat lunak open source Quantum GIS (QGIS), penelitian ini menghasilkan satu peta berbasis Web-GIS dan empat peta digital: peta persebaran penduduk, peta penerima bantuan pemerintah, peta pengguna sumber air bersih, dan peta pengguna jaringan listrik. QGIS digunakan untuk menganalisis, mengelompokkan, dan memvisualisasikan data ke dalam bentuk peta cetak dan Web-GIS. Hasil penelitian ini diharapkan dapat memberikan manfaat signifikan bagi masyarakat Kampung Pinebentengang dalam perencanaan dan pengelolaan sumber daya serta pembangunan infrastruktur yang lebih efisien dan tepat sasaran. Selain itu, data spasial ini juga dapat mendukung pengambilan keputusan yang lebih baik oleh pemerintah dan pihak terkait dalam distribusi bantuan serta pembangunan fasilitas umum yang lebih efektif dan berkelanjutan.',
+        abstrak: '',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Alfira Anggela Tamusa',
+        NIM: '2105006',
+        Angkatan: '2021',
+        judul: 'Proyeksi Data Penduduk Diwilayah Tahuna Dengan Metode Least Square',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Alisa Papendang',
+        NIM: '2105007',
+        Angkatan: '2021',
+        judul: 'Website Pengolahan Data Jemaat GMIST Ararat Nahepese',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Anggraini Makianggung',
+        NIM: '2105009',
+        Angkatan: '2021',
+        judul: 'Sistem Informasi Penerbitan Rekomendasi Izin Usaha Ternak Berbasis Web',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Aprilia Angelika Dalapan',
+        NIM: '2105010',
+        Angkatan: '2021',
+        judul: 'Perancangan Web Portal Kampung Tawoali',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Ariel Ludvic Makakombo',
+        NIM: '2105013',
+        Angkatan: '2021',
+        judul: 'Web GIS Pemberdayaan Tanah Masyarakat di Daerah Kabupaten Kepulauan Sangihe',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Arum Sari Anwar',
+        NIM: '2105015',
+        Angkatan: '2021',
+        judul: 'Sistem Informasi Penanganan Kapal Asing Ilegal di Stasuin PSDKP Tahuna Berbasis Web',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Arya Marselino Putra Adrian',
+        NIM: '2105016',
+        Angkatan: '2021',
+        judul: 'Sistem Informasi Pelayanan Dive Guide dan Paket Dive Trip',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Astika Theresa Jangkobus',
+        NIM: '2105017',
+        Angkatan: '2021',
+        judul: 'Sistem Informasi Kenaikan Pangkat dan Kenaikan Gaji Berkala Berbasis Web Dinas Pertanian Daerah Kabupaten Kepulauan Sangihe',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Calvin Datundelang',
+        NIM: '2105018',
+        Angkatan: '2021',
+        judul: 'Website Pusat Data dan Informasi Pos SAR Tahuna',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Christin Valentine Kaburuang',
+        NIM: '2105020',
+        Angkatan: '2021',
+        judul: 'Design Thinking Pengembangan UI/UX Website Sangihe Learning Center',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Cicilia Hontong',
+        NIM: '2105021',
+        Angkatan: '2021',
+        judul: 'Sistem Informasi Profil POLSEK Tahuna Berbasis Web',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Dejoses Mesias Pianaung',
+        NIM: '2105025',
+        Angkatan: '2021',
+        judul: 'Sistem Informasi Data Penjualan Spare Part dan Servis Motor Berbasis Web',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Desy Natalia Singa',
+        NIM: '2105026',
+        Angkatan: '2021',
+        judul: 'Sistem Informasi Profil Tanaman Pangan dan Hortikultura Dinas Pertanian Daerah Berbasis Web',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Devid Cordias Diamanis',
+        NIM: '2105027',
+        Angkatan: '2021',
+        judul: 'Redistribusi Tanah Berbasis Mobile',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Dian Nastasia Bogar',
+        NIM: '2105028',
+        Angkatan: '2021',
+        judul: 'Sistem Informasi Pelayanan Posyandu Kampung Tawoali Berbasis Web',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+    {
+        Photo: 'https://via.placeholder.com/150',
+        Nama: 'Eferson Saselah',
+        NIM: '2105030',
+        Angkatan: '2021',
+        judul: 'Sistem Informasi Backend Pengelola Data Redistribusi Tanah Berbasis Web',
+        lampiran: 'https://via.placeholder.com/150',
+        lampiran1: 'https://via.placeholder.com/150',
+        lampiran2: 'https://via.placeholder.com/150',
+    },
+]
 
+export {DataMahasiswa2021}
 
-const DataMahasiswa = [
+const DataMahasiswa2022 = [
     {
         Photo: amel,
         Nama: 'Amels Wisye Margareth Sasauw',
@@ -61,6 +264,7 @@ const DataMahasiswa = [
         Photo: alicia,
         Nama: 'Alicia Aurelia Hebingadil',
         NIM: '2205003',
+        Alias: 'cia',
         Angkatan: '2022',
         judul: 'Pengembangan Web GIS Sistem Pemantauan Hasil Perikanan',
         lampiran: 'https://via.placeholder.com/150',
@@ -90,6 +294,7 @@ const DataMahasiswa = [
     {
         Photo: reisky,
         Nama: 'Reisky Mendalora Sahentumuwo',
+        Alias: 'yono',
         NIM: '2205009',
         Angkatan: '2022',
         judul: 'Web GIS Sebaran Lahan Pertanian di Tahuna Barat',
@@ -100,6 +305,7 @@ const DataMahasiswa = [
     {
         Photo: cici,
         Nama: 'Regina Glorita Makaluase',
+        Alias: 'cici',
         NIM: '2205010',
         Angkatan: '2022',
         judul: 'Sistem Informasi Penyediaan Air Moil Tangki Berbasis Website',
@@ -110,6 +316,7 @@ const DataMahasiswa = [
     {
         Photo: fadhilla,
         Nama: 'Fadhilla Wahyuni Soleman',
+        Alias: 'dila',
         NIM: '2205011',
         Angkatan: '2022',
         judul: 'Analisis Sistem Monitoring Infrastruktur pada Program Pembangunan dan Pemberdayaan Masyarakat dan Desa',
@@ -120,6 +327,7 @@ const DataMahasiswa = [
     {
         Photo: januard,
         Nama: 'Januard Reynaldi Alexandro Andaria',
+        Alias: 'didi',
         NIM: '2205013',
         Angkatan: '2022',
         judul: 'Sistem Informasi Event dan Reservasi Makanan di KOPITIAM Berbasis Web',
@@ -150,6 +358,7 @@ const DataMahasiswa = [
     {
         Photo: 'https://via.placeholder.com/150',
         Nama: 'Akhsa Angel Tumbale',
+        Alias: 'emot batu, emotbatu',
         NIM: '2205016',
         Angkatan: '2022',
         judul: 'Membuat Surat Keterangan Kehilangan Barang Berbasis Web',
@@ -160,6 +369,7 @@ const DataMahasiswa = [
     {
         Photo: christy,
         Nama: 'Christy Stevani Tamusa',
+        Alias: 'tilu',
         NIM: '2205017',
         Angkatan: '2022',
         judul: 'Sistem Infromasi Kesehatan Gizi Remaja Berbasis Web',
@@ -180,6 +390,7 @@ const DataMahasiswa = [
     {
         Photo: idax,
         Nama: 'Evandrix Mamintade',
+        Alias: 'idax, nasir',
         NIM: '2205020',
         Angkatan: '2022',
         judul: 'Digitalisasi Potensi Kampung Kawio Berbasis Web',
@@ -190,6 +401,7 @@ const DataMahasiswa = [
     {
         Photo: achel,
         Nama: 'Firstonly Marshel Naharia',
+        Alias: 'achel, acel, big',
         NIM: '2205021',
         Angkatan: '2022',
         lampiran: 'https://via.placeholder.com/150',
@@ -209,6 +421,7 @@ const DataMahasiswa = [
     {
         Photo: 'https://via.placeholder.com/150',
         Nama: 'Jessica Juanita Lombontari',
+        Alias: 'emot batu, emotbatu',
         NIM: '2205024',
         Angkatan: '2022',
         judul: 'Inventaris SOP pada Lembaga Pemasyarakatan Kelas III Enemawira Berbasis Web',
@@ -229,6 +442,7 @@ const DataMahasiswa = [
     {
         Photo: iya,
         Nama: 'Zuwairyah Kantohe',
+        Alias: 'iya',
         NIM: '2205026',
         Angkatan: '2022',
         judul: 'Sistem Informasi Pendaftaran dan Pendampingan UMKM di Loka POM Sangihe',
@@ -239,6 +453,7 @@ const DataMahasiswa = [
     {
         Photo: 'https://via.placeholder.com/150',
         Nama: 'Sheren Zyallomitha Zhakilla Makawimbang',
+        Alias: 'eyen',
         NIM: '2205030',
         Angkatan: '2022',
         judul: 'Desain UI/UX Inventaris SOP pada Lembaga Pemasyarakatan Kelas III Enemawira',
@@ -249,6 +464,7 @@ const DataMahasiswa = [
     {
         Photo: julieo,
         Nama: 'Julieo Yusuf Kagingge',
+        Alias: 'jule, jules, juls, Jboyy',
         NIM: '2205031',
         Angkatan: '2022',
         judul: 'Sistem Informasi Manajemen (SIM) Data Perpustakaan',
@@ -259,6 +475,7 @@ const DataMahasiswa = [
     {
         Photo: supriadi,
         Nama: 'Supriadinata Masihor',
+        Alias: 'upi',
         NIM: '2205032',
         Angkatan: '2022',
         judul: 'Sistem Informasi Penjualan Produk UMKM Berbasis Web',
@@ -269,6 +486,7 @@ const DataMahasiswa = [
     {
         Photo: stifangki,
         Nama: 'Stifangki Josua Rivan Kakunsi',
+        Alias: 'ungke',
         NIM: '2205033',
         judul: 'Pemanfaatan Aplikasi ArcGIS untuk Jalur Evakuasi Gunung Berapi Awu',
         Angkatan: '2022',
@@ -289,6 +507,7 @@ const DataMahasiswa = [
     {
         Photo: delon,
         Nama: 'Novaldi Delon Takalalumang',
+        Alias: 'delta',
         NIM: '2205038',
         Angkatan: '2022',
         judul: 'Optimalisasi Aplikasi Berperforma Tinggi dengan Redis pada VPS Ubuntu',
@@ -319,6 +538,7 @@ const DataMahasiswa = [
     {
         Photo: stevani,
         Nama: 'Stevani Patiri',
+        Alias: 'fani',
         NIM: '2205041',
         Angkatan: '2022',
         judul: 'Penggunaan Drone untuk Identifikasi Pergeseran Garis Pantai (Studi Kasus: Kecamatan Tabukan Utara)',
@@ -329,6 +549,7 @@ const DataMahasiswa = [
     {
         Photo: geo,
         Nama: 'Geovani Marchiano Monok',
+        Alias: 'gexxyn',
         NIM: '2205042',
         Angkatan: '2022',
         judul: 'Website Monitoring Aktivitas Kunjungan Kawasan Gunung Sahendarumang',
@@ -339,6 +560,7 @@ const DataMahasiswa = [
     {
         Photo: muzamil,
         Nama: 'Muzamil Paputungan',
+        Alias: 'jamil',
         NIM: '2205043',
         Angkatan: '2022',
         judul: 'Pengelolaan Data Sebaran Keragaman Hayati Hutan Lindung Sahendarumang 2 Berbasis Web Gis',
@@ -349,6 +571,7 @@ const DataMahasiswa = [
     {
         Photo: 'https://via.placeholder.com/150',
         Nama: 'Reggi Saputra Salawangi',
+        Alias: 'Zeus, eggi',
         NIM: '2205044',
         Angkatan: '2022',
         lampiran: 'https://via.placeholder.com/150',
@@ -367,6 +590,7 @@ const DataMahasiswa = [
     {
         Photo: 'https://via.placeholder.com/150',
         Nama: 'Fryska Armelia Towoliu',
+        Alias: 'pika',
         NIM: '2205048',
         Angkatan: '2022',
         lampiran: 'https://via.placeholder.com/150',
@@ -376,6 +600,7 @@ const DataMahasiswa = [
     {
         Photo: tirsa,
         Nama: 'Tirsa Olivia Talete',
+        Alias: 'dede',
         NIM: '2205049',
         Angkatan: '2022',
         judul: 'Desain UI/UX Sistem Informasi Ecent dan Reservasi Makanan di KOPITIAM Berbasis Web',
@@ -396,6 +621,7 @@ const DataMahasiswa = [
     {
         Photo: debora,
         Nama: 'Regina Debora Lahamendu',
+        Alias: 'mogi',
         NIM: '2205051',
         Angkatan: '2022',
         judul: 'Web GIS Sebaran Lahan Pertanian di Tahuna Barat',
@@ -406,6 +632,7 @@ const DataMahasiswa = [
     {
         Photo: marentek,
         Nama: 'Marchel Hezzel Marentek',
+        Alias: 'achel, acel',
         judul: 'Penyewaan Lapangan Futsal Berbasis Web',
         NIM: '2205052',
         Angkatan: '2022',
@@ -456,6 +683,7 @@ const DataMahasiswa = [
     {
         Photo: 'https://via.placeholder.com/150',
         Nama: 'Tasya Lawitang',
+        Alias: 'aca',
         NIM: '2205060',
         Angkatan: '2022',
         judul: 'Web GIS Laporan Operasi SAR',
@@ -467,6 +695,7 @@ const DataMahasiswa = [
         Photo: 'https://via.placeholder.com/150',
         Nama: 'Vanessa Tesalonika Dhea Bundel',
         NIM: '2205061',
+        Alias: 'dea',
         Angkatan: '2022',
         judul: 'Rekomendasi Usaha Pariwisata Berbasis Web',
         lampiran: 'https://via.placeholder.com/150',
@@ -486,6 +715,7 @@ const DataMahasiswa = [
     {
         Photo: 'https://via.placeholder.com/150',
         Nama: 'Sela Ester Laodini',
+        Alias: 'selbe',
         NIM: '2205063',
         Angkatan: '2022',
         judul: 'Pengembangan Sistem Pelaporan Orang Hilang Berbasis Mobile',
@@ -496,6 +726,7 @@ const DataMahasiswa = [
     {
         Photo: leo,
         Nama: 'Leo Richardo Alelo',
+        Alias: 'cipay, cipai',
         NIM: '2205064',
         Angkatan: '2022',
         judul: 'Pengembangan Backend Website Attendance Management System',
@@ -506,6 +737,7 @@ const DataMahasiswa = [
     {
         Photo: sean,
         Nama: 'Sean Ishak Adare',
+        Alias: 'Irene002, Astaroth',
         NIM: '2205066',
         Angkatan: '2022',
         judul: 'Pengembangan Frontend Website Attendance Management System Berbasis ReactJS & TailwindCSS',
@@ -517,4 +749,4 @@ const DataMahasiswa = [
     },
 ]
 
-export default DataMahasiswa
+export default DataMahasiswa2022
