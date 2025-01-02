@@ -9,7 +9,6 @@ const Angkatan2019 = lazy(() => import('../pages/angkatan/Angkatan2019.jsx'))
 const Angkatan2020 = lazy(() => import('../pages/angkatan/Angkatan2020.jsx'))
 const Angkatan2021 = lazy(() => import('../pages/angkatan/Angkatan2021.jsx'))
 const Angkatan2022 = lazy(() => import('../pages/angkatan/Angkatan2022.jsx'))
-const SpeedInsights = lazy(() => import('../pages/misc/SpeedInsighting.jsx'))
 
 const Routing = () => {
   return (
@@ -24,7 +23,6 @@ const Routing = () => {
             <Route path='/mahasiswa' element={<Mahasiswa />} />
             <Route path='/tentang' element={<About />} />
             <Route path='/mahasiswa/:angkatan/:name' element={<MahasiswaDetail />} />
-            <Route path='/stats' element={<SpeedInsights />} />
 
             {/* Angkatan Pages */}
             <Route path='/mahasiswa/2019' element={<Angkatan2019 />} />
