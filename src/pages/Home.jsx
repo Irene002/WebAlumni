@@ -80,8 +80,8 @@ const Home = () => {
                         <div className='absolute z-10 left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
                             <div className='FadeIn'>
                             <div className={`transition-all duration-500`}>
-                                <h1 className='text-white text-3xl mb-4 sm:text-3xl md:text-4xl lg:text-5xl'>Website Alumni 2024</h1>
-                                <p className='text-white text-md sm:text-md md:text-lg xl:text-xl'>Website Alumni 2024 adalah platform bagi alumni untuk terhubung, berbagi pengalaman, dan berkontribusi pada komunitas.</p>
+                                <h1 className='text-white text-3xl mb-4 sm:text-3xl md:text-4xl lg:text-5xl'>Website Alumni 2025</h1>
+                                <p className='text-white text-md sm:text-md md:text-lg xl:text-xl'>Website Alumni 2025 adalah platform bagi alumni untuk terhubung, berbagi pengalaman, dan berkontribusi pada komunitas.</p>
                             </div>
                             <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row gap-8 mt-8 justify-center items-center'>
                                 <button onClick={NavigateBtn.Button1Navigate} className=' border-2 border-white text-white rounded-md p-4 transition-all duration-300 hover:bg-orange-400 hover:border-orange-400'>
