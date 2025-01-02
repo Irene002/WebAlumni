@@ -7,7 +7,7 @@ import MobileNav from './components/MobileNav';
 const App = () => {
   return (
     <>
-    <main className='relative'>
+    <main className='relative overflow-hidden'>
       <NavigationBar />
       <section>
         <Routing />
