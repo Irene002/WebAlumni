@@ -79,7 +79,7 @@ const Home = () => {
 
         <>
             <section onContextMenu={(e) => e.preventDefault()} className='relative'>
-                <div className='relative bg-gray-50'>
+                <div className='relative flex flex-col h-[700px]'>
                     <div className='absolute z-10 left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
                         <div className={` opacity-0  ${isVisible ? 'FadeIn' : ''}`}>
                             <div className={`transition-all duration-500`}>
@@ -97,7 +97,7 @@ const Home = () => {
                         </div>
                     </div>
                     <LazyLoadImage
-                    className='object-cover h-[700px] w-full brightness-[.4]'
+                    className='object-cover h-full w-full brightness-[.4]'
                     src={imageBanner || 'https://viaplaceholder.com/150'}
                     effect='blur'
                     />

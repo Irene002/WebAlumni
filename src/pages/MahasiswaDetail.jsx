@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import DataMahasiswa2022 from '../DataMap/MahasiswaAlumni'
@@ -11,8 +11,8 @@ import { FaXmark } from 'react-icons/fa6'
 const MahasiswaDetail = () => {
   const { angkatan, name } = useParams()
   const formattedName = name.replace(/-/g, ' ')
-  const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021, ...DataMahasiswa2020, ...DataMahasiswa2019]
 
+  const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021, ...DataMahasiswa2020, ...DataMahasiswa2019]
   const mahasiswa = DataSeluruhMahasiswa.find(mhs => mhs.Angkatan === angkatan && mhs.Nama.toLowerCase() === formattedName.toLowerCase())
 
   if (!mahasiswa) {
@@ -40,6 +40,10 @@ const MahasiswaDetail = () => {
     setIsModalOpen(false);
     setSelectedLampiran(null);
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  },[])
 
   return (
 

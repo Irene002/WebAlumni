@@ -7,7 +7,7 @@ const MobileNav = () => {
 
   return (
     <>
-    <nav className="bg-orange-600 p-4 fixed bottom-0 w-full sm:visible md:hidden lg:hidden xl:hidden">
+    <nav className="bg-orange-600 p-4 fixed z-20 bottom-0 w-full sm:visible md:hidden lg:hidden xl:hidden">
         <ul className="text-white flex flex-row justify-center gap-12 items-center h-full">
             <li onClick={() => Navigate('/')} className="flex flex-col items-center gap-2">
                 <FaBuildingColumns size={20}/>

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom'
 import { FaChevronUp, FaMagnifyingGlass } from 'react-icons/fa6'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -47,6 +47,10 @@ const AngkatanDetail = () => {
   const handleClickTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  useEffect(() => {
+      window.scrollTo(0, 0)
+    },[])
 
 
 return (

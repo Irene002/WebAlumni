@@ -1,9 +1,14 @@
 import { DataAngkatan } from "../DataMap/MahasiswaAlumni"
 import { useNavigate } from "react-router-dom"
+import { useEffect } from "react";
 
 const Mahasiswa = () => {
 
   const Navigate = useNavigate();
+
+  useEffect(() => {
+      window.scrollTo(0, 0)
+    },[])
 
   return (
     <>
