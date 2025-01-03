@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom'
 import { FaChevronUp, FaMagnifyingGlass } from 'react-icons/fa6'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 // Data Mahasiswa
 import DataMahasiswa2022 from '../DataMap/MahasiswaAlumni';
@@ -67,12 +69,17 @@ return (
         <div className='grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
           {filteredDataMahasiswa.length > 0 ? (
             filteredDataMahasiswa.slice(0, rows * 12).map((mhs, index) => (
-              <button onClick={() => Navigate(generateLink(mhs.Angkatan, mhs.Nama))} style={{ animationDelay: `${index * 0.2}s` }} key={index} className={`FadeIn flex flex-shrink-0 h-[450px] w-full max-w-[390px] min-w-[290px] rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200`}>
-                <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
+              <button onClick={() => Navigate(generateLink(mhs.Angkatan, mhs.Nama))} style={{ animationDelay: `${index * 0.2}s` }} key={index} className={` group FadeIn flex flex-shrink-0 h-[450px] w-full bg-gray-300 max-w-[390px] min-w-[290px] rounded-md overflow-clip relative shadow-lg shadow-orange-200`}>
+                <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 group-hover:-bottom-5'>
                   <p className='font-bold mb-2'>{mhs.Nama}</p>
                   <p>{mhs.NIM}</p>
                 </div>
-                <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo || 'https://via.placeholder.com/150'} alt={mhs.Nama} />
+                {/* <img className='transition-all duration-500 object-cover w-full h-full scale-110 ' src={mhs.Photo || 'https://via.placeholder.com/150'} alt={mhs.Nama} /> */}
+                <LazyLoadImage
+                className={'!transition-all !duration-500 object-cover w-full h-full scale-110 group-hover:scale-100'}
+                effect={'blur'}
+                src={mhs.Photo || 'https://via.placeholder.com/150'}
+                />
               </button>
             ))
           ) : (

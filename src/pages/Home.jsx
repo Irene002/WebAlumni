@@ -5,6 +5,8 @@ import hima from '../assets/Hima.gif'
 import polnustar from '../assets/polnustar.png?format=webp'
 import logoTI from '../assets/logo-ti.png?format=webp'
 import { FaChevronUp } from 'react-icons/fa6'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 // DATA MAHASISWA
 import DataMahasiswa2022 from '../DataMap/MahasiswaAlumni'
@@ -18,8 +20,8 @@ import { useEffect, useState, useRef } from 'react'
 
 const Home = () => {
 
-    const [isVisible, setIsVisible] = useState(false);
-    const componentRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false)
+    const Navigate = useNavigate()
 
     const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021, ...DataMahasiswa2020, ...DataMahasiswa2019]
 
@@ -65,30 +67,21 @@ const Home = () => {
         return `/mahasiswa/${angkatan}/${nama.replace(/\s+/g, '-').toLowerCase()}`
     }
 
-    const Navigate = useNavigate();
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => { setIsVisible(entry.isIntersecting); },
-            { threshold: 0.1 }
-        );
-        if (componentRef.current) {
-        }
-        observer.observe(componentRef.current);
-        return () => {
-            if (componentRef.current) {
-                observer.unobserve(componentRef.current);
-            }
-        };
-    }, []);
+        setTimeout(() => {
+            setIsVisible(true);
+        }, 1000);
+        shuffleCardData;
+    }, [])
 
     return (
 
         <>
             <section onContextMenu={(e) => e.preventDefault()} className='relative'>
-                <div className='relative'>
+                <div className='relative bg-gray-50'>
                     <div className='absolute z-10 left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 text-center w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%]'>
-                        <div ref={componentRef} className={` ${isVisible ? 'FadeInRef' : 'FadeOutRef'}`}>
+                        <div className={` opacity-0  ${isVisible ? 'FadeIn' : ''}`}>
                             <div className={`transition-all duration-500`}>
                                 <h1 className='text-white text-3xl mb-4 sm:text-3xl md:text-4xl lg:text-5xl'>Website Alumni 2025</h1>
                                 <p className='text-white text-md sm:text-md md:text-lg xl:text-xl'>Website Alumni 2025  adalah platform bagi alumni untuk terhubung, berbagi pengalaman, dan berkontribusi pada komunitas.</p>
@@ -103,7 +96,11 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <img className='object-cover h-[700px] w-full brightness-[.4]' src={imageBanner} alt="" />
+                    <LazyLoadImage
+                    className='object-cover h-[700px] w-full brightness-[.4]'
+                    src={imageBanner || 'https://viaplaceholder.com/150'}
+                    effect='blur'
+                    />
                 </div>
                 <div className=' py-32 px-4 bg-orange-100 sm:px-4 md:px-24 lg:px-24 xl:px-24 2xl:px-32'>
                     <div className='justify-between mb-24 sm:flex sm:flex-col sm:items-center md:flex-col md:items-center xl:flex xl:flex-row xl:mb-4'>
@@ -167,12 +164,17 @@ const Home = () => {
                     <div className='flex justify-center'>
                         <div className='grid grid-cols-1 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
                             {shuffleCardData.slice(0, 4).map((mhs, index) => (
-                                <button onClick={() => Navigate(generateLink(mhs.Angkatan, mhs.Nama))} key={index} className='flex h-[450px] w-full max-w-[390px] min-w-[290px] bg-black rounded-md overflow-clip relative CardMahasiswa shadow-lg shadow-orange-200'>
-                                    <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 CardMahasiswaLabel'>
+                                <button onClick={() => Navigate(generateLink(mhs.Angkatan, mhs.Nama))} key={index} className='group flex h-[450px] w-full max-w-[390px] min-w-[290px] bg-gray-300 rounded-md overflow-clip relative shadow-lg shadow-orange-200'>
+                                    <div className='bg-white border border-orange-500 text-black px-12 py-4 pb-12 shadow-lg absolute z-10 rounded-xl -bottom-40 -left-5 text-start transition-all duration-500 group-hover:-bottom-5'>
                                         <p className='font-bold mb-2'>{mhs.Nama}</p>
                                         <p>{mhs.NIM}</p>
                                     </div>
-                                    <img className='transition-all duration-500 object-cover w-full h-full scale-110' src={mhs.Photo || 'https://via.placeholder.com/150'} alt={mhs.Nama} />
+                                    <LazyLoadImage
+                                    className={`!transition-all !duration-500 !object-cover w-full h-full scale-110 group-hover:scale-100`}
+                                    src={mhs.Photo || 'https://via.placeholder.com/150'}
+                                    alt={mhs.Nama}
+                                    effect='blur'
+                                    />
                                 </button>
                             ))}
                         </div>

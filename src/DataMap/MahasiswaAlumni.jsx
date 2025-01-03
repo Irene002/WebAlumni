@@ -804,6 +804,7 @@ const DataMahasiswa2021 = [
     {
         Photo: pangeran,
         Nama: 'Pangeran Jouce Djarang',
+        Alias: 'ean',
         NIM: '2105096',
         Angkatan: '2021',
         judul: 'Identifikasi Kelayakan Pertimbangan Teknis Pertahanan Pembangunan Tower Bakti KOMINFO Menggunakan Sistem Informasi Geografis Berbasis Aturan',
