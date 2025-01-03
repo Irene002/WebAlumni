@@ -9,23 +9,26 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
 // DATA MAHASISWA
-import DataMahasiswa2022 from '../DataMap/MahasiswaAlumni'
-import { DataMahasiswa2021 } from '../DataMap/MahasiswaAlumni'
-import { DataMahasiswa2020 } from '../DataMap/MahasiswaAlumni'
-import { DataMahasiswa2019 } from '../DataMap/MahasiswaAlumni'
+import MahasiswaPhoto from '../DataMap/MahasiswaPhoto'
 
-import { DataAngkatan } from '../DataMap/MahasiswaAlumni'
+import data2022 from '../DataMap/Angkatan2022.json'
+import data2021 from '../DataMap/Angkatan2021.json'
+
+import { DataAngkatan } from '../DataMap/DataAngkatan'
 import { useNavigate } from 'react-router-dom'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 
 const Home = () => {
+
+    const { DataMahasiswa2022 } = data2022;
+    const { DataMahasiswa2021 } = data2021;
 
     const [isVisible, setIsVisible] = useState(false)
     const Navigate = useNavigate()
 
-    const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021, ...DataMahasiswa2020, ...DataMahasiswa2019]
+    const DataSeluruhMahasiswa = [...DataMahasiswa2022, ...DataMahasiswa2021]
 
-    const shuffleCardData = [...DataSeluruhMahasiswa].sort(() => Math.random() - 0.5)
+    const shuffleCardData = [...DataSeluruhMahasiswa].filter(mhs => MahasiswaPhoto[mhs.Photo] && MahasiswaPhoto[mhs.Photo] !== 'https://via.placeholder.com/150').sort(() => Math.random() - 0.5)
 
     const NavigateBtn = {
         Button1: 'Daftar Mahasiswa Alumni',
@@ -97,9 +100,9 @@ const Home = () => {
                         </div>
                     </div>
                     <LazyLoadImage
-                    className='object-cover h-full w-full brightness-[.4]'
-                    src={imageBanner || 'https://viaplaceholder.com/150'}
-                    effect='blur'
+                        className='object-cover h-full w-full brightness-[.4]'
+                        src={imageBanner || 'https://viaplaceholder.com/150'}
+                        effect='blur'
                     />
                 </div>
                 <div className=' py-32 px-4 bg-orange-100 sm:px-4 md:px-24 lg:px-24 xl:px-24 2xl:px-32'>
@@ -170,10 +173,10 @@ const Home = () => {
                                         <p>{mhs.NIM}</p>
                                     </div>
                                     <LazyLoadImage
-                                    className={`!transition-all !duration-500 !object-cover w-full h-full scale-110 group-hover:scale-100`}
-                                    src={mhs.Photo || 'https://via.placeholder.com/150'}
-                                    alt={mhs.Nama}
-                                    effect='blur'
+                                        className={`!transition-all !duration-500 !object-cover w-full h-full scale-110 group-hover:scale-100`}
+                                        src={MahasiswaPhoto[mhs.Photo] || 'https://via.placeholder.com/150'}
+                                        alt={mhs.Nama}
+                                        effect='blur'
                                     />
                                 </button>
                             ))}

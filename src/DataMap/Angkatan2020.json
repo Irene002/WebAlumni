@@ -1,0 +1,15 @@
+{
+    "DataMahasiswa2020" : [
+        {
+            "Photo": "judha",
+            "Nama": "Judha Rachmat Surudani",
+            "NIM": "2005105",
+            "Angkatan": "2020",
+            "abstrak": "Jalan Raya adalah elemen vital dalam kehidupan masyarakat, berfungsi sebagai prasarana perhubungan darat yang mendukung berbagai aktivitas dan kebutuhan dasar manusia. Dinas Perhubungan bertugas membantu pemerintah dalam mengelola perhubungan, termasuk izin penggunaan jalan nasional, provinsi, kabupaten/kota, dan desa. Izin penggunaan jalan dapat diberikan untuk kepentingan umum dan pribadi, dengan syarat adanya jalur alternatif dan rambu lalu lintas sementara. Pengelolaan rekomendasi izin penggunaan jalan membutuhkan informasi lokasi, jenis kegiatan, durasi kegiatan, serta data jalur alternatif. Digitalisasi informasi, seperti foto lokasi dan syarat pengurusan izin, dapat mempermudah proses pengecekan dan pencarian jalur alternatif oleh dinas perhubungan. Dengan meningkatnya jumlah pemohon izin penggunaan jalan, diperlukan sistem yang efisien dan efektif untuk mengelola data dan memproses permohonan. Sistem ini juga bertujuan untuk menginformasikan penutupan jalan dan jalur alternatif kepada masyarakat. Penelitian ini bertujuan untuk merancang dan mengembangkan sistem manajemen rekomendasi izin penggunaan jalan yang dapat meningkatkan efisiensi dan efektivitas pengelolaan izin, serta memfasilitasi penyampaian informasi kepada masyarakat.",
+            "judul": "Sistem Informasi Pengurusan Rekomendasi Izin Jalan pada Dinas Perhubungan Kepulauan Sangihe",
+            "lampiran": "https://via.placeholder.com/150",
+            "lampiran1": "https://via.placeholder.com/150",
+            "lampiran2": "https://via.placeholder.com/150"
+        }
+    ]
+}

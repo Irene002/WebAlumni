@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import DataMahasiswa2022 from '../DataMap/MahasiswaAlumni'
-import { DataMahasiswa2021 } from '../DataMap/MahasiswaAlumni'
-import { DataMahasiswa2020 } from '../DataMap/MahasiswaAlumni'
-import { DataMahasiswa2019 } from '../DataMap/MahasiswaAlumni'
+// DATA MAHASISWA
+import Angkatan2022 from '../DataMap/Angkatan2022.json'
+import Angkatan2021 from '../DataMap/Angkatan2021.json'
+import Angkatan2020 from '../DataMap/Angkatan2020.json'
+import Angkatan2019 from '../DataMap/Angkatan2019.json'
+
+import MahasiswaPhoto from '../DataMap/MahasiswaPhoto'
 
 import { FaXmark } from 'react-icons/fa6'
 
 const MahasiswaDetail = () => {
+
+  const { DataMahasiswa2022 } = Angkatan2022
+  const { DataMahasiswa2021 } = Angkatan2021
+  const { DataMahasiswa2020 } = Angkatan2020
+  const { DataMahasiswa2019 } = Angkatan2019
+
   const { angkatan, name } = useParams()
   const formattedName = name.replace(/-/g, ' ')
 
@@ -18,12 +27,12 @@ const MahasiswaDetail = () => {
   if (!mahasiswa) {
     return (
       <>
-      <div className='flex h-screen justify-center items-center p-32'> 
-        <div className='text-center'>
-          <h1 className='text-1xl'>Error 404</h1>
-          <h2 className='text-xl font-normal'>Mahasiswa <span className='text-red-500'> {formattedName} </span> not Found</h2>
+        <div className='flex h-screen justify-center items-center p-32'>
+          <div className='text-center'>
+            <h1 className='text-1xl'>Error 404</h1>
+            <h2 className='text-xl font-normal'>Mahasiswa <span className='text-red-500'> {formattedName} </span> not Found</h2>
+          </div>
         </div>
-      </div>
       </>
     )
   }
@@ -43,7 +52,7 @@ const MahasiswaDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  },[])
+  }, [])
 
   return (
 
@@ -64,7 +73,7 @@ const MahasiswaDetail = () => {
       <section className='p-32 px-4 sm:px-4 md:px-8 lg:px-12 xl:px-24 2xl:px-32 bg-orange-50' onContextMenu={(e) => e.preventDefault()}>
         <div className='flex flex-col gap-16 items-center sm:flex-col md:flex-col lg:flex-col xl:flex-row xl:items-start'>
           <div className='flex w-[300px] h-[360px] sm:w-[300px] sm:h-[360px] 2xl:w-[380px] 2xl:h-[460px] rounded-md overflow-clip shadow-md FadeIn flex-shrink-0'>
-            <img className='w-full h-auto object-cover' src={mahasiswa.Photo || 'https://via.placeholder.com/150'} alt={mahasiswa.Nama} />
+            <img className='w-full h-auto object-cover' src={MahasiswaPhoto[mahasiswa.Photo] || 'https://via.placeholder.com/150'} alt={mahasiswa.Nama} />
           </div>
           <div className='w-full'>
             <div>
